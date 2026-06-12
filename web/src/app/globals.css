@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────
+ * Design tokens — COMEDK 2025 cut-off lookup
+ *
+ * Palette: deep ink ground + paper-warm foreground + a single
+ * turmeric/brass accent (a nod to the Karnataka context without
+ * being kitsch). Tier colours intentionally muted so they read as
+ * labels, not alarms.
+ * ────────────────────────────────────────────────────────────── */
+
+:root {
+  --bg-base: #0e1014;
+  --bg-surface: #15171e;
+  --bg-elev: #1b1e27;
+  --hairline: #262932;
+  --hairline-strong: #383d4a;
+
+  --fg: #ece7da;           /* warm paper-white */
+  --fg-mute: #8c8779;
+  --fg-dim: #5b5850;
+
+  --accent: #e2b23b;        /* turmeric/brass */
+  --accent-soft: rgba(226, 178, 59, 0.16);
+  --accent-line: rgba(226, 178, 59, 0.38);
+
+  --safe: #8fa57d;
+  --moderate: #d2a25b;
+  --reach: #c2503e;
+
+  --radius: 2px;
+}
+
+@theme inline {
+  --color-bg: var(--bg-base);
+  --color-surface: var(--bg-surface);
+  --color-elev: var(--bg-elev);
+  --color-hairline: var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-fg: var(--fg);
+  --color-fg-mute: var(--fg-mute);
+  --color-fg-dim: var(--fg-dim);
+  --color-accent: var(--accent);
+  --color-safe: var(--safe);
+  --color-moderate: var(--moderate);
+  --color-reach: var(--reach);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-instrument);
+  --font-mono: var(--font-mono-face);
+}
+
+* {
+  border-color: var(--hairline);
+}
+
+html, body {
+  background: var(--bg-base);
+  color: var(--fg);
+}
+
+body {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--fg);
+}
+
+/* Background texture: ultra-faint cross-hatch so the canvas isn't
+ * pure flat black. Mimics the grain of printed allotment lists. */
+.bg-paper {
+  background-image:
+    radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.012) 1px, transparent 1.4px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.008) 1px, transparent 1.4px);
+  background-size: 22px 22px, 30px 30px;
+}
+
+/* Display heading utility. Letter-spaced into the serif. */
+.display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  font-style: normal;
+}
+
+.display-italic {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.015em;
+}
+
+/* Small, tracked-out eyebrow label. Used liberally for sections. */
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-mute);
+}
+
+/* Hairline rule with a small ascii lead. */
+.rule {
+  border-top: 1px solid var(--hairline);
+}
+
+/* The big rank input — feels like a license plate / barcode field. */
+.rank-input {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-feature-settings: "tnum", "zero";
+  font-variant-numeric: tabular-nums;
+  background: transparent;
+  color: var(--fg);
+  caret-color: var(--accent);
+  outline: none;
+  width: 100%;
+  border: 0;
+  letter-spacing: -0.02em;
+}
+
+.rank-input::placeholder {
+  color: var(--fg-dim);
+  letter-spacing: -0.02em;
+}
+
+/* Hide native number input spinners */
+.rank-input::-webkit-outer-spin-button,
+.rank-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rank-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Fit bar — the signature element.
+ * A mono-text density meter rendered next to each result. */
+.fit-bar {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  color: var(--fg-dim);
+}
+.fit-bar .filled { color: var(--accent); }
+.fit-bar .pivot { color: var(--fg-mute); }
+
+/* Tier chip — small inline marker, not a badge. */
+.tier {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.tier.safe { color: var(--safe); }
+.tier.moderate { color: var(--moderate); }
+.tier.reach { color: var(--reach); }
+
+/* Row hover — paper crease, not a card lift. */
+.row {
+  border-top: 1px solid var(--hairline);
+  transition: background-color 120ms ease;
+}
+.row:hover {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+/* A vertical brass tick — used once, as the section marker. */
+.brass-tick {
+  width: 1px;
+  background: var(--accent-line);
+}
+
+/* Focus ring — accent, slim, not a glow halo. */
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* The rank input owns its own focus signal via its container's bottom
+ * border (see .rank-shell), so suppress the default ring on the input
+ * itself — the outline box doesn't fit the documentary layout. */
+.rank-input:focus,
+.rank-input:focus-visible {
+  outline: none;
+}
+
+.rank-shell {
+  border-bottom: 1px solid var(--hairline-strong);
+  transition: border-color 160ms ease;
+}
+.rank-shell:focus-within {
+  border-bottom-color: var(--accent);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

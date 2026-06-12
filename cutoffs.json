@@ -1,0 +1,1194 @@
+{
+  "colleges": [
+    {
+      "code": "E001",
+      "name": "Acharya Institute of Technology-Soladevanahalli, Bengaluru"
+    },
+    {
+      "code": "E003",
+      "name": "A.C.S. College of Engineering-Kambipura Mysore Road, Bengaluru"
+    },
+    {
+      "code": "E004",
+      "name": "Adichunchanagiri Institute Of Technology-Jyothi Nagara, Chikkamagaluru"
+    },
+    {
+      "code": "E005",
+      "name": "Akash Institute of Engineering and Technology-Devanahalli, Bengaluru Rural"
+    },
+    {
+      "code": "E006",
+      "name": "Alvas Institute of Engineering and Technology-Moodbidri, Mangaluru"
+    },
+    {
+      "code": "E007",
+      "name": "AMC Engineering College-Bannerghatta Rd, Bengaluru"
+    },
+    {
+      "code": "E009",
+      "name": "Angadi Institute of Technology and Management-Savagaon Road, Belagavi"
+    },
+    {
+      "code": "E011",
+      "name": "APS College of Engineering-Kanakapura Road, Bengaluru"
+    },
+    {
+      "code": "E012",
+      "name": "Atria Institute of Technology-Hebbal, Bengaluru"
+    },
+    {
+      "code": "E013",
+      "name": "Akshaya Institute of Technology-Koratagere Road, Tumakuru"
+    },
+    {
+      "code": "E014",
+      "name": "Anuvartik Mirji Bharatesh Institute of Technology-Shindhollicross, Belagavi"
+    },
+    {
+      "code": "E015",
+      "name": "B.N.M. Institute of Technology-Banashankari, Bengaluru"
+    },
+    {
+      "code": "E016",
+      "name": "KLE Technological University Formerly known as BVBCET-Vidyanagar, Hubballi"
+    },
+    {
+      "code": "E017",
+      "name": "Ballari Institute of Technology And Management-Near Allipura, Ballari"
+    },
+    {
+      "code": "E019",
+      "name": "Bangalore Institute of Technology-V V Puram, Bengaluru"
+    },
+    {
+      "code": "E020",
+      "name": "Bangalore Technological Institute-Chikkanayakanahalli Dinne, Bengaluru"
+    },
+    {
+      "code": "E021",
+      "name": "Bapuji Institute of Engineering and Technology-Shamanur Road, Davangere"
+    },
+    {
+      "code": "E023",
+      "name": "Basavakalyan Engineering College-NH9 Basavakalyan, Bidar"
+    },
+    {
+      "code": "E024",
+      "name": "Basaveshwar Engineering College-Vidya Nagar, Bagalkote"
+    },
+    {
+      "code": "E026",
+      "name": "BLDEAs V.P. Dr.P.G.Halakatti College of Engineering and Technology-Ashram Road, Vijayapura"
+    },
+    {
+      "code": "E027",
+      "name": "BMS College of Engineering-Basavanagudi, Bengaluru"
+    },
+    {
+      "code": "E028",
+      "name": "BMS Institute of Technology and Management-Yelahanka, Bengaluru"
+    },
+    {
+      "code": "E030",
+      "name": "Brindavan College of Engineering-Yelahanka, Bengaluru"
+    },
+    {
+      "code": "E032",
+      "name": "C.M.R. Institute of Technology-Brookefield, Bengaluru"
+    },
+    {
+      "code": "E033",
+      "name": "Cambridge Institute of Technology-K R Puram, Bengaluru"
+    },
+    {
+      "code": "E035",
+      "name": "Channabasaveshwara Institute of Technology- Gubbi, Tumakuru"
+    },
+    {
+      "code": "E036",
+      "name": "Chanakya University-Devanahalli, Bengaluru Rural"
+    },
+    {
+      "code": "E037",
+      "name": "City Engineering College-Doddakalasandra, Bengaluru"
+    },
+    {
+      "code": "E038",
+      "name": "Coorg Institute of Technology-Ponnampet, South Kodagu"
+    },
+    {
+      "code": "E039",
+      "name": "Dayananda Sagar Academy of Technology and Management-Kanakpura Road, Bengaluru"
+    },
+    {
+      "code": "E040",
+      "name": "Dayananda Sagar College of Engineering-Kumaraswamy Layout, Bengaluru"
+    },
+    {
+      "code": "E041",
+      "name": "DON BOSCO Institute of Technology-Kumbalgodu, Bengaluru"
+    },
+    {
+      "code": "E042",
+      "name": "Dr. Ambedkar Institute of Technology-Malathahalli, Bengaluru"
+    },
+    {
+      "code": "E043",
+      "name": "Yenepoya Institute of Technology formerly known as Dr. M V Shetty Institute of Technology- Moodbidri, Mangaluru"
+    },
+    {
+      "code": "E044",
+      "name": "Dr.Shri Shri Shivakumara Mahaswamy College of Engineering-Nelamangala, Bengaluru Rural"
+    },
+    {
+      "code": "E045",
+      "name": "Dr H N National College Of Engineering-Jayanagar, Bengaluru"
+    },
+    {
+      "code": "E046",
+      "name": "East Point College of Engineering and Technology-Avalahalli, Bengaluru"
+    },
+    {
+      "code": "E048",
+      "name": "East West Institute of Technology-BEL Layout, Bengaluru"
+    },
+    {
+      "code": "E049",
+      "name": "Garden City University-Old Madras Road, Bengaluru"
+    },
+    {
+      "code": "E050",
+      "name": "Global Academy of Technology-Rajarajeshwari Nagar, Bengaluru"
+    },
+    {
+      "code": "E051",
+      "name": "GM Institute of Technology-P B Road, Davangere"
+    },
+    {
+      "code": "E053",
+      "name": "Gopalan College of Engineering And Management-Whitefield, Bengaluru"
+    },
+    {
+      "code": "E055",
+      "name": "GSSS Institute of Engineering and Technology for Women-Metagalli, Mysuru"
+    },
+    {
+      "code": "E056",
+      "name": "H.K.E.Societys P.D.A. College of Engineering-Aiwan E Shahi area, Kalaburgi"
+    },
+    {
+      "code": "E058",
+      "name": "Sri Jayachamarajendra College of Engineering constituent college of JSS Science and Technology University-Manasagangothri, Mysuru"
+    },
+    {
+      "code": "E059",
+      "name": "Jawaharlal Nehru New College of Engineering JNNCE-Swalanga Road, Shivamogga"
+    },
+    {
+      "code": "E060",
+      "name": "JSS Academy of Technical Education-Kengeri Main Road, Bengaluru"
+    },
+    { "code": "E061", "name": "JSS Science and Technology University-Mysuru" },
+    {
+      "code": "E062",
+      "name": "Jain College of Engineering-T.S Nagar, Belagavi"
+    },
+    {
+      "code": "E063",
+      "name": "Jnana Vikas Institute of Technology-Bidadi, Ramnagar Taluk, Bengaluru Rural"
+    },
+    {
+      "code": "E064",
+      "name": "Jain College of Engineering and Research-Udyambag, Belagavi"
+    },
+    {
+      "code": "E065",
+      "name": "KLE Technological University Formerly called as KLE Dr. M.S. Sheshgiri College of Engineering and Technology-Udyambag, Belagavi"
+    },
+    {
+      "code": "E066",
+      "name": "KLE College of Engineering and Technology-Chikodi Dist., Belagavi"
+    },
+    {
+      "code": "E067",
+      "name": "K.S School of Engineering And Management-Off Kanakapura Road, Bengaluru"
+    },
+    {
+      "code": "E068",
+      "name": "K.S. Institute of Technology-Kanakapura Main Road, Bengaluru"
+    },
+    {
+      "code": "E069",
+      "name": "KVG College Of Engineering-Sullia, Dakshina Kannada"
+    },
+    {
+      "code": "E070",
+      "name": "Kalpataru Institute of Technology-B H Road, Tiptur"
+    },
+    {
+      "code": "E071",
+      "name": "Karavali Institute of Technology-Kottara, Mangaluru"
+    },
+    {
+      "code": "E073",
+      "name": "KLS Gogte Institute of Technology-Udyambag, Belagavi"
+    },
+    {
+      "code": "E074",
+      "name": "KLS Vishwanathrao Deshpande Institute of Technology-Dandeli Road, Haliyal"
+    },
+    {
+      "code": "E075",
+      "name": "KNS Institute of Technology-Yelahanka, Bengaluru"
+    },
+    { "code": "E076", "name": "M.S. Engineering College-Sadahalli, Bengaluru" },
+    {
+      "code": "E077",
+      "name": "M.S. Ramaiah Institute of Technology-MSR Nagar, Bengaluru"
+    },
+    {
+      "code": "E078",
+      "name": "Maharaja Institute of Technology-Belawadi, Mandya"
+    },
+    {
+      "code": "E079",
+      "name": "Malnad College of Engineering-Rangoli Halla, Hassan"
+    },
+    {
+      "code": "E080",
+      "name": "Mangalore Institute of Technology and Engineering-Moodbidri, Mangaluru"
+    },
+    {
+      "code": "E081",
+      "name": "Moodalakatte Institute of Technology-Moodalakatte, Udupi"
+    },
+    {
+      "code": "E082",
+      "name": "Maharaja Institute of Technology-Thandavapura, Mysuru"
+    },
+    {
+      "code": "E083",
+      "name": "Mysuru Royal Institute of Technology-Palahallli, Mandya District"
+    },
+    {
+      "code": "E084",
+      "name": "Nagarjuna College of Engineering And Technology-Devanahalli, Bengaluru"
+    },
+    {
+      "code": "E085",
+      "name": "The National Institute of Engineering North Campus-Koorgalli, Mysuru"
+    },
+    {
+      "code": "E088",
+      "name": "Navodaya Institute of Technology-Bijangera, Raichur"
+    },
+    {
+      "code": "E089",
+      "name": "P.E.S.College of Engineering-PES College Road, Mandya"
+    },
+    {
+      "code": "E090",
+      "name": "PES Institute of Technology and Management-Kotegangoor Cost, Shivamogga"
+    },
+    {
+      "code": "E094",
+      "name": "Proudhadevaraya Institute of Technology-TB Dam Road, Hosapete"
+    },
+    {
+      "code": "E095",
+      "name": "R V College of Engineering-Mysore Road, Bengaluru"
+    },
+    {
+      "code": "E096",
+      "name": "R.L. Jalappa Institute of Technology-Kodigehalli, Doddaballapur"
+    },
+    {
+      "code": "E097",
+      "name": "R.R. Institute of Technology-Chikkabanavara, Bengaluru"
+    },
+    {
+      "code": "E098",
+      "name": "R T E Societys Rural Engineering College-Hulkoti, Gadag"
+    },
+    {
+      "code": "E099",
+      "name": "Raja Rajeswari College of Engineering-Kumbalgodu, Bengaluru"
+    },
+    {
+      "code": "E100",
+      "name": "Rajeev Institute of Technology-BM Bypass Road, Hassan"
+    },
+    {
+      "code": "E101",
+      "name": "Rajiv Gandhi Institute of Technology-R T Nagar Post, Bengaluru"
+    },
+    {
+      "code": "E102",
+      "name": "Rao Bahadur Y Mahabaleswarappa Engineering College-Cantonment, Ballari"
+    },
+    {
+      "code": "E104",
+      "name": "RNS Institute of Technology-R R Nagar Post, Bengaluru"
+    },
+    {
+      "code": "E105",
+      "name": "Bheemanna Khandre Institute of Technology-Bhalki, Bidar"
+    },
+    {
+      "code": "E107",
+      "name": "SJB Institute of Technology-Kengeri, Bengaluru"
+    },
+    {
+      "code": "E108",
+      "name": "S J C Institute of Technology-BB Road, Chikkaballapur"
+    },
+    {
+      "code": "E109",
+      "name": "S.E.A. College of Engineering and Technology-K R Puram, Bengaluru"
+    },
+    {
+      "code": "E110",
+      "name": "SSETs S.G. Balekundri Institute of Technology-Shivabasva Nagar, Belagavi"
+    },
+    {
+      "code": "E111",
+      "name": "S.J.P.N Trust s Hirasugar Institute of Technology-Nidasoshi, Belagavi"
+    },
+    {
+      "code": "E112",
+      "name": "Sahyadri College of Engineering and Management-Adyar, Mangaluru"
+    },
+    {
+      "code": "E113",
+      "name": "Sai Vidya Institute of Technology-Rajan Kunte, Bengaluru"
+    },
+    {
+      "code": "E114",
+      "name": "Sambhram Institute of Technology-Jalahalli East, Bengaluru"
+    },
+    {
+      "code": "E116",
+      "name": "Sapthagiri NPS University-Hesarghatta Main Road, Bengaluru"
+    },
+    {
+      "code": "E117",
+      "name": "SDM College of Engineering and Technology, Tulu Minority-Kalaghatagi, Dharwad"
+    },
+    {
+      "code": "E118",
+      "name": "SDM Institute of Technology, Tulu Minority-Ujjire, Dakshina Kannada"
+    },
+    {
+      "code": "E119",
+      "name": "SECAB Institute of Engineering andTechnology-Nauraspur-Bagalkot Road, Vijayapura"
+    },
+    {
+      "code": "E121",
+      "name": "Sri Sairam College of Engineering-Anekal, Bengaluru"
+    },
+    {
+      "code": "E122",
+      "name": "Shree Devi Institute of Technology-Kenjar, Mangaluru"
+    },
+    {
+      "code": "E123",
+      "name": "Shri Madhwa Vadiraja Institute of Technology and Management-Bantakal, Udupi"
+    },
+    {
+      "code": "E124",
+      "name": "Shridevi Institute of Engineering and Technology-Sira Road, Tumakuru"
+    },
+    {
+      "code": "E125",
+      "name": "Siddaganga Institute of Technology-B H Road, Tumakuru"
+    },
+    {
+      "code": "E126",
+      "name": "Sir M.Visvesvaraya Institute of Technology-Yelahanka, Bengaluru"
+    },
+    {
+      "code": "E127",
+      "name": "SJM Institute of Technology-NH 4 Bye-pass, Chitradurga"
+    },
+    {
+      "code": "E128",
+      "name": "Smt. Kamala and Sri Venkappa M. Agadi College of Engineering and Technology-Laxmeswar, Gadag"
+    },
+    {
+      "code": "E132",
+      "name": "Sri Krishna Institute of Technology-Chikkabanavara, Bengaluru"
+    },
+    {
+      "code": "E136",
+      "name": "Sri Taralabalu Jagadguru Institute of Technology-Haveri Dist., Ranebennur"
+    },
+    {
+      "code": "E137",
+      "name": "Sri Venkateshwara College of Engineering-KIAL Road, Bengaluru"
+    },
+    {
+      "code": "E138",
+      "name": "Srinivas Institute of Technology-Hampankatta, Mangaluru"
+    },
+    {
+      "code": "E141",
+      "name": "T. John Institute of Technology-Bannerghatta Road, Bengaluru"
+    },
+    {
+      "code": "E142",
+      "name": "The National Institute of Engineering South Campus-Mananthavady Road, Mysuru"
+    },
+    {
+      "code": "E143",
+      "name": "Tontadarya College of Engineering-Mundaragi Road , Gadag"
+    },
+    {
+      "code": "E144",
+      "name": "Veerappa Nisty Engineering College-Shorapur, Yadgir"
+    },
+    {
+      "code": "E145",
+      "name": "Vemana Institute of Technology-Koramangala, Bengaluru"
+    },
+    {
+      "code": "E146",
+      "name": "Vidya Vikas Institute of Engineering and Technology-Alnahally, Mysuru"
+    },
+    {
+      "code": "E147",
+      "name": "Vidyavardhaka College of Engineering-Gokulam, Mysuru"
+    },
+    {
+      "code": "E148",
+      "name": "Vivekananda College of Engineering and Technology-Puttur, Dakshin Kannada"
+    },
+    {
+      "code": "E152",
+      "name": "ATME College of Engineering-Bannur Road, Mysuru"
+    },
+    {
+      "code": "E156",
+      "name": "Jyothy Institute of Technology-Tathguni, Bengaluru"
+    },
+    {
+      "code": "E158",
+      "name": "Shetty Institute of Technology - Gulbarga Shahabad Road, Kalaburagi"
+    },
+    { "code": "E159", "name": "Lingaraj Appa Engineering-Gornalli, Bidar" },
+    {
+      "code": "E161",
+      "name": "Cambridge Institute of Technology North Campus-Kundana, Bengaluru"
+    },
+    { "code": "E164", "name": "Reva University-Yelahanka, Bengaluru" },
+    {
+      "code": "E165",
+      "name": "Alliance College of Engineering and Design. Alliance University-Anekal, Bengaluru"
+    },
+    {
+      "code": "E171",
+      "name": "GITAM Deemed to be University-Dodaballapur taluk, Bengaluru"
+    },
+    {
+      "code": "E172",
+      "name": "Mysore College of Engineering and Management-Chikkahalli, Mysuru"
+    },
+    { "code": "E173", "name": "Presidency University-Yelahanka, Bengaluru" },
+    {
+      "code": "E183",
+      "name": "Jain Institute of Technology-Avaragere Village, Davangere"
+    },
+    { "code": "E187", "name": "CMR University-Bagalur-Chagalatti, Bengaluru" },
+    {
+      "code": "E191",
+      "name": "Sir M V School Of Architecture-Yelahanka, Bengaluru"
+    },
+    {
+      "code": "E194",
+      "name": "Jain College of Engineering and Technology-Unkal, Hubballi"
+    },
+    {
+      "code": "E195",
+      "name": "Navkis College of Engineering -Kandali NH75, Hassan"
+    },
+    {
+      "code": "E197",
+      "name": "M.S. Ramaiah University of Applied Sciences-MSR Nagar, Bengaluru"
+    },
+    {
+      "code": "E198",
+      "name": "R V Institute of Technology and Management-J P Nagar, Bengaluru"
+    },
+    {
+      "code": "E199",
+      "name": "Biluru Gurubasava Mahaswamiji Institute of Technology-Mudhol, Bagalkot"
+    },
+    {
+      "code": "E201",
+      "name": "G Madegowda Institute of Technology-Maddur, Mandya District"
+    },
+    {
+      "code": "E202",
+      "name": "C Byregowda Insitute of Technology-Thoradevandahalli, Kolar"
+    },
+    {
+      "code": "E203",
+      "name": "Amruta Institute of Engineering and Management Science-Bidadi, Ramnagar Taluk, Bengaluru Rural"
+    },
+    {
+      "code": "E204",
+      "name": "H.K.E. Societys Sir M. Visvesvaraya College of Engineering-Yermarus Camp, Raichur"
+    },
+    {
+      "code": "E205",
+      "name": "Vijaya Vittala Institution of Technology-Kothanur, Bengaluru"
+    },
+    {
+      "code": "E206",
+      "name": "Cauvery Institute Of Technology-Sundahalli, Mandya"
+    },
+    {
+      "code": "E207",
+      "name": "BGS College of Engineering and Technology-Mahalaxmipuram, Bengaluru"
+    },
+    {
+      "code": "E208",
+      "name": "A.G.M Rural College of Engineering and Technology-Varur, Hubballi"
+    },
+    {
+      "code": "E209",
+      "name": "Aditya College of Engineering and Technology-Yelahanka, Bengaluru"
+    },
+    {
+      "code": "E211",
+      "name": "East West College of Engineering-Yelahanka, Bengaluru"
+    },
+    {
+      "code": "E212",
+      "name": "Seshadripuram Institute of Technology - Jaipura Hobli, Mysuru"
+    },
+    {
+      "code": "E214",
+      "name": "Sri Siddhartha School of Engineering-Near Kyathsandra Toll Gate, Tumkur"
+    },
+    {
+      "code": "E215",
+      "name": "Cauvery College of Engineering-KBL Layout, Mysuru"
+    },
+    {
+      "code": "E216",
+      "name": "New Ebenezer Institute of Technology - Kothanur, Bangalore"
+    },
+    {
+      "code": "E217",
+      "name": "Harsha Institute of Technology-Nelamangala Taluk, Bangalore Rural"
+    }
+  ],
+  "branches": [
+    { "code": "AD", "name": "Artificial Intelligence & Data Science" },
+    { "code": "AE", "name": "Aeronautical Engineering" },
+    { "code": "AG", "name": "Agricultural Engineering" },
+    { "code": "AI", "name": "Artificial Intelligence & Machine Learning" },
+    { "code": "AL", "name": "Agriculture Engineering Course" },
+    { "code": "AR", "name": "Automation & Robotics Engineering" },
+    { "code": "AS", "name": "Aerospace Engineering" },
+    { "code": "AU", "name": "Automobile Engineering" },
+    { "code": "AVE", "name": "Automotive Engineering" },
+    { "code": "BD", "name": "Bachelor of Design" },
+    { "code": "BDC", "name": "Bachelor of Design (Communic- ation & Design)" },
+    { "code": "BFD", "name": "Bachelor of Design (Fashion Design)" },
+    { "code": "BID", "name": "Bachelor of Design (Industrial Design)" },
+    {
+      "code": "BLD",
+      "name": "Bachelor of Design (Lifestyle & Accessory Design)"
+    },
+    { "code": "BM", "name": "Bio- Medical Engineering" },
+    { "code": "BP", "name": "Bachelor of Urban & Regional Planning" },
+    { "code": "BT", "name": "Bio- technology" },
+    {
+      "code": "CA",
+      "name": "Computer Science & Engineering (Artificial Intelligence)"
+    },
+    {
+      "code": "CAD",
+      "name": "Computer Science & Engineering (Artificial Intelligence & Data Science)"
+    },
+    { "code": "CB", "name": "Computer Science & Business Systems" },
+    { "code": "CBD", "name": "Computer Science & Technology (Big Data)" },
+    { "code": "CC", "name": "Ceramic And Cement Technology" },
+    { "code": "CCA", "name": "Civil Engineering with Computer Application" },
+    {
+      "code": "CCS",
+      "name": "Civil Construction & Sustainability Engineering"
+    },
+    { "code": "CD", "name": "Computer Science & Engineering (Data Science)" },
+    { "code": "CE", "name": "Computer Engineering" },
+    { "code": "CG", "name": "Computer Science & Design" },
+    { "code": "CH", "name": "Chemical Engineering" },
+    {
+      "code": "CI",
+      "name": "Computer Science & Engineering (Artificial Intelligence & Machine Learning)"
+    },
+    { "code": "CIT", "name": "Computer Science & Information Technology" },
+    { "code": "CK", "name": "Civil Engineering (Kannada)" },
+    { "code": "CM", "name": "Computer & Communica- tion Engineering" },
+    { "code": "CN", "name": "Computer Science & Technology" },
+    { "code": "CO", "name": "Computer Science & Engineering (IOT)" },
+    { "code": "CR", "name": "Computer Science" },
+    { "code": "CS", "name": "Computer Science & Engineering" },
+    { "code": "CSB", "name": "Computer Science & Engineering (Block Chain)" },
+    { "code": "CSD", "name": "Computer Science & Technology (Devops)" },
+    { "code": "CV", "name": "Civil Engineering" },
+    { "code": "CX", "name": "Cyber Security" },
+    { "code": "CY", "name": "Computer Science & Engineering (Cyber Security)" },
+    { "code": "DS", "name": "Data Science" },
+    { "code": "EC", "name": "Electronics & Communicati on Engineering" },
+    { "code": "ECE", "name": "Electrical & Computer Engineering" },
+    {
+      "code": "ECV",
+      "name": "Electronics and Communica- tion Engineering ( VLSI Design & Technology)"
+    },
+    { "code": "EE", "name": "Electrical & Electronics Engineering" },
+    { "code": "EI", "name": "Electronics & Instrumentati on Engineering" },
+    { "code": "ES", "name": "Electronics & Computer Science" },
+    { "code": "ET", "name": "Electronics & Telecommu- nication Engineering" },
+    {
+      "code": "IAR",
+      "name": "Information Technology (Augmented Reality and Virtual Reality (AR / VR)"
+    },
+    {
+      "code": "IC",
+      "name": "Computer Science & Engineering (IOT & Cyber Security Including Block Chain Technology)"
+    },
+    { "code": "IDA", "name": "Information Technology (Data Analytics)" },
+    { "code": "IM", "name": "Industrial Engineering & Management" },
+    { "code": "INT", "name": "Information Technology" },
+    { "code": "IP", "name": "Industrial & Production Engineering" },
+    { "code": "IS", "name": "Information Science & Engineering" },
+    { "code": "IST", "name": "Information Science & Technology" },
+    { "code": "MAE", "name": "Mechanical & Aerospace Engineering" },
+    { "code": "MD", "name": "Medical Electronics Engineering" },
+    { "code": "ME", "name": "Mechanical Engineering" },
+    { "code": "MR", "name": "Marine Engineering" },
+    { "code": "MT", "name": "Mechatronics Engineering" },
+    { "code": "RA", "name": "Robotics & Automation" },
+    { "code": "RI", "name": "Robotics & Artificial Intelligence" },
+    { "code": "ROB", "name": "Robotics" },
+    { "code": "TX", "name": "Textile Technology" },
+    { "code": "UE", "name": "Electronics & Computer Engineering" },
+    {
+      "code": "VL",
+      "name": "Electronics Engineering (VLSI Design & Technology)"
+    },
+    { "code": "VLS", "name": "VLSI" }
+  ],
+  "records": [
+    { "college": "E001", "branch": "AE", "rank": 104061 },
+    { "college": "E001", "branch": "AI", "rank": 52746 },
+    { "college": "E003", "branch": "AI", "rank": 92733 },
+    { "college": "E003", "branch": "AS", "rank": 90119 },
+    { "college": "E004", "branch": "AI", "rank": 106484 },
+    { "college": "E005", "branch": "AD", "rank": 71024 },
+    { "college": "E006", "branch": "AI", "rank": 89891 },
+    { "college": "E007", "branch": "AE", "rank": 95021 },
+    { "college": "E007", "branch": "AI", "rank": 109229 },
+    { "college": "E012", "branch": "AI", "rank": 92297 },
+    { "college": "E014", "branch": "AI", "rank": 104513 },
+    { "college": "E015", "branch": "AI", "rank": 30837 },
+    { "college": "E016", "branch": "AR", "rank": 53894 },
+    { "college": "E017", "branch": "AI", "rank": 86938 },
+    { "college": "E019", "branch": "AI", "rank": 12943 },
+    { "college": "E020", "branch": "AI", "rank": 107728 },
+    { "college": "E021", "branch": "AI", "rank": 111412 },
+    { "college": "E024", "branch": "AI", "rank": 103197 },
+    { "college": "E027", "branch": "AD", "rank": 4049 },
+    { "college": "E027", "branch": "AI", "rank": 4569 },
+    { "college": "E028", "branch": "AI", "rank": 16633 },
+    { "college": "E032", "branch": "AD", "rank": 24251 },
+    { "college": "E032", "branch": "AI", "rank": 22998 },
+    { "college": "E033", "branch": "AI", "rank": 59221 },
+    { "college": "E040", "branch": "AE", "rank": 21325 },
+    { "college": "E040", "branch": "AI", "rank": 6201 },
+    { "college": "E041", "branch": "AD", "rank": 102657 },
+    { "college": "E042", "branch": "AE", "rank": 107317 },
+    { "college": "E042", "branch": "AI", "rank": 45417 },
+    { "college": "E043", "branch": "AI", "rank": 89103 },
+    { "college": "E045", "branch": "AD", "rank": 106828 },
+    { "college": "E048", "branch": "AI", "rank": 108498 },
+    { "college": "E050", "branch": "AD", "rank": 80207 },
+    { "college": "E050", "branch": "AE", "rank": 76592 },
+    { "college": "E050", "branch": "AI", "rank": 63167 },
+    { "college": "E055", "branch": "AD", "rank": 69950 },
+    { "college": "E059", "branch": "AI", "rank": 101886 },
+    { "college": "E066", "branch": "AD", "rank": 105457 },
+    { "college": "E068", "branch": "AI", "rank": 102605 },
+    { "college": "E073", "branch": "AE", "rank": 107667 },
+    { "college": "E075", "branch": "AI", "rank": 103454 },
+    { "college": "E077", "branch": "AD", "rank": 2483 },
+    { "college": "E077", "branch": "AI", "rank": 2402 },
+    { "college": "E077", "branch": "AS", "rank": 9212 },
+    { "college": "E082", "branch": "AD", "rank": 75566 },
+    { "college": "E090", "branch": "AI", "rank": 111068 },
+    { "college": "E095", "branch": "AS", "rank": 3464 },
+    { "college": "E099", "branch": "AI", "rank": 103540 },
+    { "college": "E101", "branch": "AI", "rank": 72485 },
+    { "college": "E107", "branch": "AI", "rank": 55981 },
+    { "college": "E108", "branch": "AS", "rank": 110023 },
+    { "college": "E109", "branch": "AI", "rank": 38473 },
+    { "college": "E110", "branch": "AD", "rank": 101776 },
+    { "college": "E117", "branch": "AI", "rank": 55939 },
+    { "college": "E118", "branch": "AD", "rank": 77621 },
+    { "college": "E123", "branch": "AD", "rank": 62552 },
+    { "college": "E126", "branch": "AI", "rank": 24120 },
+    { "college": "E141", "branch": "AI", "rank": 97282 },
+    { "college": "E145", "branch": "AI", "rank": 110976 },
+    { "college": "E156", "branch": "AI", "rank": 88766 },
+    { "college": "E164", "branch": "AD", "rank": 34295 },
+    { "college": "E164", "branch": "AG", "rank": 71914 },
+    { "college": "E165", "branch": "AS", "rank": 94827 },
+    { "college": "E194", "branch": "AI", "rank": 108652 },
+    { "college": "E203", "branch": "AI", "rank": 81494 },
+    { "college": "E207", "branch": "AD", "rank": 108945 },
+    { "college": "E207", "branch": "AI", "rank": 96926 },
+    { "college": "E209", "branch": "AD", "rank": 90966 },
+    { "college": "E209", "branch": "AI", "rank": 107173 },
+    { "college": "E211", "branch": "AL", "rank": 93611 },
+    { "college": "E212", "branch": "AI", "rank": 104925 },
+    { "college": "E040", "branch": "AU", "rank": 37797 },
+    { "college": "E101", "branch": "BM", "rank": 96470 },
+    { "college": "E191", "branch": "BD", "rank": 44061 },
+    { "college": "E197", "branch": "AVE", "rank": 47146 },
+    { "college": "E001", "branch": "BT", "rank": 105937 },
+    { "college": "E016", "branch": "BT", "rank": 106895 },
+    { "college": "E016", "branch": "CA", "rank": 33066 },
+    { "college": "E017", "branch": "CA", "rank": 73490 },
+    { "college": "E026", "branch": "CA", "rank": 103425 },
+    { "college": "E027", "branch": "BT", "rank": 30409 },
+    { "college": "E027", "branch": "CB", "rank": 4349 },
+    { "college": "E028", "branch": "CB", "rank": 15601 },
+    { "college": "E040", "branch": "BT", "rank": 44710 },
+    { "college": "E042", "branch": "CB", "rank": 59929 },
+    { "college": "E061", "branch": "BT", "rank": 98365 },
+    { "college": "E061", "branch": "CB", "rank": 18824 },
+    { "college": "E065", "branch": "CA", "rank": 69481 },
+    { "college": "E074", "branch": "CA", "rank": 111074 },
+    { "college": "E077", "branch": "BT", "rank": 26988 },
+    { "college": "E078", "branch": "CA", "rank": 100751 },
+    { "college": "E078", "branch": "CB", "rank": 106222 },
+    { "college": "E089", "branch": "CB", "rank": 25053 },
+    { "college": "E095", "branch": "BT", "rank": 14685 },
+    { "college": "E126", "branch": "BT", "rank": 78926 },
+    { "college": "E137", "branch": "CA", "rank": 80920 },
+    { "college": "E165", "branch": "BT", "rank": 104355 },
+    { "college": "E173", "branch": "CBD", "rank": 75355 },
+    { "college": "E216", "branch": "CAD", "rank": 94868 },
+    { "college": "E001", "branch": "CD", "rank": 53623 },
+    { "college": "E004", "branch": "CD", "rank": 86772 },
+    { "college": "E005", "branch": "CI", "rank": 91347 },
+    { "college": "E006", "branch": "CD", "rank": 56170 },
+    { "college": "E007", "branch": "CD", "rank": 92944 },
+    { "college": "E007", "branch": "CI", "rank": 111096 },
+    { "college": "E011", "branch": "CI", "rank": 94218 },
+    { "college": "E012", "branch": "CD", "rank": 111230 },
+    { "college": "E019", "branch": "CD", "rank": 10496 },
+    { "college": "E020", "branch": "CD", "rank": 103964 },
+    { "college": "E020", "branch": "CE", "rank": 100965 },
+    { "college": "E021", "branch": "CD", "rank": 111716 },
+    { "college": "E027", "branch": "CD", "rank": 3854 },
+    { "college": "E027", "branch": "CH", "rank": 25041 },
+    { "college": "E032", "branch": "CD", "rank": 19813 },
+    { "college": "E032", "branch": "CI", "rank": 18611 },
+    { "college": "E033", "branch": "CD", "rank": 58396 },
+    { "college": "E039", "branch": "CD", "rank": 37213 },
+    { "college": "E039", "branch": "CI", "rank": 34054 },
+    { "college": "E040", "branch": "CD", "rank": 5740 },
+    { "college": "E040", "branch": "CG", "rank": 7492 },
+    { "college": "E040", "branch": "CH", "rank": 38499 },
+    { "college": "E041", "branch": "CI", "rank": 107604 },
+    { "college": "E042", "branch": "CD", "rank": 48747 },
+    { "college": "E046", "branch": "CD", "rank": 104956 },
+    { "college": "E046", "branch": "CI", "rank": 110249 },
+    { "college": "E048", "branch": "CI", "rank": 64384 },
+    { "college": "E050", "branch": "CI", "rank": 79288 },
+    { "college": "E053", "branch": "CD", "rank": 90783 },
+    { "college": "E053", "branch": "CI", "rank": 110929 },
+    { "college": "E055", "branch": "CI", "rank": 52101 },
+    { "college": "E059", "branch": "CD", "rank": 104928 },
+    { "college": "E060", "branch": "CI", "rank": 37474 },
+    { "college": "E061", "branch": "CI", "rank": 13641 },
+    { "college": "E062", "branch": "CI", "rank": 96545 },
+    { "college": "E064", "branch": "CI", "rank": 110588 },
+    { "college": "E065", "branch": "CH", "rank": 94423 },
+    { "college": "E073", "branch": "CI", "rank": 41876 },
+    { "college": "E076", "branch": "CD", "rank": 45773 },
+    { "college": "E077", "branch": "CH", "rank": 28430 },
+    { "college": "E077", "branch": "CI", "rank": 1649 },
+    { "college": "E078", "branch": "CD", "rank": 111099 },
+    { "college": "E078", "branch": "CE", "rank": 108542 },
+    { "college": "E078", "branch": "CI", "rank": 96870 },
+    { "college": "E079", "branch": "CI", "rank": 92605 },
+    { "college": "E084", "branch": "CD", "rank": 59079 },
+    { "college": "E085", "branch": "CI", "rank": 15809 },
+    { "college": "E089", "branch": "CD", "rank": 29874 },
+    { "college": "E089", "branch": "CI", "rank": 23957 },
+    { "college": "E090", "branch": "CD", "rank": 106482 },
+    { "college": "E090", "branch": "CE", "rank": 110737 },
+    { "college": "E095", "branch": "CD", "rank": 649 },
+    { "college": "E095", "branch": "CH", "rank": 11506 },
+    { "college": "E095", "branch": "CI", "rank": 713 },
+    { "college": "E104", "branch": "CD", "rank": 34045 },
+    { "college": "E104", "branch": "CI", "rank": 33681 },
+    { "college": "E107", "branch": "CD", "rank": 62287 },
+    { "college": "E108", "branch": "CI", "rank": 62272 },
+    { "college": "E112", "branch": "CI", "rank": 103600 },
+    { "college": "E113", "branch": "CI", "rank": 110575 },
+    { "college": "E116", "branch": "CD", "rank": 103424 },
+    { "college": "E117", "branch": "CH", "rank": 88258 },
+    { "college": "E122", "branch": "CI", "rank": 81412 },
+    { "college": "E125", "branch": "CI", "rank": 15983 },
+    { "college": "E126", "branch": "CD", "rank": 23926 },
+    { "college": "E145", "branch": "CD", "rank": 87999 },
+    { "college": "E147", "branch": "CI", "rank": 64888 },
+    { "college": "E152", "branch": "CI", "rank": 99165 },
+    { "college": "E161", "branch": "CD", "rank": 105165 },
+    { "college": "E161", "branch": "CI", "rank": 105955 },
+    { "college": "E164", "branch": "CI", "rank": 27585 },
+    { "college": "E171", "branch": "CD", "rank": 24435 },
+    { "college": "E171", "branch": "CI", "rank": 21709 },
+    { "college": "E173", "branch": "CD", "rank": 75286 },
+    { "college": "E173", "branch": "CI", "rank": 58354 },
+    { "college": "E187", "branch": "CD", "rank": 55912 },
+    { "college": "E187", "branch": "CE", "rank": 87610 },
+    { "college": "E187", "branch": "CI", "rank": 47545 },
+    { "college": "E195", "branch": "CI", "rank": 95782 },
+    { "college": "E198", "branch": "CI", "rank": 15849 },
+    { "college": "E207", "branch": "CG", "rank": 70313 },
+    { "college": "E217", "branch": "CD", "rank": 85336 },
+    { "college": "E001", "branch": "CS", "rank": 51728 },
+    { "college": "E003", "branch": "CS", "rank": 104746 },
+    { "college": "E004", "branch": "CS", "rank": 59442 },
+    { "college": "E005", "branch": "CS", "rank": 111733 },
+    { "college": "E006", "branch": "CS", "rank": 107931 },
+    { "college": "E007", "branch": "CS", "rank": 109518 },
+    { "college": "E011", "branch": "CS", "rank": 41643 },
+    { "college": "E012", "branch": "CS", "rank": 85478 },
+    { "college": "E015", "branch": "CS", "rank": 24582 },
+    { "college": "E016", "branch": "CS", "rank": 31388 },
+    { "college": "E019", "branch": "CS", "rank": 9177 },
+    { "college": "E020", "branch": "CS", "rank": 81326 },
+    { "college": "E021", "branch": "CS", "rank": 110850 },
+    { "college": "E024", "branch": "CS", "rank": 92928 },
+    { "college": "E026", "branch": "CS", "rank": 106797 },
+    { "college": "E027", "branch": "CS", "rank": 3689 },
+    { "college": "E028", "branch": "CS", "rank": 14153 },
+    { "college": "E032", "branch": "CS", "rank": 18084 },
+    { "college": "E033", "branch": "CS", "rank": 58952 },
+    { "college": "E035", "branch": "CS", "rank": 88016 },
+    { "college": "E038", "branch": "CS", "rank": 63276 },
+    { "college": "E039", "branch": "CS", "rank": 35187 },
+    { "college": "E040", "branch": "CS", "rank": 5479 },
+    { "college": "E041", "branch": "CS", "rank": 111427 },
+    { "college": "E042", "branch": "CS", "rank": 42969 },
+    { "college": "E045", "branch": "CS", "rank": 99127 },
+    { "college": "E046", "branch": "CS", "rank": 87819 },
+    { "college": "E048", "branch": "CS", "rank": 88757 },
+    { "college": "E049", "branch": "CN", "rank": 79136 },
+    { "college": "E049", "branch": "CS", "rank": 106127 },
+    { "college": "E050", "branch": "CS", "rank": 75438 },
+    { "college": "E051", "branch": "CS", "rank": 78310 },
+    { "college": "E053", "branch": "CS", "rank": 101116 },
+    { "college": "E055", "branch": "CS", "rank": 48397 },
+    { "college": "E058", "branch": "CS", "rank": 4752 },
+    { "college": "E059", "branch": "CS", "rank": 101301 },
+    { "college": "E060", "branch": "CS", "rank": 36550 },
+    { "college": "E061", "branch": "CS", "rank": 12996 },
+    { "college": "E062", "branch": "CS", "rank": 110288 },
+    { "college": "E064", "branch": "CS", "rank": 110996 },
+    { "college": "E065", "branch": "CS", "rank": 79727 },
+    { "college": "E066", "branch": "CS", "rank": 109981 },
+    { "college": "E067", "branch": "CS", "rank": 101569 },
+    { "college": "E068", "branch": "CS", "rank": 106608 },
+    { "college": "E073", "branch": "CS", "rank": 53966 },
+    { "college": "E074", "branch": "CS", "rank": 110111 },
+    { "college": "E075", "branch": "CS", "rank": 94425 },
+    { "college": "E076", "branch": "CS", "rank": 101479 },
+    { "college": "E077", "branch": "CS", "rank": 1341 },
+    { "college": "E078", "branch": "CS", "rank": 101975 },
+    { "college": "E079", "branch": "CS", "rank": 110247 },
+    { "college": "E080", "branch": "CS", "rank": 109490 },
+    { "college": "E082", "branch": "CS", "rank": 109919 },
+    { "college": "E084", "branch": "CS", "rank": 94779 },
+    { "college": "E085", "branch": "CS", "rank": 15390 },
+    { "college": "E089", "branch": "CS", "rank": 35673 },
+    { "college": "E090", "branch": "CS", "rank": 82096 },
+    { "college": "E095", "branch": "CS", "rank": 542 },
+    { "college": "E099", "branch": "CS", "rank": 105648 },
+    { "college": "E101", "branch": "CS", "rank": 103272 },
+    { "college": "E104", "branch": "CS", "rank": 30222 },
+    { "college": "E107", "branch": "CS", "rank": 53748 },
+    { "college": "E108", "branch": "CS", "rank": 51440 },
+    { "college": "E109", "branch": "CS", "rank": 86597 },
+    { "college": "E110", "branch": "CS", "rank": 104814 },
+    { "college": "E112", "branch": "CS", "rank": 104962 },
+    { "college": "E113", "branch": "CS", "rank": 107167 },
+    { "college": "E116", "branch": "CS", "rank": 110300 },
+    { "college": "E117", "branch": "CS", "rank": 49002 },
+    { "college": "E118", "branch": "CS", "rank": 89042 },
+    { "college": "E125", "branch": "CS", "rank": 14939 },
+    { "college": "E126", "branch": "CS", "rank": 22026 },
+    { "college": "E127", "branch": "CS", "rank": 86353 },
+    { "college": "E137", "branch": "CS", "rank": 109058 },
+    { "college": "E138", "branch": "CS", "rank": 90025 },
+    { "college": "E141", "branch": "CS", "rank": 106939 },
+    { "college": "E145", "branch": "CS", "rank": 109781 },
+    { "college": "E146", "branch": "CS", "rank": 106350 },
+    { "college": "E147", "branch": "CS", "rank": 82079 },
+    { "college": "E152", "branch": "CS", "rank": 105603 },
+    { "college": "E156", "branch": "CS", "rank": 109278 },
+    { "college": "E161", "branch": "CS", "rank": 104072 },
+    { "college": "E164", "branch": "CIT", "rank": 39983 },
+    { "college": "E165", "branch": "CO", "rank": 80186 },
+    { "college": "E165", "branch": "CSB", "rank": 109154 },
+    { "college": "E165", "branch": "CS", "rank": 42800 },
+    { "college": "E171", "branch": "CS", "rank": 20658 },
+    { "college": "E173", "branch": "CO", "rank": 79721 },
+    { "college": "E173", "branch": "CSB", "rank": 85739 },
+    { "college": "E173", "branch": "CS", "rank": 46905 },
+    { "college": "E187", "branch": "CN", "rank": 75437 },
+    { "college": "E187", "branch": "CS", "rank": 57965 },
+    { "college": "E194", "branch": "CS", "rank": 99653 },
+    { "college": "E198", "branch": "CS", "rank": 14773 },
+    { "college": "E203", "branch": "CS", "rank": 110891 },
+    { "college": "E205", "branch": "CS", "rank": 40289 },
+    { "college": "E207", "branch": "CS", "rank": 100335 },
+    { "college": "E212", "branch": "CS", "rank": 102501 },
+    { "college": "E214", "branch": "CS", "rank": 61878 },
+    { "college": "E217", "branch": "CS", "rank": 80960 },
+    { "college": "E001", "branch": "CV", "rank": 90907 },
+    { "college": "E001", "branch": "EC", "rank": 89548 },
+    { "college": "E003", "branch": "CY", "rank": 98461 },
+    { "college": "E005", "branch": "CY", "rank": 104762 },
+    { "college": "E007", "branch": "EC", "rank": 62066 },
+    { "college": "E009", "branch": "EC", "rank": 107672 },
+    { "college": "E012", "branch": "EC", "rank": 110946 },
+    { "college": "E015", "branch": "EC", "rank": 37057 },
+    { "college": "E016", "branch": "CV", "rank": 111127 },
+    { "college": "E016", "branch": "EC", "rank": 54028 },
+    { "college": "E019", "branch": "CV", "rank": 84998 },
+    { "college": "E019", "branch": "EC", "rank": 19284 },
+    { "college": "E020", "branch": "EC", "rank": 94248 },
+    { "college": "E021", "branch": "EC", "rank": 101158 },
+    { "college": "E024", "branch": "EC", "rank": 108233 },
+    { "college": "E027", "branch": "CV", "rank": 31147 },
+    { "college": "E027", "branch": "EC", "rank": 5302 },
+    { "college": "E028", "branch": "CV", "rank": 68667 },
+    { "college": "E028", "branch": "EC", "rank": 19346 },
+    { "college": "E030", "branch": "CV", "rank": 6655 },
+    { "college": "E032", "branch": "EC", "rank": 38765 },
+    { "college": "E033", "branch": "EC", "rank": 111194 },
+    { "college": "E039", "branch": "CY", "rank": 37819 },
+    { "college": "E039", "branch": "EC", "rank": 46875 },
+    { "college": "E040", "branch": "CV", "rank": 40753 },
+    { "college": "E040", "branch": "CY", "rank": 6442 },
+    { "college": "E040", "branch": "EC", "rank": 10951 },
+    { "college": "E041", "branch": "EC", "rank": 81250 },
+    { "college": "E042", "branch": "EC", "rank": 60654 },
+    { "college": "E042", "branch": "ECV", "rank": 82112 },
+    { "college": "E046", "branch": "EC", "rank": 74935 },
+    { "college": "E048", "branch": "EC", "rank": 69091 },
+    { "college": "E050", "branch": "CV", "rank": 104120 },
+    { "college": "E050", "branch": "EC", "rank": 111800 },
+    { "college": "E053", "branch": "EC", "rank": 90597 },
+    { "college": "E055", "branch": "EC", "rank": 110904 },
+    { "college": "E059", "branch": "EC", "rank": 75336 },
+    { "college": "E060", "branch": "CV", "rank": 78471 },
+    { "college": "E060", "branch": "EC", "rank": 56738 },
+    { "college": "E061", "branch": "CV", "rank": 109696 },
+    { "college": "E062", "branch": "EC", "rank": 79925 },
+    { "college": "E064", "branch": "EC", "rank": 77514 },
+    { "college": "E065", "branch": "EC", "rank": 94385 },
+    { "college": "E066", "branch": "EC", "rank": 96361 },
+    { "college": "E068", "branch": "EC", "rank": 66339 },
+    { "college": "E073", "branch": "CV", "rank": 7406 },
+    { "college": "E073", "branch": "EC", "rank": 68273 },
+    { "college": "E074", "branch": "EC", "rank": 108632 },
+    { "college": "E077", "branch": "CV", "rank": 30423 },
+    { "college": "E077", "branch": "CY", "rank": 2071 },
+    { "college": "E077", "branch": "EC", "rank": 3162 },
+    { "college": "E078", "branch": "EC", "rank": 110498 },
+    { "college": "E089", "branch": "CV", "rank": 76684 },
+    { "college": "E089", "branch": "EC", "rank": 41342 },
+    { "college": "E089", "branch": "ECV", "rank": 43511 },
+    { "college": "E090", "branch": "EC", "rank": 108985 },
+    { "college": "E095", "branch": "CV", "rank": 17969 },
+    { "college": "E095", "branch": "CY", "rank": 774 },
+    { "college": "E095", "branch": "EC", "rank": 1077 },
+    { "college": "E099", "branch": "EC", "rank": 56779 },
+    { "college": "E101", "branch": "EC", "rank": 67192 },
+    { "college": "E104", "branch": "CV", "rank": 92294 },
+    { "college": "E104", "branch": "CY", "rank": 35124 },
+    { "college": "E104", "branch": "EC", "rank": 40410 },
+    { "college": "E107", "branch": "EC", "rank": 109664 },
+    { "college": "E113", "branch": "EC", "rank": 33986 },
+    { "college": "E116", "branch": "EC", "rank": 88619 },
+    { "college": "E117", "branch": "CV", "rank": 70309 },
+    { "college": "E117", "branch": "EC", "rank": 66979 },
+    { "college": "E125", "branch": "EC", "rank": 21476 },
+    { "college": "E126", "branch": "CV", "rank": 110094 },
+    { "college": "E126", "branch": "EC", "rank": 34643 },
+    { "college": "E137", "branch": "CY", "rank": 106739 },
+    { "college": "E142", "branch": "EC", "rank": 20308 },
+    { "college": "E147", "branch": "CV", "rank": 110523 },
+    { "college": "E147", "branch": "EC", "rank": 105161 },
+    { "college": "E161", "branch": "CY", "rank": 100037 },
+    { "college": "E164", "branch": "CV", "rank": 102529 },
+    { "college": "E164", "branch": "EC", "rank": 48305 },
+    { "college": "E165", "branch": "CSD", "rank": 86640 },
+    { "college": "E165", "branch": "CY", "rank": 60538 },
+    { "college": "E165", "branch": "EC", "rank": 110448 },
+    { "college": "E171", "branch": "CY", "rank": 24121 },
+    { "college": "E171", "branch": "ECE", "rank": 99933 },
+    { "college": "E171", "branch": "EC", "rank": 37265 },
+    { "college": "E173", "branch": "CSD", "rank": 86348 },
+    { "college": "E173", "branch": "CV", "rank": 104478 },
+    { "college": "E173", "branch": "CY", "rank": 76298 },
+    { "college": "E173", "branch": "EC", "rank": 111665 },
+    { "college": "E187", "branch": "EC", "rank": 66541 },
+    { "college": "E194", "branch": "EC", "rank": 89005 },
+    { "college": "E197", "branch": "CV", "rank": 68875 },
+    { "college": "E198", "branch": "EC", "rank": 18473 },
+    { "college": "E212", "branch": "EC", "rank": 105585 },
+    { "college": "E217", "branch": "EC", "rank": 110173 },
+    { "college": "E001", "branch": "EE", "rank": 104887 },
+    { "college": "E006", "branch": "IC", "rank": 75282 },
+    { "college": "E007", "branch": "EE", "rank": 70900 },
+    { "college": "E015", "branch": "EE", "rank": 62330 },
+    { "college": "E016", "branch": "EE", "rank": 110581 },
+    { "college": "E019", "branch": "EE", "rank": 29168 },
+    { "college": "E019", "branch": "EI", "rank": 33853 },
+    { "college": "E019", "branch": "ET", "rank": 25329 },
+    { "college": "E019", "branch": "IC", "rank": 13341 },
+    { "college": "E027", "branch": "IC", "rank": 4089 },
+    { "college": "E028", "branch": "EE", "rank": 26385 },
+    { "college": "E033", "branch": "EE", "rank": 98440 },
+    { "college": "E033", "branch": "IC", "rank": 63549 },
+    { "college": "E037", "branch": "IC", "rank": 100851 },
+    { "college": "E039", "branch": "IC", "rank": 39604 },
+    { "college": "E040", "branch": "EE", "rank": 19099 },
+    { "college": "E040", "branch": "ET", "rank": 17797 },
+    { "college": "E040", "branch": "IC", "rank": 6664 },
+    { "college": "E041", "branch": "EE", "rank": 32466 },
+    { "college": "E041", "branch": "IC", "rank": 33031 },
+    { "college": "E046", "branch": "IC", "rank": 110484 },
+    { "college": "E048", "branch": "EE", "rank": 108308 },
+    { "college": "E050", "branch": "EE", "rank": 91719 },
+    { "college": "E060", "branch": "EI", "rank": 82291 },
+    { "college": "E065", "branch": "EE", "rank": 94755 },
+    { "college": "E068", "branch": "IC", "rank": 78493 },
+    { "college": "E073", "branch": "EE", "rank": 92019 },
+    { "college": "E077", "branch": "EE", "rank": 5756 },
+    { "college": "E077", "branch": "EI", "rank": 6106 },
+    { "college": "E077", "branch": "ET", "rank": 4772 },
+    { "college": "E078", "branch": "IC", "rank": 109740 },
+    { "college": "E089", "branch": "EE", "rank": 37003 },
+    { "college": "E090", "branch": "EE", "rank": 69375 },
+    { "college": "E095", "branch": "EE", "rank": 1866 },
+    { "college": "E095", "branch": "ET", "rank": 1343 },
+    { "college": "E104", "branch": "EE", "rank": 45507 },
+    { "college": "E116", "branch": "EE", "rank": 93840 },
+    { "college": "E117", "branch": "EE", "rank": 107627 },
+    { "college": "E126", "branch": "EE", "rank": 65232 },
+    { "college": "E126", "branch": "ET", "rank": 52153 },
+    { "college": "E126", "branch": "IC", "rank": 26568 },
+    { "college": "E142", "branch": "EE", "rank": 23770 },
+    { "college": "E147", "branch": "EE", "rank": 84576 },
+    { "college": "E164", "branch": "IC", "rank": 42714 },
+    { "college": "E165", "branch": "EE", "rank": 61682 },
+    { "college": "E165", "branch": "IAR", "rank": 67223 },
+    { "college": "E165", "branch": "IDA", "rank": 109750 },
+    { "college": "E173", "branch": "EE", "rank": 97479 },
+    { "college": "E001", "branch": "IS", "rank": 75143 },
+    { "college": "E012", "branch": "IS", "rank": 109052 },
+    { "college": "E015", "branch": "IS", "rank": 31447 },
+    { "college": "E019", "branch": "IS", "rank": 15238 },
+    { "college": "E021", "branch": "IS", "rank": 106067 },
+    { "college": "E024", "branch": "IS", "rank": 108363 },
+    { "college": "E032", "branch": "IS", "rank": 26492 },
+    { "college": "E036", "branch": "MAE", "rank": 61373 },
+    { "college": "E039", "branch": "IS", "rank": 44072 },
+    { "college": "E040", "branch": "IS", "rank": 7373 },
+    { "college": "E040", "branch": "MD", "rank": 50220 },
+    { "college": "E042", "branch": "IS", "rank": 60782 },
+    { "college": "E045", "branch": "IS", "rank": 83887 },
+    { "college": "E046", "branch": "IS", "rank": 108885 },
+    { "college": "E050", "branch": "IS", "rank": 101196 },
+    { "college": "E055", "branch": "IS", "rank": 71549 },
+    { "college": "E059", "branch": "IS", "rank": 85433 },
+    { "college": "E060", "branch": "IS", "rank": 44529 },
+    { "college": "E061", "branch": "IS", "rank": 19312 },
+    { "college": "E077", "branch": "IM", "rank": 27429 },
+    { "college": "E077", "branch": "IS", "rank": 2311 },
+    { "college": "E077", "branch": "MD", "rank": 33938 },
+    { "college": "E078", "branch": "IS", "rank": 111029 },
+    { "college": "E089", "branch": "IS", "rank": 42248 },
+    { "college": "E090", "branch": "IS", "rank": 107203 },
+    { "college": "E095", "branch": "IM", "rank": 12328 },
+    { "college": "E099", "branch": "IS", "rank": 92310 },
+    { "college": "E107", "branch": "IS", "rank": 71438 },
+    { "college": "E112", "branch": "IS", "rank": 102448 },
+    { "college": "E117", "branch": "IS", "rank": 57018 },
+    { "college": "E125", "branch": "IS", "rank": 18090 },
+    { "college": "E126", "branch": "IS", "rank": 30150 },
+    { "college": "E146", "branch": "IS", "rank": 111279 },
+    { "college": "E164", "branch": "IS", "rank": 44161 },
+    { "college": "E165", "branch": "INT", "rank": 71584 },
+    { "college": "E173", "branch": "IS", "rank": 75506 },
+    { "college": "E173", "branch": "IST", "rank": 107866 },
+    { "college": "E187", "branch": "INT", "rank": 98024 },
+    { "college": "E197", "branch": "IS", "rank": 25525 },
+    { "college": "E207", "branch": "IS", "rank": 89272 },
+    { "college": "E001", "branch": "ME", "rank": 107616 },
+    { "college": "E001", "branch": "MT", "rank": 90218 },
+    { "college": "E001", "branch": "RI", "rank": 70413 },
+    { "college": "E012", "branch": "RA", "rank": 104693 },
+    { "college": "E015", "branch": "ME", "rank": 108369 },
+    { "college": "E016", "branch": "ME", "rank": 103984 },
+    { "college": "E019", "branch": "ME", "rank": 53844 },
+    { "college": "E019", "branch": "RI", "rank": 17065 },
+    { "college": "E020", "branch": "RI", "rank": 65090 },
+    { "college": "E027", "branch": "ME", "rank": 13510 },
+    { "college": "E028", "branch": "ME", "rank": 43026 },
+    { "college": "E033", "branch": "ME", "rank": 82604 },
+    { "college": "E039", "branch": "ME", "rank": 57162 },
+    { "college": "E040", "branch": "ME", "rank": 34913 },
+    { "college": "E040", "branch": "RI", "rank": 8006 },
+    { "college": "E048", "branch": "ME", "rank": 104180 },
+    { "college": "E050", "branch": "ME", "rank": 94278 },
+    { "college": "E059", "branch": "RI", "rank": 100557 },
+    { "college": "E060", "branch": "ME", "rank": 97000 },
+    { "college": "E060", "branch": "RA", "rank": 51021 },
+    { "college": "E061", "branch": "ME", "rank": 56635 },
+    { "college": "E073", "branch": "ME", "rank": 88764 },
+    { "college": "E077", "branch": "ME", "rank": 12622 },
+    { "college": "E089", "branch": "RI", "rank": 39412 },
+    { "college": "E090", "branch": "ME", "rank": 88296 },
+    { "college": "E095", "branch": "ME", "rank": 5339 },
+    { "college": "E104", "branch": "ME", "rank": 57487 },
+    { "college": "E112", "branch": "RA", "rank": 55193 },
+    { "college": "E114", "branch": "ME", "rank": 90200 },
+    { "college": "E117", "branch": "ME", "rank": 109315 },
+    { "college": "E126", "branch": "ME", "rank": 84225 },
+    { "college": "E126", "branch": "RI", "rank": 34662 },
+    { "college": "E126", "branch": "UE", "rank": 45918 },
+    { "college": "E142", "branch": "ME", "rank": 33516 },
+    { "college": "E147", "branch": "ME", "rank": 106778 },
+    { "college": "E161", "branch": "ME", "rank": 21531 },
+    { "college": "E165", "branch": "ME", "rank": 88403 },
+    { "college": "E171", "branch": "ME", "rank": 95156 },
+    { "college": "E171", "branch": "RI", "rank": 29322 },
+    { "college": "E016", "branch": "VLS", "rank": 60902 },
+    { "college": "E019", "branch": "VL", "rank": 23687 },
+    { "college": "E036", "branch": "VL", "rank": 48972 },
+    { "college": "E171", "branch": "VL", "rank": 81522 },
+    { "college": "E173", "branch": "VLS", "rank": 89941 }
+  ]
+}
