@@ -46,6 +46,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Acharya Institute of Technology",
     locality: "Soladevanahalli",
     city: "Bengaluru",
+    established: 2000,
+    type: "private",
+    website: "https://acharya.ac.in",
+    about:
+      "Soladevanahalli campus; large multi-disciplinary group with engineering, management and dental schools.",
+    placement: {
+      overallAvgLpa: 6,
+      year: 2024,
+    },
   },
   {
     code: "E003",
@@ -76,6 +85,14 @@ export const COLLEGES: CollegeMeta[] = [
     name: "AMC Engineering College",
     locality: "Bannerghatta Rd",
     city: "Bengaluru",
+    established: 1999,
+    type: "private",
+    website: "https://amcec.edu.in",
+    about: "Run by Paramahamsa Foundation Trust; Bannerghatta Road campus.",
+    placement: {
+      overallAvgLpa: 5.5,
+      year: 2024,
+    },
   },
   {
     code: "E009",
@@ -94,6 +111,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Atria Institute of Technology",
     locality: "Hebbal",
     city: "Bengaluru",
+    established: 2000,
+    type: "private",
+    website: "https://atria.edu",
+    about:
+      "Run by Atria Educational Foundation; Hebbal campus; recently autonomous status.",
+    placement: {
+      overallAvgLpa: 10.32,
+      year: 2024,
+    },
   },
   {
     code: "E013",
@@ -112,12 +138,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "B.N.M. Institute of Technology",
     locality: "Banashankari",
     city: "Bengaluru",
+    established: 2001,
+    type: "autonomous",
+    website: "https://bnmit.org",
+    about:
+      "Run by Bhageerathi Bai Narayana Rao Maanay Charities Trust; Banashankari campus; autonomous.",
+    placement: {
+      overallAvgLpa: 6.16,
+      year: 2024,
+    },
   },
   {
     code: "E016",
     name: "KLE Technological University Formerly known as BVBCET",
     locality: "Vidyanagar",
     city: "Hubballi",
+    established: 1947,
+    type: "university",
+    website: "https://www.kletech.ac.in",
+    about:
+      "Private university based in Hubballi (also Belagavi campus); formerly B V Bhoomaraddi College of Engineering; A grade NAAC.",
+    placement: {
+      overallAvgLpa: 7,
+      year: 2024,
+    },
   },
   {
     code: "E017",
@@ -130,9 +174,17 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Bangalore Institute of Technology",
     locality: "V V Puram",
     city: "Bengaluru",
+    established: 1979,
+    type: "autonomous",
+    website: "https://bit-bangalore.edu.in",
+    about:
+      "Run by the Vokkaligara Sangha; VV Puram campus; long-standing reputation in Bengaluru engineering circles.",
+    placement: {
+      overallAvgLpa: 10,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "i_mZovvne6M",
-      title: "BIT Bangalore Student Review",
     },
   },
   {
@@ -140,12 +192,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Bangalore Technological Institute",
     locality: "Chikkanayakanahalli Dinne",
     city: "Bengaluru",
+    established: 2010,
+    type: "private",
+    website: "https://btibangalore.in",
+    about:
+      "Kodathi off Sarjapur Road; affiliated to VTU; relatively young engineering college.",
+    placement: {
+      overallAvgLpa: 6,
+      year: 2023,
+    },
   },
   {
     code: "E021",
     name: "Bapuji Institute of Engineering and Technology",
     locality: "Shamanur Road",
     city: "Davangere",
+    established: 1979,
+    type: "private",
+    website: "https://www.bietdvg.edu",
+    about:
+      "Davangere's flagship private engineering college; A grade NAAC; affiliated to VTU.",
+    placement: {
+      overallAvgLpa: 4.97,
+      year: 2024,
+    },
   },
   {
     code: "E023",
@@ -158,6 +228,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Basaveshwar Engineering College",
     locality: "Vidya Nagar",
     city: "Bagalkote",
+    established: 1963,
+    type: "autonomous",
+    website: "https://www.becbgk.edu",
+    about:
+      "Run by BVV Sangha; one of north Karnataka's oldest engineering colleges; autonomous.",
+    placement: {
+      overallAvgLpa: 4,
+      year: 2024,
+    },
   },
   {
     code: "E026",
@@ -170,9 +249,18 @@ export const COLLEGES: CollegeMeta[] = [
     name: "BMS College of Engineering",
     locality: "Basavanagudi",
     city: "Bengaluru",
+    established: 1946,
+    type: "autonomous",
+    website: "https://www.bmsce.ac.in",
+    about:
+      "India's first private engineering college; founded by BMS Educational Trust; strong legacy program with autonomous status.",
+    placement: {
+      cseAvgLpa: 11,
+      overallAvgLpa: 9.8,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "cdS1Sa9iKec",
-      title: "BMSCE Bangalore Student Review",
     },
   },
   {
@@ -180,6 +268,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "BMS Institute of Technology and Management",
     locality: "Yelahanka",
     city: "Bengaluru",
+    established: 2002,
+    type: "autonomous",
+    website: "https://bmsit.ac.in",
+    about:
+      "Yelahanka campus of the BMS Educational Trust; engineering and management programs with strong placement record.",
+    placement: {
+      overallAvgLpa: 7.9,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "ezxl87YWUMk",
       title: "BMSIT Bangalore Student Review",
@@ -196,12 +293,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "C.M.R. Institute of Technology",
     locality: "Brookefield",
     city: "Bengaluru",
+    established: 2000,
+    type: "autonomous",
+    website: "https://www.cmrit.ac.in",
+    about:
+      "Run by CMR Jnanadhara Trust; located on AECS Layout / ITPL Main Road (not Brookefield as dataset notes); CSE-strong placements.",
+    placement: {
+      overallAvgLpa: 6.99,
+      year: 2024,
+    },
   },
   {
     code: "E033",
     name: "Cambridge Institute of Technology",
     locality: "K R Puram",
     city: "Bengaluru",
+    established: 2007,
+    type: "private",
+    website: "https://engg.cambridge.edu.in",
+    about:
+      "Run by Habitat Educational Trust; K R Puram campus; mid-tier college with steady placement record.",
+    placement: {
+      overallAvgLpa: 7.2,
+      year: 2024,
+    },
   },
   {
     code: "E035",
@@ -238,9 +353,17 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Dayananda Sagar College of Engineering",
     locality: "Kumaraswamy Layout",
     city: "Bengaluru",
+    established: 1979,
+    type: "autonomous",
+    website: "https://www.dsce.edu.in",
+    about:
+      "Flagship engineering college of the Dayananda Sagar group; autonomous since 2015; located at Kumaraswamy Layout.",
+    placement: {
+      overallAvgLpa: 9,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "Ul3TtSe2OK8",
-      title: "DSCE Bangalore Student Review",
     },
   },
   {
@@ -248,12 +371,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "DON BOSCO Institute of Technology",
     locality: "Kumbalgodu",
     city: "Bengaluru",
+    established: 2001,
+    type: "private",
+    website: "https://www.donboscoit.edu.in",
+    about:
+      "Mysore Road / Kengeri campus; private engineering college on a 36-acre campus.",
+    placement: {
+      overallAvgLpa: 4.5,
+      year: 2024,
+    },
   },
   {
     code: "E042",
     name: "Dr. Ambedkar Institute of Technology",
     locality: "Malathahalli",
     city: "Bengaluru",
+    established: 1980,
+    type: "autonomous",
+    website: "https://drait.edu.in",
+    about:
+      "Government-aided autonomous engineering college; Mallathalli campus; founded by Shri M H Jayaprakash Narayan.",
+    placement: {
+      overallAvgLpa: 7,
+      year: 2024,
+    },
   },
   {
     code: "E043",
@@ -278,6 +419,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "East Point College of Engineering and Technology",
     locality: "Avalahalli",
     city: "Bengaluru",
+    established: 1999,
+    type: "private",
+    website: "https://epcet.edu.in",
+    about:
+      "Engineering and technology arm of East Point Group of Institutions; Avalahalli, Bengaluru.",
+    placement: {
+      overallAvgLpa: 7.5,
+      year: 2024,
+    },
   },
   {
     code: "E048",
@@ -296,6 +446,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Global Academy of Technology",
     locality: "Rajarajeshwari Nagar",
     city: "Bengaluru",
+    established: 2001,
+    type: "private",
+    website: "https://gat.ac.in",
+    about:
+      "Run by National Education Foundation; Rajarajeshwari Nagar campus; NAAC A grade.",
+    placement: {
+      overallAvgLpa: 5.75,
+      year: 2024,
+    },
   },
   {
     code: "E051",
@@ -338,11 +497,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "JSS Academy of Technical Education",
     locality: "Kengeri Main Road",
     city: "Bengaluru",
+    established: 1997,
+    type: "private",
+    website: "https://www.jssateb.ac.in",
+    about:
+      "Bengaluru campus of the JSS Mahavidyapeetha Mysuru; Uttarahalli Main Road.",
+    placement: {
+      overallAvgLpa: 6.5,
+      year: 2024,
+    },
   },
   {
     code: "E061",
     name: "JSS Science and Technology University",
     locality: "Mysuru",
+    established: 1963,
+    type: "university",
+    website: "https://jssstuniv.in",
+    about:
+      "Constituent college of JSS Science and Technology University (formerly SJCE Mysuru); autonomous since 2007-08.",
+    placement: {
+      cseAvgLpa: 10,
+      overallAvgLpa: 6.5,
+      year: 2024,
+    },
   },
   {
     code: "E062",
@@ -379,12 +557,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "K.S School of Engineering And Management",
     locality: "Off Kanakapura Road",
     city: "Bengaluru",
+    established: 2010,
+    type: "private",
+    website: "https://kssem.edu.in",
+    about:
+      "Kanakapura Road; affiliated to VTU; engineering and management programs.",
+    placement: {
+      overallAvgLpa: 7,
+      year: 2024,
+    },
   },
   {
     code: "E068",
     name: "K.S. Institute of Technology",
     locality: "Kanakapura Main Road",
     city: "Bengaluru",
+    established: 1999,
+    type: "private",
+    website: "https://www.ksit.ac.in",
+    about:
+      "Sister institution of KSSEM under K.S. Group; Kanakapura Road campus.",
+    placement: {
+      overallAvgLpa: 4.5,
+      year: 2024,
+    },
   },
   {
     code: "E069",
@@ -433,9 +629,18 @@ export const COLLEGES: CollegeMeta[] = [
     name: "M.S. Ramaiah Institute of Technology",
     locality: "MSR Nagar",
     city: "Bengaluru",
+    established: 1962,
+    type: "autonomous",
+    website: "https://www.msrit.edu",
+    about:
+      "Run by Gokula Education Foundation; one of Bengaluru's most-recruited colleges with strong industry connect.",
+    placement: {
+      cseAvgLpa: 11,
+      overallAvgLpa: 10,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "KX4XE15EFcg",
-      title: "MS Ramaiah College Review by Student (MSRIT 2026)",
     },
   },
   {
@@ -479,12 +684,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Nagarjuna College of Engineering And Technology",
     locality: "Devanahalli",
     city: "Bengaluru",
+    established: 2001,
+    type: "private",
+    website: "https://ncet.co.in",
+    about:
+      "Run by Nagarjuna Education Society; Devanahalli campus; NAAC A+ accredited.",
+    placement: {
+      overallAvgLpa: 4.5,
+      year: 2024,
+    },
   },
   {
     code: "E085",
     name: "The National Institute of Engineering North Campus",
     locality: "Koorgalli",
     city: "Mysuru",
+    established: 1946,
+    type: "autonomous",
+    website: "https://nie.ac.in",
+    about:
+      "North campus of The National Institute of Engineering, Mysuru; autonomous under VTU since 2007.",
+    placement: {
+      overallAvgLpa: 10.5,
+      year: 2024,
+    },
   },
   {
     code: "E088",
@@ -497,12 +720,29 @@ export const COLLEGES: CollegeMeta[] = [
     name: "P.E.S.College of Engineering",
     locality: "PES College Road",
     city: "Mandya",
+    established: 1962,
+    type: "autonomous",
+    website: "https://pesce.ac.in",
+    about:
+      "Founded by People's Education Society; Mandya campus; one of the oldest private engineering colleges in Karnataka.",
+    placement: {
+      overallAvgLpa: 5.3,
+      year: 2024,
+    },
   },
   {
     code: "E090",
     name: "PES Institute of Technology and Management",
     locality: "Kotegangoor Cost",
     city: "Shivamogga",
+    established: 2007,
+    type: "private",
+    website: "https://pesitm.edu",
+    about: "Shivamogga campus of the PES group; affiliated to VTU.",
+    placement: {
+      overallAvgLpa: 4.5,
+      year: 2024,
+    },
   },
   {
     code: "E094",
@@ -515,9 +755,17 @@ export const COLLEGES: CollegeMeta[] = [
     name: "R V College of Engineering",
     locality: "Mysore Road",
     city: "Bengaluru",
+    established: 1963,
+    type: "autonomous",
+    website: "https://www.rvce.edu.in",
+    about:
+      "Top-tier private autonomous engineering college in Bengaluru; run by the Rashtriya Sikshana Samithi Trust; highly competitive admissions and placements.",
+    placement: {
+      overallAvgLpa: 15.25,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "kJ6zigXV4OI",
-      title: "RVCE Bangalore Honest Student Review 2026",
     },
   },
   {
@@ -543,6 +791,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Raja Rajeswari College of Engineering",
     locality: "Kumbalgodu",
     city: "Bengaluru",
+    established: 2006,
+    type: "private",
+    website: "https://www.rrce.org",
+    about:
+      "Run by Moogambigai Charitable and Education Trust; Mysore Road campus.",
+    placement: {
+      overallAvgLpa: 3.6,
+      year: 2025,
+    },
   },
   {
     code: "E100",
@@ -567,6 +824,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "RNS Institute of Technology",
     locality: "R R Nagar Post",
     city: "Bengaluru",
+    established: 2001,
+    type: "private",
+    website: "https://www.rnsit.ac.in",
+    about:
+      "Founded by R N Shetty; located at R R Nagar; engineering programs across CSE/ECE/EEE/ME.",
+    placement: {
+      overallAvgLpa: 8,
+      year: 2024,
+    },
   },
   {
     code: "E105",
@@ -579,12 +845,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "SJB Institute of Technology",
     locality: "Kengeri",
     city: "Bengaluru",
+    established: 2001,
+    type: "private",
+    website: "https://www.sjbit.edu.in",
+    about:
+      "Founded by Sri Adichunchanagiri Shikshana Trust (SAST); Kengeri campus.",
+    placement: {
+      overallAvgLpa: 5.5,
+      year: 2024,
+    },
   },
   {
     code: "E108",
     name: "S J C Institute of Technology",
     locality: "BB Road",
     city: "Chikkaballapur",
+    established: 1986,
+    type: "private",
+    website: "https://sjcit.ac.in",
+    about:
+      "Run by Sri Jagadguru Chandrashekaranatha Swamiji Educational Trust; BB Road, Chikkaballapur.",
+    placement: {
+      overallAvgLpa: 5.4,
+      year: 2024,
+    },
   },
   {
     code: "E109",
@@ -615,6 +899,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Sai Vidya Institute of Technology",
     locality: "Rajan Kunte",
     city: "Bengaluru",
+    established: 2008,
+    type: "private",
+    website: "https://saividya.ac.in",
+    about:
+      "Run by Sai Vidya Educational Trust; Rajanukunte (off Doddaballapur Road) campus.",
+    placement: {
+      overallAvgLpa: 5.69,
+      year: 2024,
+    },
   },
   {
     code: "E114",
@@ -627,6 +920,14 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Sapthagiri NPS University",
     locality: "Hesarghatta Main Road",
     city: "Bengaluru",
+    established: 2023,
+    type: "university",
+    website: "https://snpsu.edu.in",
+    about: "New private university (under Sapthagiri Group + NPS); Bengaluru.",
+    placement: {
+      overallAvgLpa: 6,
+      year: 2024,
+    },
   },
   {
     code: "E117",
@@ -675,9 +976,17 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Siddaganga Institute of Technology",
     locality: "B H Road",
     city: "Tumakuru",
+    established: 1963,
+    type: "autonomous",
+    website: "https://sit.ac.in",
+    about:
+      "Run by Sri Siddaganga Education Society; autonomous; one of Tumakuru's leading engineering institutions.",
+    placement: {
+      overallAvgLpa: 8.5,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "RGzq0SRDmvc",
-      title: "SIT Tumkur Student Review",
     },
   },
   {
@@ -685,6 +994,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Sir M.Visvesvaraya Institute of Technology",
     locality: "Yelahanka",
     city: "Bengaluru",
+    established: 1986,
+    type: "private",
+    website: "https://www.sirmvit.edu",
+    about:
+      "Yelahanka campus engineering college affiliated to VTU; named after Sir M. Visvesvaraya.",
+    placement: {
+      overallAvgLpa: 5.5,
+      year: 2024,
+    },
   },
   {
     code: "E127",
@@ -733,9 +1051,17 @@ export const COLLEGES: CollegeMeta[] = [
     name: "The National Institute of Engineering South Campus",
     locality: "Mananthavady Road",
     city: "Mysuru",
+    established: 1946,
+    type: "autonomous",
+    website: "https://nie.ac.in",
+    about:
+      "South (main) campus of The National Institute of Engineering, Mysuru; one of India's oldest engineering colleges.",
+    placement: {
+      overallAvgLpa: 10.5,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "YYxT7kbPbow",
-      title: "NIE Mysore Review",
     },
   },
   {
@@ -767,6 +1093,14 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Vidyavardhaka College of Engineering",
     locality: "Gokulam",
     city: "Mysuru",
+    established: 1997,
+    type: "private",
+    website: "https://vvce.ac.in",
+    about: "Run by Vidyavardhaka Sangha; Gokulam, Mysuru campus.",
+    placement: {
+      overallAvgLpa: 4.5,
+      year: 2024,
+    },
   },
   {
     code: "E148",
@@ -785,6 +1119,14 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Jyothy Institute of Technology",
     locality: "Tathguni",
     city: "Bengaluru",
+    established: 2011,
+    type: "private",
+    website: "https://jyothyit.ac.in",
+    about: "Udaypura (off Kanakapura Road); affiliated to VTU.",
+    placement: {
+      overallAvgLpa: 5,
+      year: 2024,
+    },
   },
   {
     code: "E158",
@@ -809,9 +1151,18 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Reva University",
     locality: "Yelahanka",
     city: "Bengaluru",
+    established: 2012,
+    type: "university",
+    website: "https://www.reva.edu.in",
+    about:
+      "Private university established by the Divya Sree Foundation; Yelahanka campus; large engineering programs.",
+    placement: {
+      cseAvgLpa: 6,
+      overallAvgLpa: 5,
+      year: 2024,
+    },
     podcast: {
       youtubeId: "d-ER1-peQ5s",
-      title: "REVA University Bangalore Honest Review",
     },
   },
   {
@@ -819,12 +1170,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Alliance College of Engineering and Design. Alliance University",
     locality: "Anekal",
     city: "Bengaluru",
+    established: 2010,
+    type: "university",
+    website: "https://www.alliance.edu.in",
+    about:
+      "Private university with large engineering, business and law schools; Chandapura Anekal campus.",
+    placement: {
+      overallAvgLpa: 8.3,
+      year: 2024,
+    },
   },
   {
     code: "E171",
     name: "GITAM Deemed to be University",
     locality: "Dodaballapur taluk",
     city: "Bengaluru",
+    established: 2012,
+    type: "deemed",
+    website: "https://www.gitam.edu",
+    about:
+      "Bengaluru campus of GITAM Deemed University (HQ Visakhapatnam); Doddaballapur Rural campus.",
+    placement: {
+      overallAvgLpa: 4.5,
+      year: 2024,
+    },
   },
   {
     code: "E172",
@@ -837,6 +1206,16 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Presidency University",
     locality: "Yelahanka",
     city: "Bengaluru",
+    established: 2013,
+    type: "university",
+    website: "https://presidencyuniversity.in",
+    about:
+      "Private university at Itgalpur Rajanakunte, Yelahanka; engineering, management and law programs.",
+    placement: {
+      cseAvgLpa: 4.5,
+      overallAvgLpa: 5,
+      year: 2024,
+    },
   },
   {
     code: "E183",
@@ -849,6 +1228,15 @@ export const COLLEGES: CollegeMeta[] = [
     name: "CMR University",
     locality: "Bagalur-Chagalatti",
     city: "Bengaluru",
+    established: 2013,
+    type: "university",
+    website: "https://cmr.edu.in",
+    about:
+      "Private university; School of Engineering at Bagalur off Hennur Road; sister to CMRIT (separate institution).",
+    placement: {
+      overallAvgLpa: 4,
+      year: 2024,
+    },
   },
   {
     code: "E191",
@@ -873,12 +1261,30 @@ export const COLLEGES: CollegeMeta[] = [
     name: "M.S. Ramaiah University of Applied Sciences",
     locality: "MSR Nagar",
     city: "Bengaluru",
+    established: 2013,
+    type: "university",
+    website: "https://www.msruas.ac.in",
+    about:
+      "Private university under the Ramaiah group; MSR Nagar; applied sciences focus including engineering, management and medical.",
+    placement: {
+      overallAvgLpa: 6.2,
+      year: 2024,
+    },
   },
   {
     code: "E198",
     name: "R V Institute of Technology and Management",
     locality: "J P Nagar",
     city: "Bengaluru",
+    established: 2019,
+    type: "private",
+    website: "https://www.rvitm.edu.in",
+    about:
+      "Newer sister institution of RVCE under Rashtreeya Sikshana Samithi Trust; J P Nagar campus; small intake.",
+    placement: {
+      overallAvgLpa: 11.47,
+      year: 2024,
+    },
   },
   {
     code: "E199",
