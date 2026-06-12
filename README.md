@@ -8,9 +8,11 @@ first, core last.
 
 - `Engineering_Cut_Off_Ranks_after_Round_3_Allotment__Notified_on_22_08_2025.pdf` —
   the official source PDF.
-- `cutoffs.json` — parsed dataset (150 colleges · 69 branches · 508 GM cut-off
-  records). Same file is mirrored at `web/src/data.json` for the app.
-- `web/` — the Next.js + Tailwind + shadcn app.
+- `data/colleges.csv` — editable source of truth for college metadata
+  (placement, established year, type, website, podcast). See its README.
+- `web/src/data.json` — the parsed cut-off dataset (150 colleges · 69 branches
+  · 508 GM cut-off records) the app reads.
+- `web/` — the Next.js + Tailwind app.
 
 ## Run the app
 
