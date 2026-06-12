@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useRef, useState } from "react";
 import {
   groupByFamily,
   predict,
@@ -16,6 +16,20 @@ import { ResultRow } from "./ResultRow";
 export function Predictor() {
   const [rankRaw, setRankRaw] = useState<string>("");
   const deferred = useDeferredValue(rankRaw);
+  const resultsRef = useRef<HTMLDivElement>(null);
+
+  // On mobile, the hero + input fills the viewport; pressing the keyboard's
+  // Go/Enter key needs to dismiss the keyboard AND surface the results so it
+  // doesn't look like nothing happened.
+  function handleEnter(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    e.currentTarget.blur();
+    // Wait a tick so the keyboard collapses before we measure & scroll.
+    requestAnimationFrame(() => {
+      resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
 
   const rank = useMemo(() => {
     const n = parseInt(deferred.replace(/[^0-9]/g, ""), 10);
@@ -50,6 +64,7 @@ export function Predictor() {
           id="rank"
           type="text"
           inputMode="numeric"
+          enterKeyHint="go"
           autoComplete="off"
           autoFocus
           spellCheck={false}
@@ -59,6 +74,7 @@ export function Predictor() {
             const cleaned = e.target.value.replace(/[^0-9]/g, "").slice(0, 7);
             setRankRaw(cleaned);
           }}
+          onKeyDown={handleEnter}
           className="rank-input text-[52px] sm:text-[72px] md:text-[92px] leading-none pb-1"
           aria-describedby="rank-help"
         />
@@ -83,7 +99,7 @@ export function Predictor() {
       </p>
 
       {/* Results */}
-      <div className="mt-16">
+      <div ref={resultsRef} className="mt-16 scroll-mt-6">
         {!hasRank && <EmptyState />}
 
         {hasRank && totalMatches === 0 && <NoMatches rank={rank} />}
@@ -152,15 +168,15 @@ function Legend() {
     <div className="mt-16 pt-6 border-t border-hairline flex flex-wrap gap-x-10 gap-y-3 text-[12px]">
       <span className="flex items-center gap-2">
         <span className="tier safe">safe</span>
-        <span className="text-fg-mute">rank well below cut-off</span>
+        <span className="text-fg-mute">easy peasy for you</span>
       </span>
       <span className="flex items-center gap-2">
         <span className="tier moderate">moderate</span>
-        <span className="text-fg-mute">within 10 percent of cut-off</span>
+        <span className="text-fg-mute">gonna be very close</span>
       </span>
       <span className="flex items-center gap-2">
         <span className="tier reach">reach</span>
-        <span className="text-fg-mute">rank just past cut-off</span>
+        <span className="text-fg-mute">most likely you will miss</span>
       </span>
     </div>
   );
