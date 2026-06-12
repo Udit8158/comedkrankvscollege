@@ -130,6 +130,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Bangalore Institute of Technology",
     locality: "V V Puram",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "i_mZovvne6M",
+      title: "BIT Bangalore Student Review",
+    },
   },
   {
     code: "E020",
@@ -166,12 +170,20 @@ export const COLLEGES: CollegeMeta[] = [
     name: "BMS College of Engineering",
     locality: "Basavanagudi",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "cdS1Sa9iKec",
+      title: "BMSCE Bangalore Student Review",
+    },
   },
   {
     code: "E028",
     name: "BMS Institute of Technology and Management",
     locality: "Yelahanka",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "ezxl87YWUMk",
+      title: "BMSIT Bangalore Student Review",
+    },
   },
   {
     code: "E030",
@@ -226,6 +238,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Dayananda Sagar College of Engineering",
     locality: "Kumaraswamy Layout",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "Ul3TtSe2OK8",
+      title: "DSCE Bangalore Student Review",
+    },
   },
   {
     code: "E041",
@@ -417,6 +433,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "M.S. Ramaiah Institute of Technology",
     locality: "MSR Nagar",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "KX4XE15EFcg",
+      title: "MS Ramaiah College Review by Student (MSRIT 2026)",
+    },
   },
   {
     code: "E078",
@@ -495,6 +515,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "R V College of Engineering",
     locality: "Mysore Road",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "kJ6zigXV4OI",
+      title: "RVCE Bangalore Honest Student Review 2026",
+    },
   },
   {
     code: "E096",
@@ -651,6 +675,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Siddaganga Institute of Technology",
     locality: "B H Road",
     city: "Tumakuru",
+    podcast: {
+      youtubeId: "RGzq0SRDmvc",
+      title: "SIT Tumkur Student Review",
+    },
   },
   {
     code: "E126",
@@ -705,6 +733,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "The National Institute of Engineering South Campus",
     locality: "Mananthavady Road",
     city: "Mysuru",
+    podcast: {
+      youtubeId: "YYxT7kbPbow",
+      title: "NIE Mysore Review",
+    },
   },
   {
     code: "E143",
@@ -777,6 +809,10 @@ export const COLLEGES: CollegeMeta[] = [
     name: "Reva University",
     locality: "Yelahanka",
     city: "Bengaluru",
+    podcast: {
+      youtubeId: "d-ER1-peQ5s",
+      title: "REVA University Bangalore Honest Review",
+    },
   },
   {
     code: "E165",
