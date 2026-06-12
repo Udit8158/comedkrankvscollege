@@ -31,12 +31,22 @@ export type Match = {
 export type PredictOptions = {
   /** Show options where userRank exceeds cutoff by this fraction (e.g. 0.05 = 5%). Reach window. */
   reachMargin?: number;
-  /** Hard cap on results PER FAMILY (computing / electronics / core / other). */
-  perFamilyLimit?: number;
+  /** Hard cap on results per family. Overrides DEFAULT_FAMILY_LIMITS. */
+  familyLimits?: Partial<Record<BranchFamily, number>>;
+};
+
+const DEFAULT_FAMILY_LIMITS: Record<BranchFamily, number> = {
+  cse: 5,           // top 5 best pure-CS colleges
+  cse_spec: 10,     // top 10 best CSE specialization seats
+  electronics: 5,   // top 5 best electronics seats
+  core: 10,         // top 10 best core engineering seats — depth at top colleges
+                    // (core has more branch diversity per college: ME, CV, CH,
+                    //  IM, BT, AS, etc. — 5 was too tight to show that depth)
 };
 
 export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
-  const { reachMargin = 0.05, perFamilyLimit = 12 } = opts;
+  const { reachMargin = 0.05, familyLimits } = opts;
+  const limits = { ...DEFAULT_FAMILY_LIMITS, ...(familyLimits ?? {}) };
   if (!Number.isFinite(userRank) || userRank <= 0) return [];
 
   const matches: Match[] = [];
@@ -46,9 +56,11 @@ export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
     // Include qualifies + a small reach window (rank slightly above cutoff).
     if (headroom < -cutoff * reachMargin) continue;
 
+    const family = familyOf(r.branch);
+    if (family === null) continue; // skip design / planning branches
+
     const collegeName = collegeByCode.get(r.college) ?? r.college;
     const branchName = branchByCode.get(r.branch) ?? r.branch;
-    const family = familyOf(r.branch);
 
     // Fit score: clamp headroom/cutoff to [-reachMargin, 1].
     // Positive → qualifies. Negative within reach window → reach.
@@ -73,21 +85,22 @@ export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
     });
   }
 
-  // Sort: family priority asc → intra-family branch priority asc → cutoff asc (best college first)
+  // Sort: family priority asc → cutoff asc (best college first within family).
+  // Intra-family rank is a tie-breaker for ties on cutoff.
   matches.sort((a, b) => {
     const fr = familyRank(a.branchCode) - familyRank(b.branchCode);
     if (fr !== 0) return fr;
-    const ir = intraFamilyRank(a.branchCode) - intraFamilyRank(b.branchCode);
-    if (ir !== 0) return ir;
-    return a.cutoff - b.cutoff;
+    if (a.cutoff !== b.cutoff) return a.cutoff - b.cutoff;
+    return intraFamilyRank(a.branchCode) - intraFamilyRank(b.branchCode);
   });
 
-  // Cap PER family so the page doesn't drown a user with 200 rows.
+  // Per-family cap: e.g. 5 best CSE, 10 best CSE specializations, 5 best EC,
+  // 5 best core, 3 best other.
   const perFamilyCount: Record<string, number> = {};
   const capped: Match[] = [];
   for (const m of matches) {
     perFamilyCount[m.family] = (perFamilyCount[m.family] ?? 0) + 1;
-    if (perFamilyCount[m.family] <= perFamilyLimit) capped.push(m);
+    if (perFamilyCount[m.family] <= limits[m.family]) capped.push(m);
   }
   return capped;
 }

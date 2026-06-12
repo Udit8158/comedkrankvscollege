@@ -1,10 +1,20 @@
 // Branch families. Order in array = display priority.
-// CSE-family always before Electronics before Core engineering before Other.
+// Pure CSE first, then CSE specializations, then Electronics, then Core, then Other.
 
-export type BranchFamily = "computing" | "electronics" | "core" | "other";
+export type BranchFamily =
+  | "cse"
+  | "cse_spec"
+  | "electronics"
+  | "core";
 
-const COMPUTING = new Set([
-  "CS", "CD", "CI", "CY", "CA", "CB", "CG", "CO", "CAD", "CIT",
+// Pure CSE — just the `CS` code.
+const CSE_PURE = new Set(["CS"]);
+
+// CSE specializations + every adjacent "computing-ish" branch (Info Science,
+// IT, AI/ML, Data Science, Robotics-AI). Anything that lives under the
+// computing umbrella but isn't the plain `CS` code.
+const CSE_SPEC = new Set([
+  "CD", "CI", "CY", "CA", "CB", "CG", "CO", "CAD", "CIT",
   "CSB", "CSD", "CR", "CM", "CN", "IC", "CE", "ES", "UE",
   "IS", "IST", "INT", "IDA", "IAR", "DS", "CX",
   "AI", "AD", "RI", "CBD",
@@ -37,22 +47,26 @@ const INTRA_FAMILY_ORDER: Record<string, number> = {
   AR: 16, AG: 17, AL: 18, CC: 19, TX: 20, CCA: 21, CCS: 22, CK: 23,
 };
 
-export function familyOf(code: string): BranchFamily {
-  if (COMPUTING.has(code)) return "computing";
+// Returns null for branches outside the engineering scope (Bachelor of Design,
+// Bachelor of Urban Planning, etc.) — those records are dropped from results.
+export function familyOf(code: string): BranchFamily | null {
+  if (CSE_PURE.has(code)) return "cse";
+  if (CSE_SPEC.has(code)) return "cse_spec";
   if (ELECTRONICS.has(code)) return "electronics";
   if (CORE.has(code)) return "core";
-  return "other";
+  return null;
 }
 
 const FAMILY_RANK: Record<BranchFamily, number> = {
-  computing: 0,
-  electronics: 1,
-  core: 2,
-  other: 3,
+  cse: 0,
+  cse_spec: 1,
+  electronics: 2,
+  core: 3,
 };
 
 export function familyRank(code: string): number {
-  return FAMILY_RANK[familyOf(code)];
+  const f = familyOf(code);
+  return f === null ? Infinity : FAMILY_RANK[f];
 }
 
 export function intraFamilyRank(code: string): number {
@@ -60,10 +74,10 @@ export function intraFamilyRank(code: string): number {
 }
 
 export const FAMILY_LABEL: Record<BranchFamily, string> = {
-  computing: "computing",
+  cse: "computer science",
+  cse_spec: "cse specializations",
   electronics: "electronics",
   core: "core engineering",
-  other: "other",
 };
 
 // Cleanup of branch names — the PDF has wrapped words like "Communicati on"
