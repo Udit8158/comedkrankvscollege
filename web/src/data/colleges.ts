@@ -708,6 +708,9 @@ export const COLLEGES: CollegeMeta[] = [
       overallAvgLpa: 10.5,
       year: 2024,
     },
+    podcast: {
+      youtubeId: "YYxT7kbPbow",
+    },
   },
   {
     code: "E088",
