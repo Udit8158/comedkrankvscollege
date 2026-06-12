@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const CSV_PATH = path.resolve(__dirname, "..", "..", "plans", "demo_additional_data.csv");
+const CSV_PATH = path.resolve(__dirname, "..", "..", "data", "colleges.csv");
 
 // Research bank — keyed by college code. Only fields with a confident value
 // are set. Where placement_year is omitted but a package figure exists, the

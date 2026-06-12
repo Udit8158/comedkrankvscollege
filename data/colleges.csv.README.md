@@ -1,7 +1,19 @@
-# `demo_additional_data.csv` — review notes
+# `colleges.csv` — source of truth for college metadata
 
-Companion to `plans/demo_additional_data.csv`. Read this first so the
-numbers in the CSV are easier to judge.
+This CSV is the editable source for every college's metadata (placement,
+established year, type, website, about, podcast). The site doesn't read
+the CSV directly — `web/scripts/merge-csv-to-colleges.mjs` reads it and
+regenerates `web/src/data/colleges.ts`, which is the file the app imports.
+
+**Workflow:**
+
+1. Edit a row in this CSV (or add a new row for a new college).
+2. Run `node web/scripts/merge-csv-to-colleges.mjs` from the repo root.
+3. The script overwrites `web/src/data/colleges.ts` with the new data
+   (only non-empty cells; empty CSV cells stay empty in the output).
+4. Commit both `data/colleges.csv` and `web/src/data/colleges.ts`.
+
+Read on for column meanings and confidence-flag conventions.
 
 ## Coverage at a glance
 

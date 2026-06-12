@@ -1,4 +1,4 @@
-// Emits plans/demo_additional_data.csv with one row per college from colleges.ts.
+// Emits data/colleges.csv with one row per college from colleges.ts.
 // Existing fields (code, name, locality, city, podcast.youtubeId) are pre-filled
 // for context. Research-target columns (established, type, website, placement_*,
 // about, sources, confidence, notes) start empty.
@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..");
 const TS_PATH = path.join(ROOT, "web", "src", "data", "colleges.ts");
-const OUT = path.join(ROOT, "plans", "demo_additional_data.csv");
+const OUT = path.join(ROOT, "data", "colleges.csv");
 
 const src = fs.readFileSync(TS_PATH, "utf8");
 

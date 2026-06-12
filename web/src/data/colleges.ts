@@ -49,8 +49,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2000,
     type: "private",
     website: "https://acharya.ac.in",
-    about:
-      "Soladevanahalli campus; large multi-disciplinary group with engineering, management and dental schools.",
+    about: "Soladevanahalli campus; large multi-disciplinary group with engineering, management and dental schools.",
     placement: {
       overallAvgLpa: 6,
       year: 2024,
@@ -114,8 +113,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2000,
     type: "private",
     website: "https://atria.edu",
-    about:
-      "Run by Atria Educational Foundation; Hebbal campus; recently autonomous status.",
+    about: "Run by Atria Educational Foundation; Hebbal campus; recently autonomous status.",
     placement: {
       overallAvgLpa: 10.32,
       year: 2024,
@@ -141,8 +139,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2001,
     type: "autonomous",
     website: "https://bnmit.org",
-    about:
-      "Run by Bhageerathi Bai Narayana Rao Maanay Charities Trust; Banashankari campus; autonomous.",
+    about: "Run by Bhageerathi Bai Narayana Rao Maanay Charities Trust; Banashankari campus; autonomous.",
     placement: {
       overallAvgLpa: 6.16,
       year: 2024,
@@ -156,8 +153,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1947,
     type: "university",
     website: "https://www.kletech.ac.in",
-    about:
-      "Private university based in Hubballi (also Belagavi campus); formerly B V Bhoomaraddi College of Engineering; A grade NAAC.",
+    about: "Private university based in Hubballi (also Belagavi campus); formerly B V Bhoomaraddi College of Engineering; A grade NAAC.",
     placement: {
       overallAvgLpa: 7,
       year: 2024,
@@ -177,8 +173,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1979,
     type: "autonomous",
     website: "https://bit-bangalore.edu.in",
-    about:
-      "Run by the Vokkaligara Sangha; VV Puram campus; long-standing reputation in Bengaluru engineering circles.",
+    about: "Run by the Vokkaligara Sangha; VV Puram campus; long-standing reputation in Bengaluru engineering circles.",
     placement: {
       overallAvgLpa: 10,
       year: 2024,
@@ -195,8 +190,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2010,
     type: "private",
     website: "https://btibangalore.in",
-    about:
-      "Kodathi off Sarjapur Road; affiliated to VTU; relatively young engineering college.",
+    about: "Kodathi off Sarjapur Road; affiliated to VTU; relatively young engineering college.",
     placement: {
       overallAvgLpa: 6,
       year: 2023,
@@ -210,8 +204,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1979,
     type: "private",
     website: "https://www.bietdvg.edu",
-    about:
-      "Davangere's flagship private engineering college; A grade NAAC; affiliated to VTU.",
+    about: "Davangere's flagship private engineering college; A grade NAAC; affiliated to VTU.",
     placement: {
       overallAvgLpa: 4.97,
       year: 2024,
@@ -231,8 +224,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1963,
     type: "autonomous",
     website: "https://www.becbgk.edu",
-    about:
-      "Run by BVV Sangha; one of north Karnataka's oldest engineering colleges; autonomous.",
+    about: "Run by BVV Sangha; one of north Karnataka's oldest engineering colleges; autonomous.",
     placement: {
       overallAvgLpa: 4,
       year: 2024,
@@ -252,8 +244,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1946,
     type: "autonomous",
     website: "https://www.bmsce.ac.in",
-    about:
-      "India's first private engineering college; founded by BMS Educational Trust; strong legacy program with autonomous status.",
+    about: "India's first private engineering college; founded by BMS Educational Trust; strong legacy program with autonomous status.",
     placement: {
       cseAvgLpa: 11,
       overallAvgLpa: 9.8,
@@ -271,15 +262,13 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2002,
     type: "autonomous",
     website: "https://bmsit.ac.in",
-    about:
-      "Yelahanka campus of the BMS Educational Trust; engineering and management programs with strong placement record.",
+    about: "Yelahanka campus of the BMS Educational Trust; engineering and management programs with strong placement record.",
     placement: {
       overallAvgLpa: 7.9,
       year: 2024,
     },
     podcast: {
       youtubeId: "ezxl87YWUMk",
-      title: "BMSIT Bangalore Student Review",
     },
   },
   {
@@ -296,8 +285,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2000,
     type: "autonomous",
     website: "https://www.cmrit.ac.in",
-    about:
-      "Run by CMR Jnanadhara Trust; located on AECS Layout / ITPL Main Road (not Brookefield as dataset notes); CSE-strong placements.",
+    about: "Run by CMR Jnanadhara Trust; located on AECS Layout / ITPL Main Road (not Brookefield as dataset notes); CSE-strong placements.",
     placement: {
       overallAvgLpa: 6.99,
       year: 2024,
@@ -311,8 +299,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2007,
     type: "private",
     website: "https://engg.cambridge.edu.in",
-    about:
-      "Run by Habitat Educational Trust; K R Puram campus; mid-tier college with steady placement record.",
+    about: "Run by Habitat Educational Trust; K R Puram campus; mid-tier college with steady placement record.",
     placement: {
       overallAvgLpa: 7.2,
       year: 2024,
@@ -356,8 +343,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1979,
     type: "autonomous",
     website: "https://www.dsce.edu.in",
-    about:
-      "Flagship engineering college of the Dayananda Sagar group; autonomous since 2015; located at Kumaraswamy Layout.",
+    about: "Flagship engineering college of the Dayananda Sagar group; autonomous since 2015; located at Kumaraswamy Layout.",
     placement: {
       overallAvgLpa: 9,
       year: 2024,
@@ -374,8 +360,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2001,
     type: "private",
     website: "https://www.donboscoit.edu.in",
-    about:
-      "Mysore Road / Kengeri campus; private engineering college on a 36-acre campus.",
+    about: "Mysore Road / Kengeri campus; private engineering college on a 36-acre campus.",
     placement: {
       overallAvgLpa: 4.5,
       year: 2024,
@@ -389,8 +374,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1980,
     type: "autonomous",
     website: "https://drait.edu.in",
-    about:
-      "Government-aided autonomous engineering college; Mallathalli campus; founded by Shri M H Jayaprakash Narayan.",
+    about: "Government-aided autonomous engineering college; Mallathalli campus; founded by Shri M H Jayaprakash Narayan.",
     placement: {
       overallAvgLpa: 7,
       year: 2024,
@@ -422,8 +406,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1999,
     type: "private",
     website: "https://epcet.edu.in",
-    about:
-      "Engineering and technology arm of East Point Group of Institutions; Avalahalli, Bengaluru.",
+    about: "Engineering and technology arm of East Point Group of Institutions; Avalahalli, Bengaluru.",
     placement: {
       overallAvgLpa: 7.5,
       year: 2024,
@@ -449,8 +432,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2001,
     type: "private",
     website: "https://gat.ac.in",
-    about:
-      "Run by National Education Foundation; Rajarajeshwari Nagar campus; NAAC A grade.",
+    about: "Run by National Education Foundation; Rajarajeshwari Nagar campus; NAAC A grade.",
     placement: {
       overallAvgLpa: 5.75,
       year: 2024,
@@ -500,8 +482,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1997,
     type: "private",
     website: "https://www.jssateb.ac.in",
-    about:
-      "Bengaluru campus of the JSS Mahavidyapeetha Mysuru; Uttarahalli Main Road.",
+    about: "Bengaluru campus of the JSS Mahavidyapeetha Mysuru; Uttarahalli Main Road.",
     placement: {
       overallAvgLpa: 6.5,
       year: 2024,
@@ -514,8 +495,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1963,
     type: "university",
     website: "https://jssstuniv.in",
-    about:
-      "Constituent college of JSS Science and Technology University (formerly SJCE Mysuru); autonomous since 2007-08.",
+    about: "Constituent college of JSS Science and Technology University (formerly SJCE Mysuru); autonomous since 2007-08.",
     placement: {
       cseAvgLpa: 10,
       overallAvgLpa: 6.5,
@@ -560,8 +540,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2010,
     type: "private",
     website: "https://kssem.edu.in",
-    about:
-      "Kanakapura Road; affiliated to VTU; engineering and management programs.",
+    about: "Kanakapura Road; affiliated to VTU; engineering and management programs.",
     placement: {
       overallAvgLpa: 7,
       year: 2024,
@@ -575,8 +554,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1999,
     type: "private",
     website: "https://www.ksit.ac.in",
-    about:
-      "Sister institution of KSSEM under K.S. Group; Kanakapura Road campus.",
+    about: "Sister institution of KSSEM under K.S. Group; Kanakapura Road campus.",
     placement: {
       overallAvgLpa: 4.5,
       year: 2024,
@@ -632,8 +610,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1962,
     type: "autonomous",
     website: "https://www.msrit.edu",
-    about:
-      "Run by Gokula Education Foundation; one of Bengaluru's most-recruited colleges with strong industry connect.",
+    about: "Run by Gokula Education Foundation; one of Bengaluru's most-recruited colleges with strong industry connect.",
     placement: {
       cseAvgLpa: 11,
       overallAvgLpa: 10,
@@ -687,8 +664,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2001,
     type: "private",
     website: "https://ncet.co.in",
-    about:
-      "Run by Nagarjuna Education Society; Devanahalli campus; NAAC A+ accredited.",
+    about: "Run by Nagarjuna Education Society; Devanahalli campus; NAAC A+ accredited.",
     placement: {
       overallAvgLpa: 4.5,
       year: 2024,
@@ -702,14 +678,10 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1946,
     type: "autonomous",
     website: "https://nie.ac.in",
-    about:
-      "North campus of The National Institute of Engineering, Mysuru; autonomous under VTU since 2007.",
+    about: "North campus of The National Institute of Engineering, Mysuru; autonomous under VTU since 2007.",
     placement: {
       overallAvgLpa: 10.5,
       year: 2024,
-    },
-    podcast: {
-      youtubeId: "YYxT7kbPbow",
     },
   },
   {
@@ -726,8 +698,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1962,
     type: "autonomous",
     website: "https://pesce.ac.in",
-    about:
-      "Founded by People's Education Society; Mandya campus; one of the oldest private engineering colleges in Karnataka.",
+    about: "Founded by People's Education Society; Mandya campus; one of the oldest private engineering colleges in Karnataka.",
     placement: {
       overallAvgLpa: 5.3,
       year: 2024,
@@ -761,8 +732,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1963,
     type: "autonomous",
     website: "https://www.rvce.edu.in",
-    about:
-      "Top-tier private autonomous engineering college in Bengaluru; run by the Rashtriya Sikshana Samithi Trust; highly competitive admissions and placements.",
+    about: "Top-tier private autonomous engineering college in Bengaluru; run by the Rashtriya Sikshana Samithi Trust; highly competitive admissions and placements.",
     placement: {
       overallAvgLpa: 15.25,
       year: 2024,
@@ -797,8 +767,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2006,
     type: "private",
     website: "https://www.rrce.org",
-    about:
-      "Run by Moogambigai Charitable and Education Trust; Mysore Road campus.",
+    about: "Run by Moogambigai Charitable and Education Trust; Mysore Road campus.",
     placement: {
       overallAvgLpa: 3.6,
       year: 2025,
@@ -830,8 +799,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2001,
     type: "private",
     website: "https://www.rnsit.ac.in",
-    about:
-      "Founded by R N Shetty; located at R R Nagar; engineering programs across CSE/ECE/EEE/ME.",
+    about: "Founded by R N Shetty; located at R R Nagar; engineering programs across CSE/ECE/EEE/ME.",
     placement: {
       overallAvgLpa: 8,
       year: 2024,
@@ -851,8 +819,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2001,
     type: "private",
     website: "https://www.sjbit.edu.in",
-    about:
-      "Founded by Sri Adichunchanagiri Shikshana Trust (SAST); Kengeri campus.",
+    about: "Founded by Sri Adichunchanagiri Shikshana Trust (SAST); Kengeri campus.",
     placement: {
       overallAvgLpa: 5.5,
       year: 2024,
@@ -866,8 +833,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1986,
     type: "private",
     website: "https://sjcit.ac.in",
-    about:
-      "Run by Sri Jagadguru Chandrashekaranatha Swamiji Educational Trust; BB Road, Chikkaballapur.",
+    about: "Run by Sri Jagadguru Chandrashekaranatha Swamiji Educational Trust; BB Road, Chikkaballapur.",
     placement: {
       overallAvgLpa: 5.4,
       year: 2024,
@@ -905,8 +871,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2008,
     type: "private",
     website: "https://saividya.ac.in",
-    about:
-      "Run by Sai Vidya Educational Trust; Rajanukunte (off Doddaballapur Road) campus.",
+    about: "Run by Sai Vidya Educational Trust; Rajanukunte (off Doddaballapur Road) campus.",
     placement: {
       overallAvgLpa: 5.69,
       year: 2024,
@@ -982,8 +947,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1963,
     type: "autonomous",
     website: "https://sit.ac.in",
-    about:
-      "Run by Sri Siddaganga Education Society; autonomous; one of Tumakuru's leading engineering institutions.",
+    about: "Run by Sri Siddaganga Education Society; autonomous; one of Tumakuru's leading engineering institutions.",
     placement: {
       overallAvgLpa: 8.5,
       year: 2024,
@@ -1000,8 +964,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1986,
     type: "private",
     website: "https://www.sirmvit.edu",
-    about:
-      "Yelahanka campus engineering college affiliated to VTU; named after Sir M. Visvesvaraya.",
+    about: "Yelahanka campus engineering college affiliated to VTU; named after Sir M. Visvesvaraya.",
     placement: {
       overallAvgLpa: 5.5,
       year: 2024,
@@ -1057,8 +1020,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 1946,
     type: "autonomous",
     website: "https://nie.ac.in",
-    about:
-      "South (main) campus of The National Institute of Engineering, Mysuru; one of India's oldest engineering colleges.",
+    about: "South (main) campus of The National Institute of Engineering, Mysuru; one of India's oldest engineering colleges.",
     placement: {
       overallAvgLpa: 10.5,
       year: 2024,
@@ -1157,8 +1119,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2012,
     type: "university",
     website: "https://www.reva.edu.in",
-    about:
-      "Private university established by the Divya Sree Foundation; Yelahanka campus; large engineering programs.",
+    about: "Private university established by the Divya Sree Foundation; Yelahanka campus; large engineering programs.",
     placement: {
       cseAvgLpa: 6,
       overallAvgLpa: 5,
@@ -1176,8 +1137,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2010,
     type: "university",
     website: "https://www.alliance.edu.in",
-    about:
-      "Private university with large engineering, business and law schools; Chandapura Anekal campus.",
+    about: "Private university with large engineering, business and law schools; Chandapura Anekal campus.",
     placement: {
       overallAvgLpa: 8.3,
       year: 2024,
@@ -1191,8 +1151,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2012,
     type: "deemed",
     website: "https://www.gitam.edu",
-    about:
-      "Bengaluru campus of GITAM Deemed University (HQ Visakhapatnam); Doddaballapur Rural campus.",
+    about: "Bengaluru campus of GITAM Deemed University (HQ Visakhapatnam); Doddaballapur Rural campus.",
     placement: {
       overallAvgLpa: 4.5,
       year: 2024,
@@ -1212,8 +1171,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2013,
     type: "university",
     website: "https://presidencyuniversity.in",
-    about:
-      "Private university at Itgalpur Rajanakunte, Yelahanka; engineering, management and law programs.",
+    about: "Private university at Itgalpur Rajanakunte, Yelahanka; engineering, management and law programs.",
     placement: {
       cseAvgLpa: 4.5,
       overallAvgLpa: 5,
@@ -1234,8 +1192,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2013,
     type: "university",
     website: "https://cmr.edu.in",
-    about:
-      "Private university; School of Engineering at Bagalur off Hennur Road; sister to CMRIT (separate institution).",
+    about: "Private university; School of Engineering at Bagalur off Hennur Road; sister to CMRIT (separate institution).",
     placement: {
       overallAvgLpa: 4,
       year: 2024,
@@ -1267,8 +1224,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2013,
     type: "university",
     website: "https://www.msruas.ac.in",
-    about:
-      "Private university under the Ramaiah group; MSR Nagar; applied sciences focus including engineering, management and medical.",
+    about: "Private university under the Ramaiah group; MSR Nagar; applied sciences focus including engineering, management and medical.",
     placement: {
       overallAvgLpa: 6.2,
       year: 2024,
@@ -1282,8 +1238,7 @@ export const COLLEGES: CollegeMeta[] = [
     established: 2019,
     type: "private",
     website: "https://www.rvitm.edu.in",
-    about:
-      "Newer sister institution of RVCE under Rashtreeya Sikshana Samithi Trust; J P Nagar campus; small intake.",
+    about: "Newer sister institution of RVCE under Rashtreeya Sikshana Samithi Trust; J P Nagar campus; small intake.",
     placement: {
       overallAvgLpa: 11.47,
       year: 2024,

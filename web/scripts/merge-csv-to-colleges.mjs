@@ -1,4 +1,4 @@
-// Reads plans/demo_additional_data.csv and re-emits web/src/data/colleges.ts.
+// Reads data/colleges.csv and re-emits web/src/data/colleges.ts.
 // Strategy:
 //   1. Read the CSV — single source of truth for the seeded metadata.
 //   2. Read the existing colleges.ts so we can preserve any podcast titles
@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..", "..");
-const CSV = path.join(ROOT, "plans", "demo_additional_data.csv");
+const CSV = path.join(ROOT, "data", "colleges.csv");
 const TS = path.join(ROOT, "web", "src", "data", "colleges.ts");
 
 function parseCsvLine(line) {
