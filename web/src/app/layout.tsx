@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { TierLegend } from "@/components/TierLegend";
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
@@ -45,6 +46,7 @@ export default function RootLayout({
           <TierLegend />
           <SiteFooter />
         </div>
+        <Analytics />
       </body>
     </html>
   );
