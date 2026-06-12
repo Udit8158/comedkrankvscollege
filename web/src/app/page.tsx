@@ -19,7 +19,7 @@ export default function Home() {
         <h1 className="display text-[48px] sm:text-[72px] md:text-[88px] leading-[0.92] mt-3 tracking-tight">
           From rank
           <br />
-          <span className="display-italic">to seat.</span>
+          <span className="display-italic">to college.</span>
         </h1>
         <p className="mt-6 max-w-md text-[15px] text-fg-mute leading-relaxed">
           A direct lookup against last year&apos;s official Round 3 cut-offs.
