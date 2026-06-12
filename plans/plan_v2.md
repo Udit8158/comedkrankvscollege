@@ -12,6 +12,7 @@ The predictor currently produces a flat list of college-branch matches. The user
 Hard constraint the user named: **data must live in one place** so the project stays maintainable as the metadata grows. 150 colleges total; only ~15 will have podcast + placement filled at launch — the schema must degrade gracefully on the long tail.
 
 Decisions from clarifying questions:
+
 - URLs are **code-based**: `/college/E095`
 - Rank carries through: predictor links to `/college/E095?rank=12000`, page filters/highlights what the user qualifies for
 - Placement schema is **minimal**: CSE avg LPA, overall avg LPA, year
@@ -24,14 +25,14 @@ New file `web/src/data/colleges.ts` — typed module exporting one array. All co
 
 ```ts
 export type CollegeMeta = {
-  code: string;                   // "E095" — primary key, matches cut-off records
-  name: string;                   // "R V College of Engineering"
-  locality?: string;              // "Mysore Road"
-  city?: string;                  // "Bengaluru"
-  established?: number;           // 1963
+  code: string; // "E095" — primary key, matches cut-off records
+  name: string; // "R V College of Engineering"
+  locality?: string; // "Mysore Road"
+  city?: string; // "Bengaluru"
+  established?: number; // 1963
   type?: "private" | "autonomous" | "deemed" | "government" | "university";
   website?: string;
-  about?: string;                 // 1-2 sentences shown under the hero
+  about?: string; // 1-2 sentences shown under the hero
   placement?: {
     cseAvgLpa?: number;
     overallAvgLpa?: number;
@@ -43,7 +44,9 @@ export type CollegeMeta = {
   };
 };
 
-export const COLLEGES: CollegeMeta[] = [ /* 150 entries */ ];
+export const COLLEGES: CollegeMeta[] = [
+  /* 150 entries */
+];
 ```
 
 A one-shot migration script `web/scripts/build-colleges.mjs` reads the current college names out of `data.json` and emits the starter `colleges.ts` so we don't lose what's already there. Top 15 colleges then get placement + podcast hand-filled.
@@ -81,22 +84,22 @@ New `docs/data-template.md` lists the 15 podcast-covered colleges and the exact 
 
 ## Critical files
 
-| File | Change |
-|---|---|
-| `web/src/data/colleges.ts` | **new** — single source of college metadata |
-| `web/src/lib/colleges.ts` | **new** — `getCollege(code)` helper |
-| `web/src/lib/predict.ts` | source college names via `getCollege` (remove the duplicate name field from `data.json` lookups) |
-| `web/src/app/college/[code]/page.tsx` | **new** — static dynamic route |
-| `web/src/components/college/CollegeHero.tsx` | **new** |
-| `web/src/components/college/PlacementStrip.tsx` | **new** |
-| `web/src/components/college/PodcastEmbed.tsx` | **new** |
-| `web/src/components/college/CollegeCutoffTable.tsx` | **new** |
-| `web/src/components/ResultRow.tsx` | wrap college name in `<Link>` to `/college/[code]?rank=…` |
-| `web/src/components/Predictor.tsx` | thread `rank` down to `ResultRow` |
-| `web/src/app/globals.css` | extract footer signature's underline-wipe into a reusable `.linkmark` class |
-| `web/scripts/build-colleges.mjs` | **new** — migration of college names from `data.json` → `colleges.ts` |
-| `web/scripts/seed-from-template.mjs` | **new** — patch top-15 metadata from `docs/data-template.md` |
-| `docs/data-template.md` | **new** — filling guide for top 15 colleges |
+| File                                                | Change                                                                                           |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `web/src/data/colleges.ts`                          | **new** — single source of college metadata                                                      |
+| `web/src/lib/colleges.ts`                           | **new** — `getCollege(code)` helper                                                              |
+| `web/src/lib/predict.ts`                            | source college names via `getCollege` (remove the duplicate name field from `data.json` lookups) |
+| `web/src/app/college/[code]/page.tsx`               | **new** — static dynamic route                                                                   |
+| `web/src/components/college/CollegeHero.tsx`        | **new**                                                                                          |
+| `web/src/components/college/PlacementStrip.tsx`     | **new**                                                                                          |
+| `web/src/components/college/PodcastEmbed.tsx`       | **new**                                                                                          |
+| `web/src/components/college/CollegeCutoffTable.tsx` | **new**                                                                                          |
+| `web/src/components/ResultRow.tsx`                  | wrap college name in `<Link>` to `/college/[code]?rank=…`                                        |
+| `web/src/components/Predictor.tsx`                  | thread `rank` down to `ResultRow`                                                                |
+| `web/src/app/globals.css`                           | extract footer signature's underline-wipe into a reusable `.linkmark` class                      |
+| `web/scripts/build-colleges.mjs`                    | **new** — migration of college names from `data.json` → `colleges.ts`                            |
+| `web/scripts/seed-from-template.mjs`                | **new** — patch top-15 metadata from `docs/data-template.md`                                     |
+| `docs/data-template.md`                             | **new** — filling guide for top 15 colleges                                                      |
 
 ## Verification
 
@@ -111,7 +114,10 @@ New `docs/data-template.md` lists the 15 podcast-covered colleges and the exact 
 
 - Same fonts, same brass accent, same hairline rhythm.
 - No new colors, no card stacks, no new component visual language.
-- Eyebrows use the existing `.eyebrow` class.
+- Eyebrow
+
+s use the existing `.eyebrow` class.
+
 - Codes, ranks, established years, LPA figures all in mono (matches the app's tabular vocabulary).
 - Each section follows the predictor's pattern: hairline rule → eyebrow label → content.
 
