@@ -31,14 +31,27 @@ export default function Home() {
         <Predictor />
       </div>
 
-      <footer className="mt-32 pt-6 border-t border-hairline flex flex-wrap items-center justify-between gap-y-3 text-[12px] text-fg-mute">
-        <span>
-          Source: Engineering Cut-off Ranks after Round 3 Allotment, notified
-          22.08.2025.
-        </span>
-        <span className="font-mono text-[11px] tracking-wider">
-          no warranty · informational
-        </span>
+      <footer className="mt-32 pt-10 border-t border-hairline flex justify-center">
+        <a
+          href="https://www.linkedin.com/in/uditkundu19/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="signature group inline-flex items-baseline gap-3"
+          aria-label="Created by Udit Kundu — open LinkedIn profile"
+        >
+          <span className="eyebrow group-hover:text-fg transition-colors">
+            crafted by
+          </span>
+          <span className="signature-name display-italic text-[20px] sm:text-[22px] text-fg">
+            Udit Kundu
+          </span>
+          <span
+            aria-hidden
+            className="signature-arrow font-mono text-[11px] text-fg-dim tracking-wider group-hover:text-accent transition-colors"
+          >
+            ↗
+          </span>
+        </a>
       </footer>
     </main>
   );

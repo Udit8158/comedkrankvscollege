@@ -161,6 +161,42 @@ body {
 .tier.moderate { color: var(--moderate); }
 .tier.reach { color: var(--reach); }
 
+/* Signature credit — footer link, treated as a tiny brand mark.
+ * Quiet by default; on hover the name picks up the brass underline that the
+ * rest of the page reserves for the input. */
+.signature {
+  text-decoration: none;
+  color: var(--fg-mute);
+}
+.signature-name {
+  position: relative;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  padding-bottom: 2px;
+  transition: background-size 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              color 160ms ease;
+}
+.signature:hover .signature-name {
+  background-size: 100% 1px;
+  color: var(--accent);
+}
+.signature-arrow {
+  display: inline-block;
+  transition: transform 200ms ease, color 160ms ease;
+}
+.signature:hover .signature-arrow {
+  transform: translate(2px, -2px);
+}
+.signature:focus-visible {
+  outline: none;
+}
+.signature:focus-visible .signature-name {
+  background-size: 100% 1px;
+  color: var(--accent);
+}
+
 /* Row hover — paper crease, not a card lift. */
 .row {
   border-top: 1px solid var(--hairline);
