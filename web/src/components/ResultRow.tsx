@@ -1,20 +1,29 @@
+import Link from "next/link";
 import { FitBar } from "./FitBar";
 import { formatRank, splitCollegeName } from "@/lib/utils";
 import type { Match } from "@/lib/predict";
 
-export function ResultRow({ m }: { m: Match }) {
+export function ResultRow({ m, rank }: { m: Match; rank: number }) {
   const { title, locality } = splitCollegeName(m.collegeName);
+  const href = `/college/${m.collegeCode}?rank=${rank}`;
+
   return (
-    <div className="row grid grid-cols-[64px_1fr_auto] gap-x-5 gap-y-1 py-4">
-      {/* Left: college code, mono */}
-      <div className="font-mono text-[12px] tracking-wider text-fg-mute pt-[3px]">
+    <Link
+      href={href}
+      className="row block py-4 sm:grid sm:grid-cols-[64px_1fr_auto] sm:gap-x-5 group"
+      aria-label={`${title} — open college details`}
+    >
+      {/* College code: small mono.
+       *  Mobile: sits inline above the name.
+       *  Desktop: its own 64px column. */}
+      <div className="font-mono text-[11px] sm:text-[12px] tracking-wider text-fg-mute sm:pt-[3px] group-hover:text-accent transition-colors">
         {m.collegeCode}
       </div>
 
-      {/* Middle: name + branch */}
-      <div className="min-w-0">
-        <div className="text-[15px] leading-snug text-fg truncate">
-          {title}
+      {/* Name + branch */}
+      <div className="min-w-0 mt-1 sm:mt-0">
+        <div className="text-[15px] leading-snug text-fg">
+          <span className="linkmark">{title}</span>
           {locality && (
             <span className="text-fg-dim font-normal">, {locality}</span>
           )}
@@ -27,16 +36,18 @@ export function ResultRow({ m }: { m: Match }) {
         </div>
       </div>
 
-      {/* Right: rank, fit bar, tier */}
-      <div className="text-right tabular-nums">
-        <div className="font-mono text-[15px] text-fg">
+      {/* Cutoff + fit + tier.
+       *  Mobile: single row below the name — cutoff on left, fit/tier on right.
+       *  Desktop: dedicated right column, cutoff on top, fit/tier underneath. */}
+      <div className="mt-3 sm:mt-0 flex items-center justify-between sm:block sm:text-right tabular-nums">
+        <span className="font-mono text-[15px] text-fg">
           {formatRank(m.cutoff)}
-        </div>
-        <div className="mt-1 flex items-center justify-end gap-3">
+        </span>
+        <span className="flex items-center gap-3 sm:mt-1 sm:justify-end">
           <FitBar fit={m.fit} tier={m.tier} />
           <span className={`tier ${m.tier}`}>{m.tier}</span>
-        </div>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }

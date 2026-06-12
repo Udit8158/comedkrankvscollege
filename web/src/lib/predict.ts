@@ -1,16 +1,15 @@
 import raw from "@/data.json";
 import { cleanBranchName, familyOf, familyRank, intraFamilyRank, type BranchFamily } from "./branches";
+import { getCollege, listColleges } from "./colleges";
 
-type RawCollege = { code: string; name: string };
 type RawBranch = { code: string; name: string };
 type RawRecord = { college: string; branch: string; rank: number };
 
-const data = raw as { colleges: RawCollege[]; branches: RawBranch[]; records: RawRecord[] };
+const data = raw as { branches: RawBranch[]; records: RawRecord[] };
 
-const collegeByCode = new Map(data.colleges.map((c) => [c.code, c.name]));
 const branchByCode = new Map(data.branches.map((b) => [b.code, cleanBranchName(b.name)]));
 
-export const TOTAL_COLLEGES = data.colleges.length;
+export const TOTAL_COLLEGES = listColleges().length;
 export const TOTAL_BRANCHES = data.branches.length;
 export const TOTAL_RECORDS = data.records.length;
 
@@ -59,7 +58,12 @@ export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
     const family = familyOf(r.branch);
     if (family === null) continue; // skip design / planning branches
 
-    const collegeName = collegeByCode.get(r.college) ?? r.college;
+    const college = getCollege(r.college);
+    const collegeName = college
+      ? [college.name, [college.locality, college.city].filter(Boolean).join(", ")]
+          .filter(Boolean)
+          .join("-")
+      : r.college;
     const branchName = branchByCode.get(r.branch) ?? r.branch;
 
     // Fit score: clamp headroom/cutoff to [-reachMargin, 1].

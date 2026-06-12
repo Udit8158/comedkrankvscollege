@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   groupByFamily,
   predict,
@@ -14,7 +15,11 @@ import { SectionHead } from "./SectionHead";
 import { ResultRow } from "./ResultRow";
 
 export function Predictor() {
-  const [rankRaw, setRankRaw] = useState<string>("");
+  // If we came back from a college page (/?rank=12000), pre-fill the input so
+  // the user lands exactly where they left off.
+  const searchParams = useSearchParams();
+  const initialRank = (searchParams.get("rank") ?? "").replace(/\D/g, "").slice(0, 7);
+  const [rankRaw, setRankRaw] = useState<string>(initialRank);
   const deferred = useDeferredValue(rankRaw);
   const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -122,13 +127,15 @@ export function Predictor() {
                 />
                 <div>
                   {g.items.map((m) => (
-                    <ResultRow key={`${m.collegeCode}-${m.branchCode}`} m={m} />
+                    <ResultRow
+                      key={`${m.collegeCode}-${m.branchCode}`}
+                      m={m}
+                      rank={rank}
+                    />
                   ))}
                 </div>
               </div>
             ))}
-
-            <Legend />
           </>
         )}
       </div>
@@ -163,21 +170,3 @@ function NoMatches({ rank }: { rank: number }) {
   );
 }
 
-function Legend() {
-  return (
-    <div className="mt-16 pt-6 border-t border-hairline flex flex-wrap gap-x-10 gap-y-3 text-[12px]">
-      <span className="flex items-center gap-2">
-        <span className="tier safe">safe</span>
-        <span className="text-fg-mute">easy peasy for you</span>
-      </span>
-      <span className="flex items-center gap-2">
-        <span className="tier moderate">moderate</span>
-        <span className="text-fg-mute">gonna be very close</span>
-      </span>
-      <span className="flex items-center gap-2">
-        <span className="tier reach">reach</span>
-        <span className="text-fg-mute">most likely you will miss</span>
-      </span>
-    </div>
-  );
-}
