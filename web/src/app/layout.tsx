@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "COMEDK 2025 cut-off lookup",
+  title: "COMEDK 2026 Rank vs College",
   description:
     "Enter your COMEDK rank, see the colleges and branches that fit. Based on the official 2025 Round 3 cut-offs.",
 };
