@@ -1,6 +1,10 @@
 "use client";
 
+import { useRef } from "react";
 import { Moon, Sun } from "lucide-react";
+
+// Keep in sync with the transition-duration in globals.css (.theme-transition).
+const TRANSITION_MS = 320;
 
 /**
  * Sun/moon theme toggle, fixed in the top-right corner. Flips the `light` class
@@ -8,15 +12,27 @@ import { Moon, Sun } from "lucide-react";
  * the choice in localStorage. The pre-paint script in layout.tsx applies the
  * saved/system theme so there's no flash; rendering both icons keeps the server
  * and client markup identical (no hydration mismatch).
+ *
+ * The `theme-transition` class is added for the duration of the switch so the
+ * whole app eases between palettes, then removed so it never affects load or
+ * unrelated interactions.
  */
 export function ThemeToggle() {
+  const timer = useRef<number | undefined>(undefined);
+
   function toggle() {
-    const isLight = document.documentElement.classList.toggle("light");
+    const root = document.documentElement;
+    root.classList.add("theme-transition");
+    const isLight = root.classList.toggle("light");
     try {
       localStorage.setItem("theme", isLight ? "light" : "dark");
     } catch {
       /* storage disabled (private mode) — toggle still works for the session */
     }
+    window.clearTimeout(timer.current);
+    timer.current = window.setTimeout(() => {
+      root.classList.remove("theme-transition");
+    }, TRANSITION_MS);
   }
 
   return (
