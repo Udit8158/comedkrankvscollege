@@ -25,7 +25,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle light and dark theme"
       title="Toggle light / dark"
-      className="fixed top-4 right-4 sm:top-5 sm:right-5 z-50 inline-grid h-9 w-9 place-items-center rounded-full border border-hairline bg-[color:var(--bg-base)] text-fg-mute transition-colors hover:text-accent hover:border-[color:var(--accent-line)]"
+      className="fixed top-4 right-4 sm:top-5 sm:right-5 z-50 inline-grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-hairline bg-[color:var(--bg-base)] text-fg-mute transition-colors hover:text-accent hover:border-[color:var(--accent-line)]"
     >
       <span aria-hidden className="grid h-4 w-4 place-items-center">
         <Sun className="theme-ico-sun" size={16} strokeWidth={1.75} />
