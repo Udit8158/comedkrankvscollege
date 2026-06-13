@@ -3,8 +3,14 @@ import { Fraunces, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { TierLegend } from "@/components/TierLegend";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
+
+// Runs before paint to set the initial theme (stored choice, else system
+// preference) so there's no flash of the wrong theme on load. Dark is the
+// default; only the `light` class is added.
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();`;
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -74,9 +80,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${fraunces.variable} ${instrument.variable} ${mono.variable}`}
     >
       <body className="bg-paper min-h-dvh flex flex-col">
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <ThemeToggle />
         <div className="flex-1">{children}</div>
         <div className="mx-auto w-full max-w-3xl px-6 sm:px-10 pb-10">
           <TierLegend />
