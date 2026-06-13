@@ -29,7 +29,52 @@
   --reach: #c2503e;
 
   --radius: 2px;
+
+  color-scheme: dark;
 }
+
+/* ── Light theme ──────────────────────────────────────────────
+ * Warm-paper inversion of the dark ground: cream canvas, deep ink
+ * text, a slightly deepened turmeric so the brass keeps its bite on
+ * a light field. Applied when <html> carries the `light` class (set
+ * pre-paint by the inline script in layout.tsx, toggled by ThemeToggle). */
+html.light {
+  --bg-base: #f3eee3;
+  --bg-surface: #ebe5d7;
+  --bg-elev: #e3dccb;
+  --hairline: #dcd4c2;
+  --hairline-strong: #c4bba6;
+
+  --fg: #1c1e23;
+  --fg-mute: #5d594e;
+  --fg-dim: #8b8676;
+
+  --accent: #a8761a;
+  --accent-soft: rgba(168, 118, 26, 0.16);
+  --accent-line: rgba(168, 118, 26, 0.40);
+
+  --safe: #5f7a4c;
+  --moderate: #a9763a;
+  --reach: #b0432f;
+
+  color-scheme: light;
+}
+
+/* Texture + row hover tint with white in dark mode — invisible on
+ * paper — so give them light-field variants. */
+html.light .bg-paper {
+  background-image:
+    radial-gradient(circle at 25% 30%, rgba(0, 0, 0, 0.022) 1px, transparent 1.4px),
+    radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.016) 1px, transparent 1.4px);
+}
+html.light .row:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+/* Theme toggle: sun shows in dark mode, moon in light mode. */
+.theme-ico-moon { display: none; }
+html.light .theme-ico-sun { display: none; }
+html.light .theme-ico-moon { display: block; }
 
 @theme inline {
   --color-bg: var(--bg-base);
