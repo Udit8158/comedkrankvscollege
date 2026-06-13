@@ -22,7 +22,7 @@ export default function Home() {
           <span className="display-italic">to college.</span>
         </h1>
         <p className="mt-6 max-w-md text-[15px] text-fg-mute leading-relaxed">
-          A direct lookup against last year&apos;s official Round 3 cut-offs.
+          A direct lookup against the official COMEDK 2025 Round 3 cut-offs.
           Enter a rank, see the colleges and branches that actually closed at or
           after it — computing branches first, core last.
         </p>
