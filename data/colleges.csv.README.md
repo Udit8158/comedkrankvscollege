@@ -22,11 +22,19 @@ Read on for column meanings and confidence-flag conventions.
 | Tier 1 — top brand + podcast colleges | **17** | RVCE, BMSCE, MSRIT, BMSIT, DSCE, BIT, SIT Tumkur, JSSSTU (SJCE), NIE North + South, REVA, Sir MVIT, CMRIT, Cambridge, RNSIT, SJBIT, RVITM |
 | Tier 2 — well-known mid-tier | **17** | Acharya, AMC, BNMIT, KLE Tech, BIET Davangere, BEC Bagalkot, JSSATE, PESCE Mandya, PESITM Shivamogga, SJCIT, Sapthagiri NPS, VVCE Mysuru, Alliance, GITAM, Presidency, CMRU, MSRUAS |
 | Tier 3 — additional notable Bengaluru/Karnataka | **12** | Atria, BTI, DBIT, Dr. AIT, EPCET, GAT, KSSEM, KSIT, NCET, RRCE, SVIT, Jyothy IT |
-| Long tail (unfilled) | 104 | Mostly small private VTU-affiliated colleges; sparse online presence |
+| Long tail (now researched) | 104 | Mostly small private VTU-affiliated colleges; researched in a later pass — `type` + `about` for all, `established`/`website` where verifiable, placement only where a credible figure exists |
 | **Total in CSV** | **150** | Same row count as `colleges.ts` |
 
-`46` rows are research-filled; `104` rows have only the seeded fields
-(code, name, locality, city, podcast id where applicable).
+All `150` rows are now research-filled to some degree:
+
+- `type` — **150 / 150** (every college classified)
+- `established_year` — **146 / 150** (4 newest colleges have no confirmed founding year)
+- `website` — **133 / 150** (the rest are parked domains / unconfirmed, left empty rather than guessed)
+- `placement` (CSE or overall avg) — **129 / 150** (only where a credible average/median exists; the 21 blanks are 8 brand-new colleges with no graduating batch, an architecture school, and 12 colleges whose only available figures were too inconsistent across sources to trust)
+
+Long-tail rows lean `confidence = low`: they typically have `type`, `website`,
+`established`, and a neutral `about`, but placement is blank or a single-source
+estimate flagged in `notes`.
 
 ## Columns
 
@@ -55,7 +63,7 @@ Read on for column meanings and confidence-flag conventions.
 ## Things I deliberately did *not* do
 
 - I did **not** modify `web/src/data/colleges.ts` — this CSV is the proposal only, per your instruction to review first.
-- I did **not** fill placement figures for the long-tail 104 colleges. Many of them don't publish averages; pulling speculative numbers would hurt more than help.
+- For the long-tail colleges I filled placement figures **only where a credible source published an average or median**. Where colleges don't publish averages — or are too new to have a graduating batch — the cell is left blank and the `notes` say why, rather than pulling a speculative number.
 - I did **not** invent `about` copy for colleges I couldn't verify. Empty is honest; a templated description for every college would read as AI fluff.
 - I did **not** distinguish CSE avg from Overall avg where the source only published one combined figure. CSE avg is empty in those rows.
 
