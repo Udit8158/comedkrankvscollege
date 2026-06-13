@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef } from "react";
 import { Moon, Sun } from "lucide-react";
 
-// Keep in sync with the transition-duration in globals.css (.theme-transition).
-const TRANSITION_MS = 320;
+// document.startViewTransition isn't in the default DOM lib types yet.
+type DocumentWithViewTransition = Document & {
+  startViewTransition?: (callback: () => void) => unknown;
+};
 
 /**
  * Sun/moon theme toggle, fixed in the top-right corner. Flips the `light` class
@@ -13,26 +14,34 @@ const TRANSITION_MS = 320;
  * saved/system theme so there's no flash; rendering both icons keeps the server
  * and client markup identical (no hydration mismatch).
  *
- * The `theme-transition` class is added for the duration of the switch so the
- * whole app eases between palettes, then removed so it never affects load or
- * unrelated interactions.
+ * The switch runs inside a View Transition so the whole app crossfades between
+ * palettes. That animates a snapshot rather than re-rendering text frame by
+ * frame, which avoids the serif-title flicker seen on mobile WebKit when
+ * transitioning text color. Falls back to an instant switch where View
+ * Transitions are unsupported or the user prefers reduced motion.
  */
 export function ThemeToggle() {
-  const timer = useRef<number | undefined>(undefined);
-
   function toggle() {
     const root = document.documentElement;
-    root.classList.add("theme-transition");
-    const isLight = root.classList.toggle("light");
-    try {
-      localStorage.setItem("theme", isLight ? "light" : "dark");
-    } catch {
-      /* storage disabled (private mode) — toggle still works for the session */
+    const apply = () => {
+      const isLight = root.classList.toggle("light");
+      try {
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+      } catch {
+        /* storage disabled (private mode) — toggle still works for the session */
+      }
+    };
+
+    const doc = document as DocumentWithViewTransition;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (!reduceMotion && typeof doc.startViewTransition === "function") {
+      doc.startViewTransition(apply);
+    } else {
+      apply();
     }
-    window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => {
-      root.classList.remove("theme-transition");
-    }, TRANSITION_MS);
   }
 
   return (

@@ -76,19 +76,16 @@ html.light .row:hover {
 html.light .theme-ico-sun { display: none; }
 html.light .theme-ico-moon { display: block; }
 
-/* Smooth cross-app palette morph while switching theme. The `theme-transition`
- * class is added to <html> only for the duration of the switch (see
- * ThemeToggle), so it never animates on first load or on unrelated changes.
- * Reduced-motion users get an instant switch. */
+/* Theme switch runs inside a View Transition (see ThemeToggle): the whole app
+ * crossfades between palettes by animating a snapshot, so text is never
+ * re-rasterized mid-transition — which is what flickered the serif titles on
+ * mobile WebKit when animating their color. Tune the crossfade here; reduced-
+ * motion users get an instant switch. */
 @media (prefers-reduced-motion: no-preference) {
-  html.theme-transition,
-  html.theme-transition *,
-  html.theme-transition *::before,
-  html.theme-transition *::after {
-    transition-property: background-color, color, border-color, fill, stroke,
-      outline-color;
-    transition-duration: 320ms;
-    transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 320ms;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 }
 
