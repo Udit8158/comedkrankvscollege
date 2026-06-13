@@ -1,6 +1,7 @@
 import raw from "@/data.json";
 import { cleanBranchName, familyOf, familyRank, intraFamilyRank, type BranchFamily } from "./branches";
 import { getCollege, listColleges } from "./colleges";
+import { tierAndFit } from "./fit";
 
 type RawBranch = { code: string; name: string };
 type RawRecord = { college: string; branch: string; rank: number };
@@ -10,6 +11,10 @@ const data = raw as { branches: RawBranch[]; records: RawRecord[] };
 const branchByCode = new Map(data.branches.map((b) => [b.code, cleanBranchName(b.name)]));
 
 export const TOTAL_COLLEGES = listColleges().length;
+/** Colleges that actually appear in the cut-off records (≤ TOTAL_COLLEGES). */
+export const TOTAL_COLLEGES_WITH_RECORDS = new Set(
+  data.records.map((r) => r.college),
+).size;
 export const TOTAL_BRANCHES = data.branches.length;
 export const TOTAL_RECORDS = data.records.length;
 
@@ -66,15 +71,8 @@ export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
       : r.college;
     const branchName = branchByCode.get(r.branch) ?? r.branch;
 
-    // Fit score: clamp headroom/cutoff to [-reachMargin, 1].
-    // Positive → qualifies. Negative within reach window → reach.
-    const ratio = headroom / cutoff;
-    let tier: Match["tier"];
-    if (ratio < 0) tier = "reach";
-    else if (ratio < 0.1) tier = "moderate";
-    else tier = "safe";
-
-    const fit = Math.max(0, Math.min(1, ratio));
+    // Tier + fit: shared with the per-college view via tierAndFit().
+    const { tier, fit } = tierAndFit(cutoff, userRank);
 
     matches.push({
       collegeCode: r.college,

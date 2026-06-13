@@ -1,5 +1,6 @@
 import raw from "@/data.json";
 import { cleanBranchName, familyOf, familyRank } from "./branches";
+import { tierAndFit } from "./fit";
 
 type RawBranch = { code: string; name: string };
 type RawRecord = { college: string; branch: string; rank: number };
@@ -68,9 +69,9 @@ export function getCollegeRecords(
       family,
     };
     if (userRank && userRank > 0) {
-      const ratio = (r.rank - userRank) / r.rank;
-      rec.tier = ratio < 0 ? "reach" : ratio < 0.1 ? "moderate" : "safe";
-      rec.fit = Math.max(0, Math.min(1, ratio));
+      const { tier, fit } = tierAndFit(r.rank, userRank);
+      rec.tier = tier;
+      rec.fit = fit;
     }
     out.push(rec);
   }

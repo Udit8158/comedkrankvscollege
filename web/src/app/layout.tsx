@@ -3,6 +3,7 @@ import { Fraunces, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { TierLegend } from "@/components/TierLegend";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -23,8 +24,6 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
 });
-
-const SITE_URL = "https://comedkrankvscollege.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

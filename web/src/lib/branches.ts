@@ -30,6 +30,19 @@ const CORE = new Set([
   "CC", "TX", "RA", "ROB", "AG", "AL", "AR",
 ]);
 
+// Branch codes intentionally excluded from the engineering predictor: design and
+// planning programs. Listed explicitly so the data validator can tell a
+// "deliberately ignored" code apart from a "newly added COMEDK code that fell
+// through unclassified" (the latter should fail validation).
+export const IGNORED_BRANCHES = new Set([
+  "BD",  // Bachelor of Design
+  "BDC", // B.Des — Communication & Design
+  "BFD", // B.Des — Fashion Design
+  "BID", // B.Des — Industrial Design
+  "BLD", // B.Des — Lifestyle & Accessory Design
+  "BP",  // Bachelor of Urban & Regional Planning
+]);
+
 // Within-family sort: pure CS first inside computing, etc.
 // Lower index = higher priority.
 const INTRA_FAMILY_ORDER: Record<string, number> = {

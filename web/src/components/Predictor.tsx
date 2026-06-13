@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import {
   groupByFamily,
   predict,
-  TOTAL_COLLEGES,
+  TOTAL_COLLEGES_WITH_RECORDS,
   TOTAL_BRANCHES,
   TOTAL_RECORDS,
 } from "@/lib/predict";
@@ -96,7 +96,7 @@ export function Predictor() {
 
       <p id="rank-help" className="mt-4 text-[13px] text-fg-mute max-w-xl">
         Indexed against{" "}
-        <span className="font-mono text-fg">{TOTAL_COLLEGES}</span> colleges and{" "}
+        <span className="font-mono text-fg">{TOTAL_COLLEGES_WITH_RECORDS}</span> colleges and{" "}
         <span className="font-mono text-fg">{TOTAL_BRANCHES}</span> branches —{" "}
         <span className="font-mono text-fg">{TOTAL_RECORDS}</span> cut-off
         entries from the 2025 Round 3 allotment. General Merit only. Last year

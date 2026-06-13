@@ -1,11 +1,11 @@
-// One-shot generator: reads college names from src/data.json and emits a
-// starter src/data/colleges.ts (single source of truth for college metadata).
+// SEEDER (occasional): reads college codes + names from src/data.json and
+// appends any *new* codes to src/data/colleges.ts as bare rows.
 //
-// After the first run, colleges.ts is the source — edit it directly to add
-// established year, placement data, podcast IDs, etc. Re-run this script ONLY
-// to bring in new colleges from data.json without losing hand-curated fields.
-// (The script appends new entries to the end and never overwrites existing
-//  field values when present.)
+// This is NOT where you edit college metadata. The editable source of truth is
+// data/colleges.csv; web/scripts/merge-csv-to-colleges.mjs regenerates
+// colleges.ts from it. Use this script only to introduce brand-new COMEDK codes,
+// then add matching rows in data/colleges.csv and re-run the merge.
+// (Append-only: never overwrites existing rows.)
 
 import fs from "node:fs";
 import path from "node:path";
@@ -61,12 +61,14 @@ console.log(`new rows to write: ${newRows.length}`);
 
 if (existingCodes.size === 0) {
   // Fresh write — emit the full module.
-  const header = `// Single source of truth for college metadata.
+  const header = `// GENERATED FILE — DO NOT EDIT BY HAND.
 //
-// Edit this file directly to add or revise per-college information. The
-// \`code\` field is the primary key and must match cut-off records in
-// src/data.json. Run scripts/build-colleges.mjs to pull in any newly
-// added colleges from data.json without overwriting curated fields.
+// Source of truth: data/colleges.csv. Edit that file, then regenerate with:
+//   node web/scripts/merge-csv-to-colleges.mjs
+//
+// The \`code\` field is the primary key and must match cut-off records in
+// src/data.json. To add a brand-new college code, follow the update playbook in
+// CLAUDE.md (build-colleges.mjs seeds the code, then add a CSV row + re-merge).
 
 export type CollegeMeta = {
   /** Primary key — matches cut-off records in data.json. */

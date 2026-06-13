@@ -1,9 +1,11 @@
-// Single source of truth for college metadata.
+// GENERATED FILE — DO NOT EDIT BY HAND.
 //
-// Edit this file directly to add or revise per-college information. The
-// `code` field is the primary key and must match cut-off records in
-// src/data.json. Run scripts/build-colleges.mjs to pull in any newly
-// added colleges from data.json without overwriting curated fields.
+// Source of truth: data/colleges.csv. Edit that file, then regenerate with:
+//   node web/scripts/merge-csv-to-colleges.mjs
+//
+// The `code` field is the primary key and must match cut-off records in
+// src/data.json. To add a brand-new college code, follow the update playbook in
+// CLAUDE.md (build-colleges.mjs seeds the code, then add a CSV row + re-merge).
 
 export type CollegeMeta = {
   /** Primary key — matches cut-off records in data.json. */

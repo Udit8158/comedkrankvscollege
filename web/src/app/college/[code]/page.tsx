@@ -7,12 +7,11 @@ import { CollegeHero } from "@/components/college/CollegeHero";
 import { PlacementStrip } from "@/components/college/PlacementStrip";
 import { PodcastEmbed } from "@/components/college/PodcastEmbed";
 import { CollegeCutoffTable } from "@/components/college/CollegeCutoffTable";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return listColleges().map((c) => ({ code: c.code }));
 }
-
-const SITE_URL = "https://comedkrankvscollege.vercel.app";
 
 export async function generateMetadata({
   params,
