@@ -7,6 +7,8 @@ import { CollegeHero } from "@/components/college/CollegeHero";
 import { PlacementStrip } from "@/components/college/PlacementStrip";
 import { PodcastEmbed } from "@/components/college/PodcastEmbed";
 import { CollegeCutoffTable } from "@/components/college/CollegeCutoffTable";
+import { CounselCTA } from "@/components/CounselCTA";
+import { RankSync } from "@/components/RankContext";
 import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -93,7 +95,7 @@ export default async function CollegePage({
   };
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 sm:px-10 pt-10 sm:pt-14 pb-32">
+    <main className="mx-auto w-full max-w-3xl px-6 sm:px-10 pt-6 sm:pt-10 pb-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -118,6 +120,24 @@ export default async function CollegePage({
       {college.podcast && <PodcastEmbed podcast={college.podcast} />}
 
       <CollegeCutoffTable records={records} hasRank={hasRank} />
+
+      {/* Deepest intent in the app: they left the list to read about one
+          specific campus. The pre-filled message names it, so the counsellor
+          opens on the right college instead of asking which one. */}
+      <CounselCTA
+        placement="college"
+        rank={userRank}
+        collegeName={college.name}
+        collegeCode={college.code}
+        eyebrow="admission"
+        head="Numbers only go so far."
+        headTail="Ask someone who has been on this campus."
+        body={`Fees, hostel, which companies actually turn up for your branch, and whether a management seat here is worth what it costs — none of that is in a cut-off table. MindCreed counsels students into Bengaluru engineering colleges and films student reviews on campuses like ${college.name}.`}
+        ctaLabel="Ask about this college"
+      />
+
+      {/* Hands the ?rank= this page was opened with to the header CTA. */}
+      <RankSync rank={userRank} />
     </main>
   );
 }

@@ -3,7 +3,7 @@ import { Predictor } from "@/components/Predictor";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 sm:px-10 pt-16 sm:pt-24 pb-32">
+    <main className="mx-auto w-full max-w-3xl px-6 sm:px-10 pt-8 sm:pt-14 pb-32">
       {/* <header className="flex items-center justify-between border-b border-hairline pb-6">
         <div className="flex items-center gap-3">
           <span className="brass-tick h-5 inline-block" />

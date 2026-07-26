@@ -3,8 +3,10 @@ import { Fraunces, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { TierLegend } from "@/components/TierLegend";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { SiteHeader } from "@/components/SiteHeader";
+import { RankProvider } from "@/components/RankContext";
 import { SITE_URL } from "@/lib/site";
+import { BRAND, WHATSAPP_NUMBER } from "@/lib/mindcreed";
 import "./globals.css";
 
 // Runs before paint to set the initial theme (stored choice, else system
@@ -33,12 +35,14 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Keyword-first, brand last: the COMEDK terms are what earns the click in
+  // search, the brand is what the student remembers afterwards.
   title: {
-    default: "COMEDK 2026 Rank vs College — College Predictor",
-    template: "%s — COMEDK 2026 Cutoffs & Placements",
+    default: "COMEDK 2026 Rank vs College — College Predictor | MindCreed",
+    template: "%s — COMEDK 2026 Cutoffs & Placements | MindCreed",
   },
   description:
-    "COMEDK 2026 rank-to-college predictor. Enter your COMEDK rank to see the colleges and branches you can get, based on the official COMEDK 2025 Round 3 cut-offs.",
+    "COMEDK 2026 rank-to-college predictor by MindCreed. Enter your COMEDK rank to see the colleges and branches you can get, based on the official COMEDK 2025 Round 3 cut-offs.",
   keywords: [
     "COMEDK 2026",
     "COMEDK 2026 rank vs college",
@@ -47,21 +51,26 @@ export const metadata: Metadata = {
     "COMEDK 2026 cutoff",
     "COMEDK college list",
     "Karnataka engineering colleges",
+    "MindCreed",
+    "COMEDK counselling Bangalore",
   ],
-  applicationName: "COMEDK Rank vs College",
+  applicationName: "MindCreed COMEDK Rank vs College",
+  authors: [{ name: BRAND.name, url: BRAND.site }],
+  creator: BRAND.name,
+  publisher: BRAND.name,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "COMEDK 2026 Rank vs College",
-    title: "COMEDK 2026 Rank vs College — College Predictor",
+    siteName: BRAND.name,
+    title: "COMEDK 2026 Rank vs College — College Predictor | MindCreed",
     description:
-      "Enter your COMEDK rank, see the colleges and branches that fit. Based on the official COMEDK 2025 Round 3 cut-offs.",
+      "Enter your COMEDK rank, see the colleges and branches that fit. Based on the official COMEDK 2025 Round 3 cut-offs. By MindCreed, Bengaluru.",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "COMEDK 2026 Rank vs College — College Predictor",
+    title: "COMEDK 2026 Rank vs College — College Predictor | MindCreed",
     description:
       "Enter your COMEDK rank, see the colleges and branches that fit. Based on COMEDK 2025 Round 3 cut-offs.",
   },
@@ -70,6 +79,28 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+};
+
+/** Ties the tool to the consultancy for search engines: who publishes it, how
+ *  to reach them, and which profiles are the same entity. */
+const ORG_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: BRAND.name,
+  url: BRAND.site,
+  sameAs: [BRAND.youtube, BRAND.site],
+  areaServed: "Bengaluru, Karnataka, India",
+  description:
+    "MindCreed is an admission consultancy in Bengaluru guiding students through COMEDK, KCET and management-quota engineering and medical admissions.",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: `+${WHATSAPP_NUMBER}`,
+      contactType: "admissions counselling",
+      areaServed: "IN",
+      availableLanguage: ["en", "hi", "kn"],
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -85,12 +116,20 @@ export default function RootLayout({
     >
       <body className="bg-paper min-h-dvh flex flex-col">
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
-        <ThemeToggle />
-        <div className="flex-1">{children}</div>
-        <div className="mx-auto w-full max-w-3xl px-6 sm:px-10 pb-10">
-          <TierLegend />
-          <SiteFooter />
-        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSON_LD) }}
+        />
+        {/* RankProvider wraps header + page so the header's WhatsApp link can
+            carry whatever rank the student has typed. */}
+        <RankProvider>
+          <SiteHeader />
+          <div className="flex-1">{children}</div>
+          <div className="mx-auto w-full max-w-3xl px-6 sm:px-10 pb-10">
+            <TierLegend />
+            <SiteFooter />
+          </div>
+        </RankProvider>
         <Analytics />
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   groupByFamily,
@@ -13,6 +13,8 @@ import { FAMILY_LABEL } from "@/lib/branches";
 import { formatRank } from "@/lib/utils";
 import { SectionHead } from "./SectionHead";
 import { ResultRow } from "./ResultRow";
+import { CounselCTA } from "./CounselCTA";
+import { useRank } from "./RankContext";
 
 export function Predictor() {
   // If we came back from a college page (/?rank=12000), pre-fill the input so
@@ -46,6 +48,14 @@ export function Predictor() {
 
   const hasRank = rank > 0;
   const totalMatches = matches.length;
+
+  // Publish the rank so the header's WhatsApp link opens a thread that already
+  // states it. Debounced by useDeferredValue upstream, so this doesn't fire on
+  // every keystroke of a six-digit number.
+  const { setRank } = useRank();
+  useEffect(() => {
+    setRank(rank);
+  }, [rank, setRank]);
 
   return (
     <section className="w-full">
@@ -136,6 +146,19 @@ export function Predictor() {
                 </div>
               </div>
             ))}
+
+            {/* Sits after the full list, never inside it — the student gets
+                every result first, then the offer to help read them. */}
+            <CounselCTA
+              placement="results"
+              rank={rank}
+              matchCount={totalMatches}
+              eyebrow="next step"
+              head="That's every seat your rank reaches."
+              headTail="Choosing between them is the harder question."
+              body="A closing rank tells you where you stand. It doesn't tell you which of these actually recruits in your branch, what the fee works out to over four years, or which are worth taking on a management seat. That is the part MindCreed does — and we've filmed student reviews on many of these campuses."
+              ctaLabel="Ask about my rank"
+            />
           </>
         )}
       </div>
@@ -154,6 +177,13 @@ function EmptyState() {
   );
 }
 
+/**
+ * The dead end — and the highest-intent moment in the app. A student who sees
+ * this is out of obvious options and actively looking for a way forward, which
+ * is precisely what a counsellor is for. The original copy already said the
+ * honest thing (other rounds and quotas exist); this just gives that sentence
+ * somewhere to lead.
+ */
 function NoMatches({ rank }: { rank: number }) {
   return (
     <div className="border-t border-hairline pt-10">
@@ -166,6 +196,17 @@ function NoMatches({ rank }: { rank: number }) {
         number. It does not mean no seat is possible — counselling rounds,
         management quota, and category seats are separate.
       </p>
+
+      <CounselCTA
+        placement="no-matches"
+        rank={rank}
+        className="mt-14"
+        eyebrow="what now"
+        head="Round 3 is not the whole story."
+        headTail="There are seats this list cannot see."
+        body="Everything above comes from one round of one exam, General Merit only. Later rounds, category seats, management and NRI quota sit outside it entirely. That is the conversation MindCreed has with students every admission season — tell us your rank and we'll tell you what's actually open."
+        ctaLabel="Ask about my options"
+      />
     </div>
   );
 }

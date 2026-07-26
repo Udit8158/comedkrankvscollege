@@ -55,6 +55,39 @@ The two tracks link by the `code` field (`E001`, `E095`, …).
 - **Confidence flags in CSV** — `high` / `medium` / `low`; cite `sources` (domains, official site first).
 - **Empty cells are honest** — don't invent placement figures.
 
+## Branding & lead capture
+
+The tool ships under the **MindCreed** brand and its only conversion surface is
+WhatsApp. Everything client-facing routes through `web/src/lib/mindcreed.ts` —
+number, links, and the pre-filled message text. Change it there, nowhere else.
+
+| Piece | File |
+| --- | --- |
+| Brand config, WhatsApp number, message copy | `web/src/lib/mindcreed.ts` |
+| Logo mark (monochrome SVG, `currentColor`) | `web/src/components/brand/MindCreedMark.tsx` |
+| Sticky brand bar + ambient CTA | `web/src/components/SiteHeader.tsx` |
+| The reusable lead block | `web/src/components/CounselCTA.tsx` |
+| Link + analytics wrapper | `web/src/components/WhatsAppCTA.tsx` |
+| Rank sharing between predictor and header | `web/src/components/RankContext.tsx` |
+
+Four CTA placements, all rank-aware: `header`, `results` (after the full list),
+`no-matches` (the dead end — highest intent), `college` (names the campus).
+
+**Rules that keep it from becoming spam:**
+
+- **Nothing is gated.** Every result stays free. The obvious lead-farm move —
+  five results then a phone-number wall — trades the YouTube channel's
+  credibility for a worse CollegeDunia. Don't add it without the user asking.
+- **Never sell before the tool has worked.** No CTA on the empty state.
+- **One brass button per view.** `.cta-brass` is the single warmest element on
+  screen; a second one halves the value of both.
+- **No invented claims.** Copy may reference what's verifiable: Bengaluru
+  counselling, COMEDK/KCET/management-quota, the @mindcreed23 reviews. Not
+  success rates, response times, or years in business.
+
+Clicks fire a `whatsapp_cta` Vercel Analytics event with `placement`, `rank` and
+`college`, so the lead flow is tunable against numbers rather than taste.
+
 ## Project quirks
 
 - COMEDK GM data only — the PDF has no other reservation categories.
@@ -65,7 +98,7 @@ The two tracks link by the `code` field (`E001`, `E095`, …).
 ## Branches
 
 - `main` — production. Has Vercel Analytics.
-- `experimental` — work-in-progress. No analytics. Predates the `data/` reorg.
+- rest, for each issues and pr from github, create a seperate branch and after reviewing from user, and merge to main, you will delete that branch
 
 ## Personal config
 

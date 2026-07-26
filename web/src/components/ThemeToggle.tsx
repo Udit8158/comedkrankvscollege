@@ -8,7 +8,7 @@ type DocumentWithViewTransition = Document & {
 };
 
 /**
- * Sun/moon theme toggle, fixed in the top-right corner. Flips the `light` class
+ * Sun/moon theme toggle, seated at the right end of the brand bar. Flips the `light` class
  * on <html> — CSS swaps both the palette and which icon is visible — and stores
  * the choice in localStorage. The pre-paint script in layout.tsx applies the
  * saved/system theme so there's no flash; rendering both icons keeps the server
@@ -50,7 +50,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle light and dark theme"
       title="Toggle light / dark"
-      className="fixed top-4 right-4 sm:top-5 sm:right-5 z-50 inline-grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-hairline bg-[color:var(--bg-base)] text-fg-mute transition-colors hover:text-accent hover:border-[color:var(--accent-line)]"
+      className="inline-grid h-8 w-8 shrink-0 cursor-pointer place-items-center rounded-full border border-hairline text-fg-mute transition-colors hover:text-accent hover:border-[color:var(--accent-line)]"
     >
       <span aria-hidden className="grid h-4 w-4 place-items-center">
         <Sun className="theme-ico-sun" size={16} strokeWidth={1.75} />

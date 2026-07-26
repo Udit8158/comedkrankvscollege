@@ -23,6 +23,11 @@
   --accent: #e2b23b;        /* turmeric/brass */
   --accent-soft: rgba(226, 178, 59, 0.16);
   --accent-line: rgba(226, 178, 59, 0.38);
+  /* CTA fill + the text that sits on it. Split from --accent because the
+   * button is the one place the accent carries text rather than sitting beside
+   * it, so it has to clear 4.5:1 — which the light palette's brass does not. */
+  --accent-cta: #e2b23b;
+  --accent-ink: #0e1014;
 
   --safe: #8fa57d;
   --moderate: #d2a25b;
@@ -52,6 +57,9 @@ html.light {
   --accent: #a8761a;
   --accent-soft: rgba(168, 118, 26, 0.16);
   --accent-line: rgba(168, 118, 26, 0.40);
+  /* Deeper than --accent so paper-white text on it clears 4.5:1 (≈4.8:1). */
+  --accent-cta: #8f6314;
+  --accent-ink: #f8f4ea;
 
   --safe: #5f7a4c;
   --moderate: #a9763a;
@@ -262,6 +270,47 @@ body {
 }
 .signature:focus-visible .signature-name {
   background-size: 100% 1px;
+  color: var(--accent);
+}
+
+/* ── Lead affordances ─────────────────────────────────────────
+ * The brass button is the single warmest element on any view — that is its
+ * whole job, and the reason there is never more than one per screen. It borrows
+ * the existing accent token and the 2px radius so it reads as part of the
+ * documentary set rather than a pasted-in marketing widget. */
+.cta-brass {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--accent-cta);
+  color: var(--accent-ink);
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-cta);
+  text-decoration: none;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+.cta-brass:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.cta-brass:active {
+  transform: translateY(0);
+}
+
+/* Quiet variant — the ambient header/footer link. Deliberately not a button:
+ * persistent chrome that shouts turns the page into an ad for itself. */
+.cta-quiet {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--fg-mute);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+.cta-quiet:hover,
+.cta-quiet:focus-visible {
   color: var(--accent);
 }
 
