@@ -157,7 +157,7 @@ export function Predictor() {
               head="That's every seat your rank reaches."
               headTail="Choosing between them is the harder question."
               body="A closing rank tells you where you stand. It doesn't tell you which of these actually recruits in your branch, what the fee works out to over four years, or which are worth taking on a management seat. That is the part MindCreed does — and we've filmed student reviews on many of these campuses."
-              ctaLabel="Ask about my rank"
+              ctaLabel="Ask about my options"
             />
           </>
         )}
