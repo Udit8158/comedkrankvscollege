@@ -9,7 +9,7 @@ import {
   TOTAL_BRANCHES,
   TOTAL_RECORDS,
 } from "@/lib/predict";
-import { FAMILY_LABEL } from "@/lib/branches";
+import { FAMILY_LABEL, type BranchFamily } from "@/lib/branches";
 import { formatRank } from "@/lib/utils";
 import { SectionHead } from "./SectionHead";
 import { ResultRow } from "./ResultRow";
@@ -48,6 +48,18 @@ export function Predictor() {
 
   const hasRank = rank > 0;
   const totalMatches = matches.length;
+
+  // Only pure CSE is open on arrival — it's the branch nearly every student
+  // checks first, and a hundred rows of everything else buries it. Toggles
+  // survive rank edits on purpose: the list re-sorts as you type, and
+  // re-collapsing a section the student just opened would fight them.
+  const [openFamilies, setOpenFamilies] = useState<
+    Partial<Record<BranchFamily, boolean>>
+  >({ cse: true });
+
+  function toggleFamily(family: BranchFamily) {
+    setOpenFamilies((prev) => ({ ...prev, [family]: !prev[family] }));
+  }
 
   // Publish the rank so the header's WhatsApp link opens a thread that already
   // states it. Debounced by useDeferredValue upstream, so this doesn't fire on
@@ -129,23 +141,32 @@ export function Predictor() {
               </span>
             </div>
 
-            {groups.map((g) => (
-              <div key={g.family}>
-                <SectionHead
-                  label={FAMILY_LABEL[g.family]}
-                  count={g.items.length}
-                />
-                <div>
-                  {g.items.map((m) => (
-                    <ResultRow
-                      key={`${m.collegeCode}-${m.branchCode}`}
-                      m={m}
-                      rank={rank}
-                    />
-                  ))}
+            {groups.map((g) => {
+              const open = openFamilies[g.family] ?? false;
+              const panelId = `family-${g.family}`;
+              return (
+                <div key={g.family}>
+                  <SectionHead
+                    label={FAMILY_LABEL[g.family]}
+                    count={g.items.length}
+                    expanded={open}
+                    onToggle={() => toggleFamily(g.family)}
+                    controls={panelId}
+                  />
+                  {open && (
+                    <div id={panelId} className="section-panel">
+                      {g.items.map((m) => (
+                        <ResultRow
+                          key={`${m.collegeCode}-${m.branchCode}`}
+                          m={m}
+                          rank={rank}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             {/* Sits after the full list, never inside it — the student gets
                 every result first, then the offer to help read them. */}
