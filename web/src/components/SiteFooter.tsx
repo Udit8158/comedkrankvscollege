@@ -1,6 +1,6 @@
 import { MindCreedMark } from "./brand/MindCreedMark";
-import { WhatsAppCTA } from "./WhatsAppCTA";
-import { BRAND } from "@/lib/mindcreed";
+import { LeadCTA } from "./LeadCTA";
+import { BRAND, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from "@/lib/mindcreed";
 
 /**
  * Footer — the brand block. Carries the ownership statement, the three places a
@@ -31,11 +31,20 @@ export function SiteFooter() {
           aria-label="MindCreed links"
           className="flex flex-col items-start gap-3"
         >
-          <WhatsAppCTA
+          {/* The footer is a contact list rather than a conversion surface, so
+              the form sits alongside the number instead of replacing it — a
+              student who would rather just dial can. */}
+          <LeadCTA
             placement="footer"
             variant="quiet"
-            label="WhatsApp a counsellor"
+            label="Request a callback"
           />
+          <a
+            href={`tel:+${WHATSAPP_NUMBER}`}
+            className="linkmark font-mono text-[12px] text-fg-mute tracking-wider"
+          >
+            {WHATSAPP_DISPLAY}
+          </a>
           <a
             href={BRAND.site}
             target="_blank"

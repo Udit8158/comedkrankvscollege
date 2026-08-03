@@ -1,5 +1,9 @@
-import { WhatsAppCTA } from "./WhatsAppCTA";
-import { WHATSAPP_DISPLAY, type CtaPlacement } from "@/lib/mindcreed";
+import { LeadCTA } from "./LeadCTA";
+import {
+  WHATSAPP_DISPLAY,
+  WHATSAPP_NUMBER,
+  type CtaPlacement,
+} from "@/lib/mindcreed";
 
 /**
  * The lead block — set in the same editorial voice as the rest of the page: a
@@ -9,11 +13,11 @@ import { WHATSAPP_DISPLAY, type CtaPlacement } from "@/lib/mindcreed";
  * sit inline without costing the page its tone.
  *
  * It is only ever rendered after the tool has done its job — never before a
- * rank produces something. Nothing is hidden behind it: the full list is free,
- * and this asks for a conversation, not a phone number. Gating results is the
- * obvious way to farm more leads here, and it would trade the channel's
- * credibility — which is the actual asset — for a worse version of what
- * CollegeDunia already does.
+ * rank produces something. It does now ask for a phone number, but nothing is
+ * hidden behind it: every result above is already on screen and stays free
+ * whether or not the form is ever opened. Gating results is the obvious way to
+ * farm more leads here, and it would trade the channel's credibility — which is
+ * the actual asset — for a worse version of what CollegeDunia already does.
  */
 export function CounselCTA({
   eyebrow,
@@ -56,7 +60,7 @@ export function CounselCTA({
       </p>
 
       <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
-        <WhatsAppCTA
+        <LeadCTA
           placement={placement}
           rank={rank}
           collegeName={collegeName}
@@ -64,9 +68,15 @@ export function CounselCTA({
           matchCount={matchCount}
           label={ctaLabel}
         />
-        <span className="font-mono text-[11px] text-fg-dim tracking-wider">
-          {WHATSAPP_DISPLAY} · opens whatsapp
-        </span>
+        {/* The number stays visible next to the button. A student who would
+            rather dial than wait for a callback shouldn't have to hunt for it
+            in the footer — and on a phone this is one tap. */}
+        <a
+          href={`tel:+${WHATSAPP_NUMBER}`}
+          className="linkmark font-mono text-[11px] text-fg-dim tracking-wider"
+        >
+          or call {WHATSAPP_DISPLAY}
+        </a>
       </div>
     </section>
   );

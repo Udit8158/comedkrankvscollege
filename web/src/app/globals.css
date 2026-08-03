@@ -314,6 +314,143 @@ body {
   color: var(--accent);
 }
 
+/* ── Lead dialog ──────────────────────────────────────────────
+ * The capture form. Deliberately not a floating card: same hairline border and
+ * 2px radius as everything else, seated on the elevated ground so it reads as a
+ * page that slid over the list rather than a marketing overlay. */
+.lead-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: color-mix(in srgb, var(--bg-base) 82%, transparent);
+  backdrop-filter: blur(3px);
+  opacity: 1;
+  transition: opacity 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.lead-backdrop[data-starting-style],
+.lead-backdrop[data-ending-style] {
+  opacity: 0;
+}
+
+.lead-popup {
+  position: fixed;
+  z-index: 61;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(27rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius);
+  padding: 24px;
+  /* A cast shadow, not a glow — enough to lift it off the texture. */
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+  transition: opacity 220ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@media (min-width: 640px) {
+  .lead-popup { padding: 30px; }
+}
+.lead-popup[data-starting-style],
+.lead-popup[data-ending-style] {
+  opacity: 0;
+  transform: translate(-50%, calc(-50% + 8px));
+}
+
+.lead-close {
+  color: var(--fg-dim);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 2px 4px;
+  margin: -2px -4px 0 0;
+  transition: color 160ms ease;
+}
+.lead-close:hover,
+.lead-close:focus-visible {
+  color: var(--accent);
+}
+
+/* The docket — two mono rows in a bordered block, set like a part-filled
+ * allotment form. The rank arrives already printed in; only the second line is
+ * the student's to complete. */
+.lead-docket {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--bg-base);
+}
+.lead-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 13px;
+  cursor: text;
+  border-bottom: 1px solid var(--hairline);
+  transition: border-color 160ms ease;
+}
+.lead-row:last-child {
+  border-bottom: 0;
+}
+.lead-row:focus-within {
+  border-bottom-color: var(--accent);
+}
+.lead-row:last-child:focus-within {
+  border-bottom: 1px solid var(--accent);
+}
+.lead-row-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  width: 4.5rem;
+  flex-shrink: 0;
+}
+.lead-affix {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 15px;
+  color: var(--fg-dim);
+  flex-shrink: 0;
+}
+.lead-input {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-feature-settings: "tnum", "zero";
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  background: transparent;
+  color: var(--fg);
+  caret-color: var(--accent);
+  border: 0;
+  outline: none;
+  width: 100%;
+  min-width: 0;
+}
+.lead-input::placeholder {
+  color: var(--fg-dim);
+  letter-spacing: 0.04em;
+}
+.lead-input:focus,
+.lead-input:focus-visible {
+  outline: none;
+}
+
+/* The decline link under the success state's WhatsApp button. */
+.lead-dismiss {
+  display: block;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--fg-dim);
+  transition: color 160ms ease;
+}
+.lead-dismiss:hover,
+.lead-dismiss:focus-visible {
+  color: var(--fg-mute);
+}
+
 /* Row hover — paper crease, not a card lift. */
 .row {
   border-top: 1px solid var(--hairline);

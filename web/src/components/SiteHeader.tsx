@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { MindCreedLockup } from "./brand/MindCreedMark";
-import { WhatsAppCTA } from "./WhatsAppCTA";
+import { LeadCTA } from "./LeadCTA";
 import { ThemeToggle } from "./ThemeToggle";
 import { useRank } from "./RankContext";
 
@@ -40,7 +40,7 @@ export function SiteHeader() {
                 their own display utility, and two display classes on one
                 element resolve by stylesheet order rather than breakpoint. */}
             <span className="hidden sm:block">
-              <WhatsAppCTA
+              <LeadCTA
                 placement="header"
                 rank={rank || undefined}
                 variant="quiet"
@@ -48,7 +48,7 @@ export function SiteHeader() {
               />
             </span>
             <span className="sm:hidden">
-              <WhatsAppCTA
+              <LeadCTA
                 placement="header"
                 rank={rank || undefined}
                 variant="quiet"

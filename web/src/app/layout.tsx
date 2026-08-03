@@ -5,6 +5,7 @@ import { TierLegend } from "@/components/TierLegend";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { RankProvider } from "@/components/RankContext";
+import { LeadProvider } from "@/components/LeadContext";
 import { SITE_URL } from "@/lib/site";
 import { BRAND, WHATSAPP_NUMBER } from "@/lib/mindcreed";
 import "./globals.css";
@@ -120,15 +121,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSON_LD) }}
         />
-        {/* RankProvider wraps header + page so the header's WhatsApp link can
-            carry whatever rank the student has typed. */}
+        {/* RankProvider wraps header + page so the header's CTA can carry
+            whatever rank the student has typed. LeadProvider sits inside it and
+            holds the single lead-form dialog every CTA opens. */}
         <RankProvider>
-          <SiteHeader />
-          <div className="flex-1">{children}</div>
-          <div className="mx-auto w-full max-w-3xl px-6 sm:px-10 pb-10">
-            <TierLegend />
-            <SiteFooter />
-          </div>
+          <LeadProvider>
+            <SiteHeader />
+            <div className="flex-1">{children}</div>
+            <div className="mx-auto w-full max-w-3xl px-6 sm:px-10 pb-10">
+              <TierLegend />
+              <SiteFooter />
+            </div>
+          </LeadProvider>
         </RankProvider>
         <Analytics />
       </body>

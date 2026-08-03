@@ -57,27 +57,46 @@ The two tracks link by the `code` field (`E001`, `E095`, …).
 
 ## Branding & lead capture
 
-The tool ships under the **MindCreed** brand and its only conversion surface is
-WhatsApp. Everything client-facing routes through `web/src/lib/mindcreed.ts` —
-number, links, and the pre-filled message text. Change it there, nowhere else.
+The tool ships under the **MindCreed** brand. The conversion surface is a
+**callback form** — every CTA opens a dialog asking for a mobile number, with
+the rank the student already typed pre-filled. WhatsApp is no longer the entry
+point (a wa.me tap left no record to count or follow up); it is offered *after*
+the number is captured, so the student still gets an instant conversation and
+the lead is recorded either way.
+
+> ⚠️ **`/api/leads` does not persist yet.** It validates and writes one
+> `[lead] {json}` line to the function log. Vercel's runtime logs are
+> short-retention and not queryable, so today the WhatsApp handoff is still the
+> only durable copy of an enquiry. Wiring a store is the next job — see the
+> header comment in `route.ts`, which also lists the other two gaps (rate
+> limiting, notify-on-lead).
 
 | Piece | File |
 | --- | --- |
 | Brand config, WhatsApp number, message copy | `web/src/lib/mindcreed.ts` |
+| Lead contract — phone validation, payload type, `submitLead()` | `web/src/lib/leads.ts` |
+| Intake endpoint (validate + log; **no storage yet**) | `web/src/app/api/leads/route.ts` |
+| The form dialog itself | `web/src/components/LeadDialog.tsx` |
+| Single dialog instance + `useLead()` | `web/src/components/LeadContext.tsx` |
+| The button that opens it | `web/src/components/LeadCTA.tsx` |
 | Logo mark (monochrome SVG, `currentColor`) | `web/src/components/brand/MindCreedMark.tsx` |
 | Sticky brand bar + ambient CTA | `web/src/components/SiteHeader.tsx` |
 | The reusable lead block | `web/src/components/CounselCTA.tsx` |
-| Link + analytics wrapper | `web/src/components/WhatsAppCTA.tsx` |
 | Rank sharing between predictor and header | `web/src/components/RankContext.tsx` |
 
-Four CTA placements, all rank-aware: `header`, `results` (after the full list),
-`no-matches` (the dead end — highest intent), `college` (names the campus).
+Five CTA placements, all rank-aware: `header`, `results` (after the full list),
+`no-matches` (the dead end — highest intent), `college` (names the campus), and
+`footer`. The placement rides along on the lead, so the dashboard can show which
+surface actually produces callbacks.
 
 **Rules that keep it from becoming spam:**
 
-- **Nothing is gated.** Every result stays free. The obvious lead-farm move —
-  five results then a phone-number wall — trades the YouTube channel's
-  credibility for a worse CollegeDunia. Don't add it without the user asking.
+- **Nothing is gated.** Every result stays free, and the form is never in the
+  way of one. The obvious lead-farm move — five results then a phone-number
+  wall — trades the YouTube channel's credibility for a worse CollegeDunia.
+  Don't add it without the user asking.
+- **The number is the only required field.** Every extra input is a place to
+  abandon, and MindCreed can ask the rest on the call.
 - **Never sell before the tool has worked.** No CTA on the empty state.
 - **One brass button per view.** `.cta-brass` is the single warmest element on
   screen; a second one halves the value of both.
@@ -85,8 +104,10 @@ Four CTA placements, all rank-aware: `header`, `results` (after the full list),
   counselling, COMEDK/KCET/management-quota, the @mindcreed23 reviews. Not
   success rates, response times, or years in business.
 
-Clicks fire a `whatsapp_cta` Vercel Analytics event with `placement`, `rank` and
-`college`, so the lead flow is tunable against numbers rather than taste.
+Three Vercel Analytics events, all carrying `placement`, `rank` and `college`:
+`lead_open` (dialog opened), `lead_submit` (number captured) and `whatsapp_cta`
+(the post-capture handoff). `lead_open` → `lead_submit` is the conversion rate
+per placement, so the lead flow is tunable against numbers rather than taste.
 
 ## Project quirks
 
