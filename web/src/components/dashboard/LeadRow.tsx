@@ -78,7 +78,7 @@ export function LeadRow({ lead, now }: { lead: LeadRecord; now: number }) {
   ].filter(Boolean) as string[];
 
   return (
-    <li className={`row px-1 py-5 ${pending ? "opacity-70" : ""}`}>
+    <li className={`row px-1 py-4 ${pending ? "opacity-70" : ""}`}>
       <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-3">
         <div className="min-w-0">
           <div className="flex items-center gap-3">
@@ -138,8 +138,14 @@ export function LeadRow({ lead, now }: { lead: LeadRecord; now: number }) {
 
       {/* The note. Always present, never a button you have to find first — the
           thing worth writing down is remembered during the call, not after
-          hunting for where to put it. Saves on blur; no Save button to forget. */}
-      <div className="mt-3 flex items-start gap-2.5">
+          hunting for where to put it. Saves on blur; no Save button to forget.
+
+          The "last touched by" credit rides on this same line rather than
+          taking one of its own. At fifty rows a page that line was costing more
+          vertical space than the notes it was annotating, and it is the least
+          consulted thing in the row — it answers "who spoke to them?", which
+          only matters once you have already decided to open the lead. */}
+      <div className="mt-2 flex items-start gap-2.5">
         <span aria-hidden className="mt-[7px] h-px w-3 shrink-0 bg-hairline" />
         <textarea
           value={note}
@@ -161,19 +167,22 @@ export function LeadRow({ lead, now }: { lead: LeadRecord; now: number }) {
           aria-label={`Note for ${formatPhone(lead.phone)}`}
           className="dash-note"
         />
+        {lead.updatedBy && (
+          <span
+            title={`Last updated by ${lead.updatedBy}`}
+            className="mt-[3px] shrink-0 font-mono text-[10px] tracking-wider text-fg-dim"
+          >
+            {lead.updatedBy.split("@")[0]}
+          </span>
+        )}
       </div>
 
-      {(error || lead.updatedBy) && (
-        <p className="mt-2 pl-[22px] font-mono text-[10px] tracking-wider">
-          {error ? (
-            <span role="alert" className="text-reach">
-              {error}
-            </span>
-          ) : (
-            <span className="text-fg-dim">
-              last touched by {lead.updatedBy?.split("@")[0]}
-            </span>
-          )}
+      {error && (
+        <p
+          role="alert"
+          className="mt-2 pl-[22px] font-mono text-[10px] tracking-wider text-reach"
+        >
+          {error}
         </p>
       )}
     </li>

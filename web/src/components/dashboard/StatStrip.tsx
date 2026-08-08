@@ -26,7 +26,12 @@ export function StatStrip({ stats }: { stats: LeadStats }) {
         <Stat label="waiting" value={waiting} accent={waiting > 0} />
       </div>
 
-      <div className="mt-9 grid gap-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+      {/* Analysis, not the queue — so it is desktop-only.
+          On a phone this block ran to roughly a screen and a half, which put
+          the first actual lead below three scrolls. The counsellor working
+          through callbacks on a handset needs the four numbers and then the
+          list; "which CTA converts best" is a question asked sitting down. */}
+      <div className="mt-9 hidden gap-8 sm:grid sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
         <Sparkline daily={stats.daily} />
         <PlacementBreakdown
           byPlacement={stats.byPlacement}
