@@ -164,12 +164,53 @@ capture degrades to log-only.
 
 Google redirect URI, exactly: `<origin>/api/auth/callback/google`.
 
+## The location filter
+
+Students do not shop for a rank, they shop for a rank *in a place they are
+willing to live*. `?in=` and `?city=` narrow the results to a region or a city;
+the selection lives in the URL, so a filtered list is a shareable link and
+survives a trip into a college page and back.
+
+| Piece | File |
+| --- | --- |
+| City aliases, region map, buckets | `web/src/lib/locations.ts` |
+| `collegeCodes` option + `reachableCollegeCodes()` | `web/src/lib/predict.ts` |
+| The two-tier chip row | `web/src/components/LocationFilter.tsx` |
+| Chip styling (`.geo-*`) | `web/src/app/globals.css` |
+
+**Rules that keep it honest:**
+
+- **The filter runs inside `predict()`, never after it.** Family caps (5 CSE,
+  10 specializations…) are applied to the *filtered* record set. Post-filtering
+  a capped list would show a Mysuru student nothing at all, because the five
+  best CSE seats in the state are all in Bengaluru.
+- **Two tiers, revealed one at a time.** Six regions, then the cities inside
+  the chosen one. Flat, it is 32 place names — twenty of them holding a single
+  college.
+- **Counts are colleges within reach, not matches.** A match count would be
+  reporting where the family cap sits. The number answers "is there anything
+  for me there", so its unit is colleges.
+- **Only places that can ever appear get a chip.** Buckets are built from
+  colleges present in `data.json`; Bidar and Kalaburagi have colleges but no
+  Round 3 GM cut-offs, so a chip for them could only ever read `0`. A zero is
+  reserved for "nothing here *at your rank*", which is a real answer and stays
+  visible rather than vanishing as you type.
+- **The filtered dead end gets no CTA.** `NoneHere` is a state the tool created
+  and the student can undo in one press — selling into it would be the cheapest
+  kind of lead capture. `NoMatches` (nothing anywhere) keeps its CTA.
+- **Filtered result copy must not overclaim.** With a filter on, the results CTA
+  reads "every seat your rank reaches *in Mysuru*".
+- **City spelling is canonicalised in the CSV**, with an alias table in
+  `locations.ts` as the safety net so a future "Bangalore" row does not open a
+  33rd bucket.
+
 ## Project quirks
 
 - COMEDK GM data only — the PDF has no other reservation categories.
 - 9 colleges have student-podcast YouTube IDs from the user's @mindcreed23 channel; long-tail colleges have podcast = absent (component returns null).
 - Predictor result sort: `cse → cse_spec → electronics → core` (no "other" — design/planning branches filtered out).
 - Per-college pages live at `/college/[code]` and accept `?rank=…` for fit-bar context.
+- The home page accepts `?rank=…&in=<region>&city=<slug>` — all three are validated on read, so a hand-typed value falls back to "anywhere".
 
 ## Branches
 

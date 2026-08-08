@@ -11,10 +11,16 @@ const data = raw as { branches: RawBranch[]; records: RawRecord[] };
 const branchByCode = new Map(data.branches.map((b) => [b.code, cleanBranchName(b.name)]));
 
 export const TOTAL_COLLEGES = listColleges().length;
-/** Colleges that actually appear in the cut-off records (≤ TOTAL_COLLEGES). */
-export const TOTAL_COLLEGES_WITH_RECORDS = new Set(
+/**
+ * Colleges that actually appear in the cut-off records (⊂ all colleges). The
+ * rest are in colleges.ts for the metadata but had no Round 3 GM allotment, so
+ * no rank can ever surface them — which is why the location filter builds its
+ * buckets from this set rather than from every college.
+ */
+export const COLLEGE_CODES_WITH_RECORDS: ReadonlySet<string> = new Set(
   data.records.map((r) => r.college),
-).size;
+);
+export const TOTAL_COLLEGES_WITH_RECORDS = COLLEGE_CODES_WITH_RECORDS.size;
 export const TOTAL_BRANCHES = data.branches.length;
 export const TOTAL_RECORDS = data.records.length;
 
@@ -37,6 +43,14 @@ export type PredictOptions = {
   reachMargin?: number;
   /** Hard cap on results per family. Overrides DEFAULT_FAMILY_LIMITS. */
   familyLimits?: Partial<Record<BranchFamily, number>>;
+  /**
+   * Restrict to these college codes (the location filter). `null`/absent means
+   * anywhere. This has to be applied *inside* predict rather than by filtering
+   * the returned array, because the per-family caps below run after it — the
+   * five best CSE seats in Karnataka are all in Bengaluru, so post-filtering
+   * "Mysuru" against a capped list would show nothing at all.
+   */
+  collegeCodes?: ReadonlySet<string> | null;
 };
 
 const DEFAULT_FAMILY_LIMITS: Record<BranchFamily, number> = {
@@ -49,12 +63,13 @@ const DEFAULT_FAMILY_LIMITS: Record<BranchFamily, number> = {
 };
 
 export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
-  const { reachMargin = 0.05, familyLimits } = opts;
+  const { reachMargin = 0.05, familyLimits, collegeCodes } = opts;
   const limits = { ...DEFAULT_FAMILY_LIMITS, ...(familyLimits ?? {}) };
   if (!Number.isFinite(userRank) || userRank <= 0) return [];
 
   const matches: Match[] = [];
   for (const r of data.records) {
+    if (collegeCodes && !collegeCodes.has(r.college)) continue;
     const cutoff = r.rank;
     const headroom = cutoff - userRank;
     // Include qualifies + a small reach window (rank slightly above cutoff).
@@ -105,6 +120,32 @@ export function predict(userRank: number, opts: PredictOptions = {}): Match[] {
     if (perFamilyCount[m.family] <= limits[m.family]) capped.push(m);
   }
   return capped;
+}
+
+/**
+ * Every college with at least one branch within reach at this rank — uncapped
+ * and unfiltered.
+ *
+ * This is what the location chips count. Counting matches instead would mean
+ * counting a capped, per-family number, so a region would read "10" purely
+ * because that is where the cap sits; and counting them per region would mean
+ * running the whole prediction once per chip. A college count is also the
+ * honest unit for the question the chips answer, which is "is there anything
+ * for me there", not "how many rows will I see".
+ */
+export function reachableCollegeCodes(
+  userRank: number,
+  reachMargin = 0.05,
+): ReadonlySet<string> {
+  const codes = new Set<string>();
+  if (!Number.isFinite(userRank) || userRank <= 0) return codes;
+  for (const r of data.records) {
+    if (codes.has(r.college)) continue;
+    if (r.rank - userRank < -r.rank * reachMargin) continue;
+    if (familyOf(r.branch) === null) continue;
+    codes.add(r.college);
+  }
+  return codes;
 }
 
 export function groupByFamily(matches: Match[]): Array<{ family: BranchFamily; items: Match[] }> {

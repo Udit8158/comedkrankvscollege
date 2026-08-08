@@ -5,14 +5,17 @@ import { useSearchParams } from "next/navigation";
 import {
   groupByFamily,
   predict,
+  reachableCollegeCodes,
   TOTAL_COLLEGES_WITH_RECORDS,
   TOTAL_BRANCHES,
   TOTAL_RECORDS,
 } from "@/lib/predict";
 import { FAMILY_LABEL, type BranchFamily } from "@/lib/branches";
+import { codesFor, placeLabel, regionById, cityBySlug } from "@/lib/locations";
 import { formatRank } from "@/lib/utils";
 import { SectionHead } from "./SectionHead";
 import { ResultRow } from "./ResultRow";
+import { LocationFilter } from "./LocationFilter";
 import { CounselCTA } from "./CounselCTA";
 import { useRank } from "./RankContext";
 
@@ -24,6 +27,31 @@ export function Predictor() {
   const [rankRaw, setRankRaw] = useState<string>(initialRank);
   const deferred = useDeferredValue(rankRaw);
   const resultsRef = useRef<HTMLDivElement>(null);
+
+  // Location filter. Seeded from the URL and written back to it (?in=&city=),
+  // so a filtered list is a link a student can send to a parent, and so that
+  // opening a college and coming back does not silently drop the filter.
+  // Validated on read — a hand-typed ?in=goa must fall back to "anywhere".
+  const [place, setPlace] = useState<{ region: string | null; city: string | null }>(
+    () => {
+      const region = regionById(searchParams.get("in"));
+      if (!region) return { region: null, city: null };
+      const city = cityBySlug(region, searchParams.get("city"));
+      return { region: region.id, city: city?.slug ?? null };
+    },
+  );
+
+  function changePlace(region: string | null, city: string | null) {
+    setPlace({ region, city });
+    const url = new URL(window.location.href);
+    if (region) url.searchParams.set("in", region);
+    else url.searchParams.delete("in");
+    if (city) url.searchParams.set("city", city);
+    else url.searchParams.delete("city");
+    // replaceState, not push: the filter is a view of the same page, and
+    // burying the browser's back button under six chip presses is hostile.
+    window.history.replaceState(null, "", url);
+  }
 
   // On mobile, the hero + input fills the viewport; pressing the keyboard's
   // Go/Enter key needs to dismiss the keyboard AND surface the results so it
@@ -43,7 +71,21 @@ export function Predictor() {
     return Number.isFinite(n) && n > 0 ? n : 0;
   }, [deferred]);
 
-  const matches = useMemo(() => (rank > 0 ? predict(rank) : []), [rank]);
+  // Every college within reach at this rank, ignoring the filter — it feeds the
+  // chip counts, and tells the empty state whether the filter is what emptied
+  // the list or whether the rank simply reaches nothing at all.
+  const reachable = useMemo(() => reachableCollegeCodes(rank), [rank]);
+
+  const codes = useMemo(
+    () => codesFor(place.region, place.city),
+    [place.region, place.city],
+  );
+  const where = placeLabel(place.region, place.city);
+
+  const matches = useMemo(
+    () => (rank > 0 ? predict(rank, { collegeCodes: codes }) : []),
+    [rank, codes],
+  );
   const groups = useMemo(() => groupByFamily(matches), [matches]);
 
   const hasRank = rank > 0;
@@ -129,15 +171,39 @@ export function Predictor() {
       <div ref={resultsRef} className="mt-16 scroll-mt-6">
         {!hasRank && <EmptyState />}
 
-        {hasRank && totalMatches === 0 && <NoMatches rank={rank} />}
+        {/* The filter only exists once the tool has produced something to
+            filter — on the empty state it would be furniture. */}
+        {hasRank && reachable.size > 0 && (
+          <div className="mb-12">
+            <LocationFilter
+              regionId={place.region}
+              citySlug={place.city}
+              onChange={changePlace}
+              reachable={reachable}
+            />
+          </div>
+        )}
+
+        {hasRank && totalMatches === 0 && reachable.size === 0 && (
+          <NoMatches rank={rank} />
+        )}
+
+        {hasRank && totalMatches === 0 && reachable.size > 0 && where && (
+          <NoneHere
+            rank={rank}
+            where={where}
+            onClear={() => changePlace(null, null)}
+          />
+        )}
 
         {hasRank && totalMatches > 0 && (
           <>
-            <div className="flex items-baseline justify-between border-b border-hairline pb-3">
-              <span className="eyebrow">your options</span>
-              <span className="font-mono text-[12px] text-fg-mute tabular-nums">
-                {formatRank(totalMatches)} found · ranked at{" "}
-                <span className="text-fg">{formatRank(rank)}</span>
+            <div className="flex items-baseline justify-between gap-4 border-b border-hairline pb-3">
+              <span className="eyebrow shrink-0">your options</span>
+              <span className="font-mono text-[12px] text-fg-mute tabular-nums text-right">
+                {formatRank(totalMatches)} found
+                {where && <> in <span className="text-fg">{where}</span></>} ·
+                ranked at <span className="text-fg">{formatRank(rank)}</span>
               </span>
             </div>
 
@@ -175,7 +241,13 @@ export function Predictor() {
               rank={rank}
               matchCount={totalMatches}
               eyebrow="next step"
-              head="That's every seat your rank reaches."
+              // With a filter on, "every seat your rank reaches" would be a
+              // false claim about a deliberately narrowed list.
+              head={
+                where
+                  ? `That's every seat your rank reaches in ${where}.`
+                  : "That's every seat your rank reaches."
+              }
               headTail="Choosing between them is the harder question."
               body="A closing rank tells you where you stand. It doesn't tell you which of these actually recruits in your branch, what the fee works out to over four years, or which are worth taking on a management seat. That is the part MindCreed does — and we've filmed student reviews on many of these campuses."
               ctaLabel="Ask about my options"
@@ -194,6 +266,42 @@ function EmptyState() {
         Empty until a rank is entered.{" "}
         <span className="display-italic">No defaults, no sample data.</span>
       </p>
+    </div>
+  );
+}
+
+/**
+ * Empty because of the filter, not because of the rank — a different situation
+ * from NoMatches and it gets a different answer. There is no CTA here on
+ * purpose: nothing has failed yet, the student is one press away from a full
+ * list, and selling into a dead end the tool created itself would be the
+ * cheapest kind of lead capture.
+ */
+function NoneHere({
+  rank,
+  where,
+  onClear,
+}: {
+  rank: number;
+  where: string;
+  onClear: () => void;
+}) {
+  return (
+    <div className="border-t border-hairline pt-10">
+      <p className="display text-[28px] leading-snug max-w-lg">
+        Nothing in {where} at rank{" "}
+        <span className="font-mono">{formatRank(rank)}</span>.{" "}
+        <span className="display-italic text-fg-mute">
+          Elsewhere, there is.
+        </span>
+      </p>
+      <p className="mt-3 text-[14px] text-fg-mute max-w-md">
+        Every cut-off in {where} closed earlier than this number. Widen the
+        search, or try one of the other regions above.
+      </p>
+      <button type="button" onClick={onClear} className="cta-quiet mt-6">
+        Show colleges anywhere →
+      </button>
     </div>
   );
 }

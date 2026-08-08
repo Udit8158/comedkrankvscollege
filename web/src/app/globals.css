@@ -514,6 +514,55 @@ body {
   border-bottom-color: var(--accent);
 }
 
+/* Location chips. Deliberately not brass: `.cta-brass` is the one warm thing
+ * on a page, and it belongs to the callback button. A pressed filter is a
+ * statement of where you are, not an action to take — so it gets the accent as
+ * ink and a tinted outline, the same register the dashboard uses for an active
+ * filter, and nothing here ever competes with the CTA. */
+.geo-chip {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--fg-mute);
+  background: none;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  /* Roomy enough to be a comfortable thumb target on a phone. */
+  padding: 7px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+.geo-chip:hover:not(:disabled) {
+  color: var(--fg);
+  border-color: var(--hairline-strong);
+}
+.geo-chip.is-active {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+/* Empty at this rank: still legible, no longer pressable. */
+.geo-chip:disabled {
+  color: var(--fg-dim);
+  border-color: transparent;
+  cursor: default;
+}
+.geo-count {
+  font-size: 10px;
+  color: var(--fg-dim);
+  font-variant-numeric: tabular-nums;
+  transition: color 160ms ease;
+}
+.geo-chip:hover:not(:disabled) .geo-count { color: var(--fg-mute); }
+.geo-chip.is-active .geo-count { color: var(--accent); opacity: 0.75; }
+.geo-chip:disabled .geo-count { color: inherit; opacity: 0.6; }
+
 /* ── Dashboard ────────────────────────────────────────────────
  * Staff-side controls. Same hairline-and-mono vocabulary as the public tool —
  * a lead list rendered in default form chrome would look like a different
