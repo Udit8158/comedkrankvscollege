@@ -514,6 +514,149 @@ body {
   border-bottom-color: var(--accent);
 }
 
+/* ── Dashboard ────────────────────────────────────────────────
+ * Staff-side controls. Same hairline-and-mono vocabulary as the public tool —
+ * a lead list rendered in default form chrome would look like a different
+ * product, and the person reading it is the person whose brand this is.
+ *
+ * Notably absent: `.cta-brass`. The dashboard has no conversion to drive, so
+ * nothing here earns the brass. The accent appears only on state that means
+ * "someone needs to act" — an unworked lead, a pressed filter. */
+
+/* Filter pill — a mono word that lights up when it's the active view. */
+.dash-pill {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--fg-dim);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 4px 9px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+.dash-pill:hover {
+  color: var(--fg);
+}
+.dash-pill.is-active {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+/* Native select, stripped back to a mono word with a caret. Keeping the native
+ * element means the OS picker on a phone — which is the right control for a
+ * counsellor thumbing through this list, and one no custom menu beats. */
+.dash-select,
+.dash-status {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  background: transparent;
+  color: var(--fg-mute);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 5px 26px 5px 9px;
+  cursor: pointer;
+  appearance: none;
+  /* Caret drawn in CSS so it inherits the theme rather than shipping two
+   * coloured SVGs. */
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 12px center, right 8px center;
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.dash-select:hover,
+.dash-status:hover {
+  border-color: var(--hairline-strong);
+  color: var(--fg);
+}
+.dash-select option,
+.dash-status option {
+  background: var(--bg-surface);
+  color: var(--fg);
+}
+.dash-status:disabled {
+  cursor: wait;
+}
+
+/* Status colours — a scale of "what to do", not of how good the outcome was.
+ * Only `new` gets a fill, because only `new` is a task. See STATUS_META in
+ * lead-status.ts for why `contacted` is neutral rather than the tier amber. */
+.dash-status.tone-accent {
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background-color: var(--accent-soft);
+}
+.dash-status.tone-mute { color: var(--fg-mute); }
+.dash-status.tone-safe { color: var(--safe); border-color: color-mix(in srgb, var(--safe) 40%, transparent); }
+.dash-status.tone-dim  { color: var(--fg-dim); }
+
+/* Search field — a rule you type on, matching the rank input's treatment. */
+.dash-input {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  background: transparent;
+  color: var(--fg);
+  caret-color: var(--accent);
+  border: 0;
+  outline: none;
+  width: 100%;
+  padding: 5px 0;
+}
+.dash-input::placeholder {
+  color: var(--fg-dim);
+}
+.dash-input:focus,
+.dash-input:focus-visible {
+  outline: none;
+}
+/* Kill WebKit's search decorations — the round X in a hairline field reads as
+ * a stray artefact. */
+.dash-input::-webkit-search-decoration,
+.dash-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Note field. Sits flush in the row with no border until it's touched: a lead
+ * with no note should look like a lead with no note, not like an empty input
+ * waiting to be filled. */
+.dash-note {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  background: transparent;
+  color: var(--fg-mute);
+  caret-color: var(--accent);
+  border: 0;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  resize: none;
+  width: 100%;
+  padding: 2px 0;
+  field-sizing: content;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.dash-note::placeholder {
+  color: var(--fg-dim);
+  font-style: italic;
+}
+.dash-note:hover:not(:disabled) {
+  border-bottom-color: var(--hairline);
+}
+.dash-note:focus,
+.dash-note:focus-visible {
+  outline: none;
+  color: var(--fg);
+  border-bottom-color: var(--accent);
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }

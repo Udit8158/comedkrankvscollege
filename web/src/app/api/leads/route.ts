@@ -1,26 +1,21 @@
+import { createHash } from "node:crypto";
 import { isValidPhone, normalizePhone } from "@/lib/leads";
+import { hasDatabase } from "@/lib/db";
+import { insertLead, recentLeadCount } from "@/lib/leads-store";
 import type { CtaPlacement } from "@/lib/mindcreed";
 
 /**
  * Lead intake.
  *
- * ⚠️  THIS DOES NOT PERSIST YET. It validates the lead and writes it to the
- * function log, nothing more. Vercel's runtime logs are short-retention and not
- * queryable as a record set, so a lead that arrives here and is not also
- * followed up on WhatsApp is effectively lost. That is why the dialog still
- * offers the WhatsApp handoff on success — until a store is wired in, the
- * conversation is the only durable copy.
+ * Persists to Neon Postgres and is read back by the dashboard at /dashboard.
+ * The `console.info("[lead]", …)` line is kept alongside the insert on purpose:
+ * it costs nothing, and it means a lead is still recoverable from the function
+ * log on the day the database is unreachable — which is exactly the day it
+ * matters. If the insert fails, the request still returns ok, because a student
+ * seeing "could not save your number" over an infrastructure problem loses the
+ * lead twice: once in the database and once in their willingness to retry.
  *
- * The shape below is the contract the dashboard will read. To make it real,
- * replace the single `console.info` with an insert and keep everything else:
- * validation, normalisation and the record shape are all storage-agnostic.
- *
- *   const lead = { ...same object... };
- *   await db.insert(leads).values(lead);   // or Neon / Upstash / Sheets
- *
- * Still owed before this is production lead capture:
- *   - persistence (above)
- *   - rate limiting — this endpoint is open and unauthenticated today
+ * Still owed:
  *   - a notification to MindCreed so a lead doesn't wait on a dashboard visit
  */
 
@@ -33,6 +28,37 @@ const PLACEMENTS: readonly CtaPlacement[] = [
   "college",
   "footer",
 ];
+
+/**
+ * Rate limit: at most 6 submissions from one address per hour.
+ *
+ * Sized against real behaviour rather than an abstract threshold. A student
+ * legitimately submits once, twice if they mistyped; a household or a school
+ * computer lab behind one NAT might produce four or five in an afternoon. Six
+ * leaves room for all of that and still stops a script from filling the table.
+ */
+const RATE_LIMIT = 6;
+const RATE_WINDOW_MINUTES = 60;
+
+/**
+ * A salted hash of the caller's IP — never the address itself.
+ *
+ * The audience is largely minors, and the address has exactly one use here:
+ * telling two submissions apart. A hash serves that and nothing else, so a
+ * database leak cannot be turned into a list of locations. AUTH_SECRET is
+ * reused as the salt so there is no second secret to rotate; a per-deploy salt
+ * would reset the limiter on every deploy, which is the wrong trade.
+ */
+function ipHash(req: Request): string | undefined {
+  const forwarded = req.headers.get("x-forwarded-for");
+  const ip =
+    forwarded?.split(",")[0].trim() ||
+    req.headers.get("x-real-ip") ||
+    undefined;
+  if (!ip) return undefined;
+  const salt = process.env.AUTH_SECRET ?? "mindcreed";
+  return createHash("sha256").update(`${salt}:${ip}`).digest("base64url");
+}
 
 function bad(error: string, status = 400) {
   return Response.json({ ok: false, error }, { status });
@@ -87,9 +113,37 @@ export async function POST(req: Request) {
     path: str(raw.path, 200),
   };
 
-  // The stand-in for storage. Structured on one line so it can be grepped out
-  // of the Vercel log drain and replayed once a real store exists.
+  // Kept as the log-drain fallback. One line, greppable, replayable.
   console.info("[lead]", JSON.stringify(lead));
+
+  if (!hasDatabase()) {
+    // No store configured — the log line above is the record, same as before.
+    console.warn("[lead] DATABASE_URL unset; lead captured to log only");
+    return Response.json({ ok: true });
+  }
+
+  const hash = ipHash(req);
+
+  try {
+    if (hash) {
+      const recent = await recentLeadCount(hash, RATE_WINDOW_MINUTES);
+      if (recent >= RATE_LIMIT) {
+        // Deliberately worded as a state, not an accusation: the overwhelming
+        // majority of anyone who sees this is a real student on a shared
+        // connection, and the WhatsApp route is still open to them.
+        return bad(
+          "We've already got a few requests from this connection. Message us on WhatsApp and we'll pick it up there.",
+          429,
+        );
+      }
+    }
+
+    await insertLead({ ...lead, ipHash: hash });
+  } catch (err) {
+    // Logged loudly, hidden from the student. The console line above means the
+    // lead is not lost, so failing the request would only cost a conversion.
+    console.error("[lead] insert failed", err);
+  }
 
   return Response.json({ ok: true });
 }
