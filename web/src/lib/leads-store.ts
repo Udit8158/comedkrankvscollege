@@ -250,21 +250,23 @@ export async function listLeads(
   const sql = db();
   const { text, params } = whereClause(filters);
 
-  const countRows = await sql.query(
-    `SELECT count(*)::int AS count FROM leads ${text}`,
-    params,
-  );
-  const total: number = countRows[0]?.count ?? 0;
-
   const safePage = Math.max(1, Math.floor(page));
   const offset = (safePage - 1) * pageSize;
 
-  const rows = await sql.query(
-    `SELECT * FROM leads ${text}
-      ORDER BY created_at DESC
-      LIMIT $${params.length + 1} OFFSET $${params.length + 2}`,
-    [...params, pageSize, offset],
-  );
+  // Count and page fire together. The count does not gate the page — `offset`
+  // is derived from the requested page number, not from the total — so making
+  // them sequential only ever added one round trip's latency.
+  const [countRows, rows] = await Promise.all([
+    sql.query(`SELECT count(*)::int AS count FROM leads ${text}`, params),
+    sql.query(
+      `SELECT * FROM leads ${text}
+        ORDER BY created_at DESC
+        LIMIT $${params.length + 1} OFFSET $${params.length + 2}`,
+      [...params, pageSize, offset],
+    ),
+  ]);
+
+  const total: number = countRows[0]?.count ?? 0;
 
   return { rows: rows.map(toRecord), total, page: safePage, pageSize };
 }
@@ -307,18 +309,23 @@ export type LeadStats = {
 };
 
 /**
- * Every headline number in one round trip.
+ * Every headline number, in three queries issued together.
  *
- * Five separate queries would be five HTTP requests on the Neon driver, which
- * is most of the page's latency budget spent on arithmetic Postgres can do in
- * one pass. The date arithmetic uses IST rather than UTC — "today" on this
- * dashboard has to mean today in Bengaluru, or the morning's leads appear to
- * belong to yesterday until 05:30.
+ * The counts collapse into one pass with FILTER rather than one query per
+ * bucket. The other two — the placement breakdown and the 14-day series — need
+ * different GROUP BYs, so they stay separate, but they are awaited as a group:
+ * on the Neon driver every query is its own HTTP request, and three sequential
+ * awaits meant three round trips stacked end to end for results that have no
+ * dependency on one another.
+ *
+ * The date arithmetic uses IST rather than UTC — "today" on this dashboard has
+ * to mean today in Bengaluru, or the morning's leads appear to belong to
+ * yesterday until 05:30.
  */
 export async function leadStats(): Promise<LeadStats> {
   const sql = db();
 
-  const [totals] = await sql`
+  const totalsQuery = sql`
     SELECT
       now() AS server_now,
       count(*)::int AS total,
@@ -334,7 +341,7 @@ export async function leadStats(): Promise<LeadStats> {
     FROM leads
   `;
 
-  const byPlacement = await sql`
+  const byPlacementQuery = sql`
     SELECT placement, count(*)::int AS count
       FROM leads
      GROUP BY placement
@@ -343,7 +350,7 @@ export async function leadStats(): Promise<LeadStats> {
 
   // generate_series so an empty day is a zero rather than a gap — a sparkline
   // that silently omits quiet days overstates the trend.
-  const daily = await sql`
+  const dailyQuery = sql`
     SELECT to_char(d.day, 'YYYY-MM-DD') AS day,
            count(l.id)::int AS count
       FROM generate_series(
@@ -356,6 +363,15 @@ export async function leadStats(): Promise<LeadStats> {
      GROUP BY d.day
      ORDER BY d.day
   `;
+
+  // The three fire together rather than one after another. Nothing here depends
+  // on anything else here.
+  const [totalsRows, byPlacement, daily] = await Promise.all([
+    totalsQuery,
+    byPlacementQuery,
+    dailyQuery,
+  ]);
+  const totals = totalsRows[0];
 
   return {
     total: totals?.total ?? 0,

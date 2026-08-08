@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useOptimistic, useState, useTransition } from "react";
 import { LEAD_STATUSES, STATUS_META } from "@/lib/lead-status";
 import { PLACEMENT_LABEL } from "@/lib/dash-format";
 
@@ -29,10 +29,30 @@ export function FilterBar({ total }: { total: number }) {
   const params = useSearchParams();
   const [pending, startTransition] = useTransition();
 
-  const status = params.get("status") ?? "all";
-  const placement = params.get("placement") ?? "all";
-  const days = params.get("days") ?? "0";
-  const q = params.get("q") ?? "";
+  const urlState = {
+    status: params.get("status") ?? "all",
+    placement: params.get("placement") ?? "all",
+    days: params.get("days") ?? "0",
+    q: params.get("q") ?? "",
+  };
+
+  /**
+   * What the controls render from — the URL, or the click that hasn't landed yet.
+   *
+   * Without this the active pill is derived purely from the URL, and Next only
+   * updates the URL once the server has replied. On a connection where that
+   * round trip is 400ms — which it is from India, since the function runs in
+   * us-east-1 — pressing a filter did *nothing at all* for those 400ms. The
+   * data was never slow; the button just sat there, which is what "laggy"
+   * actually means to the person clicking it.
+   *
+   * useOptimistic is exactly right here rather than a second useState: React
+   * discards the optimistic value automatically when the transition settles, at
+   * which point the URL says the same thing. There is no reconciliation to get
+   * wrong and no way for the two to drift.
+   */
+  const [optimistic, setOptimistic] = useOptimistic(urlState);
+  const { status, placement, days, q } = optimistic;
 
   // Local mirror so typing stays responsive while the debounced navigation
   // catches up. It has to re-sync when the URL changes underneath us — the back
@@ -58,6 +78,14 @@ export function FilterBar({ total }: { total: number }) {
     // Any filter change invalidates the current page number.
     next.delete("page");
     startTransition(() => {
+      // Must be inside the transition — that is what scopes the optimistic
+      // value to this navigation and lets React drop it when the URL catches up.
+      setOptimistic({
+        status: next.get("status") ?? "all",
+        placement: next.get("placement") ?? "all",
+        days: next.get("days") ?? "0",
+        q: next.get("q") ?? "",
+      });
       router.replace(`${pathname}?${next.toString()}`, { scroll: false });
     });
   }
