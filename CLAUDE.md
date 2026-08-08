@@ -167,16 +167,24 @@ Google redirect URI, exactly: `<origin>/api/auth/callback/google`.
 ## The location filter
 
 Students do not shop for a rank, they shop for a rank *in a place they are
-willing to live*. `?in=` and `?city=` narrow the results to a region or a city;
-the selection lives in the URL, so a filtered list is a shareable link and
-survives a trip into a college page and back.
+willing to live*. `?in=` and `?area=` narrow the results to a region or to one
+area inside it; the selection lives in the URL, so a filtered list is a
+shareable link and survives a trip into a college page and back.
 
 | Piece | File |
 | --- | --- |
-| City aliases, region map, buckets | `web/src/lib/locations.ts` |
+| City aliases, region map, Bengaluru sides, buckets | `web/src/lib/locations.ts` |
 | `collegeCodes` option + `reachableCollegeCodes()` | `web/src/lib/predict.ts` |
-| The two-tier chip row | `web/src/components/LocationFilter.tsx` |
+| The two-row chip control | `web/src/components/LocationFilter.tsx` |
 | Chip styling (`.geo-*`) | `web/src/app/globals.css` |
+
+**Two rows, and what the second one holds depends on the region.** Everywhere
+except Bengaluru the second row is cities, because they are genuinely different
+cities — Mysuru is not Hassan. Bengaluru splits 59 / 4 / 1 across Bengaluru,
+Bengaluru Rural and Chikkaballapur, so that split would ask a student to choose
+between "Bengaluru" and "Bengaluru" and hand them nothing. There the second row
+is **sides of the city** — north / east / south / west / outskirts — derived
+from the `locality` column via `SIDE_BY_LOCALITY`.
 
 **Rules that keep it honest:**
 
@@ -184,9 +192,12 @@ survives a trip into a college page and back.
   10 specializations…) are applied to the *filtered* record set. Post-filtering
   a capped list would show a Mysuru student nothing at all, because the five
   best CSE seats in the state are all in Bengaluru.
-- **Two tiers, revealed one at a time.** Six regions, then the cities inside
-  the chosen one. Flat, it is 32 place names — twenty of them holding a single
-  college.
+- **No region is named after a city inside it.** "Bengaluru & around" — the
+  "& around" is load-bearing, not decoration.
+- **No "All" chip.** The lit region chip on the first row *is* the whole
+  region; repeating it below makes three chips for two states. Pressing the lit
+  region chip widens one level (area → whole region → anywhere), and an
+  explicit `← all of <region>` appears only while narrowed.
 - **Counts are colleges within reach, not matches.** A match count would be
   reporting where the family cap sits. The number answers "is there anything
   for me there", so its unit is colleges.
@@ -195,11 +206,15 @@ survives a trip into a college page and back.
   Round 3 GM cut-offs, so a chip for them could only ever read `0`. A zero is
   reserved for "nothing here *at your rank*", which is a real answer and stays
   visible rather than vanishing as you type.
+- **`SIDE_BY_LOCALITY` is local knowledge, not a boundary.** A Bengaluru
+  locality missing from it lands in a visible "Elsewhere in the city" chip
+  rather than being guessed at or silently dropped — that chip appearing is the
+  signal to go add the locality.
 - **The filtered dead end gets no CTA.** `NoneHere` is a state the tool created
   and the student can undo in one press — selling into it would be the cheapest
   kind of lead capture. `NoMatches` (nothing anywhere) keeps its CTA.
 - **Filtered result copy must not overclaim.** With a filter on, the results CTA
-  reads "every seat your rank reaches *in Mysuru*".
+  reads "every seat your rank reaches *in south Bengaluru*".
 - **City spelling is canonicalised in the CSV**, with an alias table in
   `locations.ts` as the safety net so a future "Bangalore" row does not open a
   33rd bucket.
@@ -210,7 +225,7 @@ survives a trip into a college page and back.
 - 9 colleges have student-podcast YouTube IDs from the user's @mindcreed23 channel; long-tail colleges have podcast = absent (component returns null).
 - Predictor result sort: `cse → cse_spec → electronics → core` (no "other" — design/planning branches filtered out).
 - Per-college pages live at `/college/[code]` and accept `?rank=…` for fit-bar context.
-- The home page accepts `?rank=…&in=<region>&city=<slug>` — all three are validated on read, so a hand-typed value falls back to "anywhere".
+- The home page accepts `?rank=…&in=<region>&area=<slug>` — all three are validated on read, so a hand-typed value falls back to "anywhere".
 
 ## Branches
 

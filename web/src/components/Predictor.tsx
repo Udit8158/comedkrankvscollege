@@ -11,7 +11,7 @@ import {
   TOTAL_RECORDS,
 } from "@/lib/predict";
 import { FAMILY_LABEL, type BranchFamily } from "@/lib/branches";
-import { codesFor, placeLabel, regionById, cityBySlug } from "@/lib/locations";
+import { areaBySlug, codesFor, placePhrase, regionById } from "@/lib/locations";
 import { formatRank } from "@/lib/utils";
 import { SectionHead } from "./SectionHead";
 import { ResultRow } from "./ResultRow";
@@ -28,26 +28,26 @@ export function Predictor() {
   const deferred = useDeferredValue(rankRaw);
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  // Location filter. Seeded from the URL and written back to it (?in=&city=),
+  // Location filter. Seeded from the URL and written back to it (?in=&area=),
   // so a filtered list is a link a student can send to a parent, and so that
   // opening a college and coming back does not silently drop the filter.
   // Validated on read — a hand-typed ?in=goa must fall back to "anywhere".
-  const [place, setPlace] = useState<{ region: string | null; city: string | null }>(
+  const [place, setPlace] = useState<{ region: string | null; area: string | null }>(
     () => {
       const region = regionById(searchParams.get("in"));
-      if (!region) return { region: null, city: null };
-      const city = cityBySlug(region, searchParams.get("city"));
-      return { region: region.id, city: city?.slug ?? null };
+      if (!region) return { region: null, area: null };
+      const area = areaBySlug(region, searchParams.get("area"));
+      return { region: region.id, area: area?.slug ?? null };
     },
   );
 
-  function changePlace(region: string | null, city: string | null) {
-    setPlace({ region, city });
+  function changePlace(region: string | null, area: string | null) {
+    setPlace({ region, area });
     const url = new URL(window.location.href);
     if (region) url.searchParams.set("in", region);
     else url.searchParams.delete("in");
-    if (city) url.searchParams.set("city", city);
-    else url.searchParams.delete("city");
+    if (area) url.searchParams.set("area", area);
+    else url.searchParams.delete("area");
     // replaceState, not push: the filter is a view of the same page, and
     // burying the browser's back button under six chip presses is hostile.
     window.history.replaceState(null, "", url);
@@ -77,10 +77,10 @@ export function Predictor() {
   const reachable = useMemo(() => reachableCollegeCodes(rank), [rank]);
 
   const codes = useMemo(
-    () => codesFor(place.region, place.city),
-    [place.region, place.city],
+    () => codesFor(place.region, place.area),
+    [place.region, place.area],
   );
-  const where = placeLabel(place.region, place.city);
+  const where = placePhrase(place.region, place.area);
 
   const matches = useMemo(
     () => (rank > 0 ? predict(rank, { collegeCodes: codes }) : []),
@@ -177,7 +177,7 @@ export function Predictor() {
           <div className="mb-12">
             <LocationFilter
               regionId={place.region}
-              citySlug={place.city}
+              areaSlug={place.area}
               onChange={changePlace}
               reachable={reachable}
             />

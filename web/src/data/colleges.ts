@@ -458,7 +458,7 @@ export const COLLEGES: CollegeMeta[] = [
   {
     code: "E039",
     name: "Dayananda Sagar Academy of Technology and Management",
-    locality: "Kanakpura Road",
+    locality: "Kanakapura Road",
     city: "Bengaluru",
     established: 2011,
     type: "private",

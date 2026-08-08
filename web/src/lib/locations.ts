@@ -119,7 +119,10 @@ const REGION_OF_CITY: Record<string, RegionId> = {
 };
 
 const REGION_LABEL: Record<RegionId, string> = {
-  bengaluru: "Bengaluru",
+  // "& around" is load-bearing: the region holds Bengaluru Rural and
+  // Chikkaballapur too, and a region that shares its name with a city inside
+  // it reads as the same word nested in itself.
+  bengaluru: "Bengaluru & around",
   mysuru: "Mysuru & around",
   coastal: "Coastal",
   central: "Central",
@@ -139,6 +142,117 @@ const REGION_ORDER: RegionId[] = [
   "other",
 ];
 
+/* ── Inside Bengaluru: sides, not cities ─────────────────────────────────
+ *
+ * Everywhere else the second tier is a list of cities, because they *are*
+ * different cities — Mysuru is not Hassan. Bengaluru is the exception: the
+ * region splits 59 / 4 / 1 into Bengaluru, Bengaluru Rural and Chikkaballapur,
+ * so offering that split asks a student to choose between "Bengaluru" and
+ * "Bengaluru" and hands them almost nothing for the trouble.
+ *
+ * The question a Bengaluru student actually asks is which side of the city,
+ * and the localities already in colleges.csv answer it. This table is local
+ * knowledge, not an official boundary — the compass points are how the city is
+ * spoken about, and edge cases (Anekal, Mahalakshmipuram) are judgement calls
+ * that are meant to be argued with and edited.
+ */
+type Side = "north" | "east" | "south" | "west" | "outskirts";
+
+const SIDE_META: Record<Side, { label: string; phrase: string }> = {
+  north: { label: "North", phrase: "north Bengaluru" },
+  east: { label: "East", phrase: "east Bengaluru" },
+  south: { label: "South", phrase: "south Bengaluru" },
+  west: { label: "West", phrase: "west Bengaluru" },
+  // Not a compass point but the distinction students care about most: these
+  // are hostel-or-two-hour-commute campuses, not somewhere you live at home.
+  outskirts: { label: "Outskirts", phrase: "the Bengaluru outskirts" },
+};
+
+const SIDE_ORDER: Side[] = ["north", "east", "south", "west", "outskirts"];
+
+/** Keyed by locality, lower-cased with "rd" spelled out and spacing collapsed. */
+const SIDE_BY_LOCALITY: Record<string, Side> = {
+  // North — the Yelahanka/Hebbal/Jalahalli arc.
+  yelahanka: "north",
+  hebbal: "north",
+  "jalahalli east": "north",
+  "msr nagar": "north",
+  "r t nagar post": "north",
+  "rajan kunte": "north",
+  "hesarghatta main road": "north",
+  soladevanahalli: "north",
+  kothanur: "north",
+
+  // East — Old Madras Road out to Whitefield.
+  avalahalli: "east",
+  brookefield: "east",
+  whitefield: "east",
+  "k r puram": "east",
+  "old madras road": "east",
+
+  // South — Jayanagar/Basavanagudi down Bannerghatta and Kanakapura Roads.
+  banashankari: "south",
+  "bannerghatta road": "south",
+  basavanagudi: "south",
+  "chikkanayakanahalli dinne": "south",
+  doddakalasandra: "south",
+  "j p nagar": "south",
+  jayanagar: "south",
+  "kanakapura main road": "south",
+  "kanakapura road": "south",
+  "off kanakapura road": "south",
+  koramangala: "south",
+  "kumaraswamy layout": "south",
+  tathguni: "south",
+  "v v puram": "south",
+
+  // West — Mysore Road, Kengeri, RR Nagar, Magadi Road.
+  "bel layout": "west",
+  "kambipura mysore road": "west",
+  kengeri: "west",
+  "kengeri main road": "west",
+  kumbalgodu: "west",
+  mahalaxmipuram: "west",
+  malathahalli: "west",
+  "mysore road": "west",
+  "r r nagar post": "west",
+  "rajarajeshwari nagar": "west",
+
+  // Outskirts — outside the city proper, even where the address still says
+  // "Bengaluru": the airport belt, Anekal, and the Doddaballapur side.
+  anekal: "outskirts",
+  "bagalur-chagalatti": "outskirts",
+  devanahalli: "outskirts",
+  "dodaballapur taluk": "outskirts",
+  "kial road": "outskirts",
+  kundana: "outskirts",
+  sadahalli: "outskirts",
+};
+
+function normalizeLocality(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/\brd\b/g, "road")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sideOf(locality: string | undefined, city: string): Side | null {
+  // Bengaluru Rural and Chikkaballapur are outside the city by definition, so
+  // they need no locality lookup at all.
+  if (city !== "Bengaluru") return "outskirts";
+  return SIDE_BY_LOCALITY[normalizeLocality(locality ?? "")] ?? null;
+}
+
+/**
+ * Bucket for a Bengaluru locality the table above has never heard of. It is
+ * empty today and should stay that way: guessing a side would be a claim the
+ * data does not support, and silently dropping the college would hide it from
+ * every side at once. So it surfaces as its own chip — visibly odd, which is
+ * exactly the prompt to come and add the locality here.
+ */
+const UNPLACED = "unplaced";
+
 export function canonicalCity(raw?: string): string | null {
   const trimmed = (raw ?? "").trim();
   if (!trimmed) return null;
@@ -152,24 +266,31 @@ export function slugify(s: string): string {
     .replace(/^-|-$/g, "");
 }
 
-export type CityBucket = {
+/** One selectable subdivision of a region — a city, or a side of Bengaluru. */
+export type Area = {
   /** URL-safe id, unique within its region. */
   slug: string;
-  name: string;
+  /** Chip text. */
+  label: string;
+  /** How it reads mid-sentence: "22 found in …", "Nothing in … at rank …". */
+  phrase: string;
   codes: string[];
 };
 
 export type Region = {
   id: RegionId;
   label: string;
-  /** Every college code in the region, cities included. */
+  /** Every college code in the region, all areas included. */
   codes: string[];
-  /** Cities inside it, largest first. */
-  cities: CityBucket[];
+  areas: Area[];
 };
 
 function build(): Region[] {
-  const byRegion = new Map<RegionId, Map<string, string[]>>();
+  const byRegion = new Map<RegionId, Map<string, { label: string; phrase: string; codes: string[] }>>();
+  // Kept alongside the area buckets because a college can belong to a region
+  // and to no area within it (an unmapped Bengaluru locality) — it must still
+  // be reachable from the region chip.
+  const regionCodes = new Map<RegionId, string[]>();
 
   for (const c of listColleges()) {
     // Bidar and Kalaburagi have colleges but no Round 3 GM cut-offs, so a chip
@@ -180,25 +301,60 @@ function build(): Region[] {
     const city = canonicalCity(c.city);
     if (!city) continue; // no city on the row — it can only be reached via "anywhere"
     const region = REGION_OF_CITY[city] ?? "other";
-    let cities = byRegion.get(region);
-    if (!cities) byRegion.set(region, (cities = new Map()));
-    const bucket = cities.get(city);
-    if (bucket) bucket.push(c.code);
-    else cities.set(city, [c.code]);
+    const all = regionCodes.get(region);
+    if (all) all.push(c.code);
+    else regionCodes.set(region, [c.code]);
+
+    let areas = byRegion.get(region);
+    if (!areas) byRegion.set(region, (areas = new Map()));
+
+    // Bengaluru subdivides by side of the city; every other region by city.
+    let key: string, label: string, phrase: string;
+    if (region === "bengaluru") {
+      const side = sideOf(c.locality, city);
+      key = side ?? UNPLACED;
+      label = side ? SIDE_META[side].label : "Elsewhere in the city";
+      phrase = side ? SIDE_META[side].phrase : "Bengaluru";
+    } else {
+      key = city;
+      label = city;
+      phrase = city;
+    }
+
+    const bucket = areas.get(key);
+    if (bucket) bucket.codes.push(c.code);
+    else areas.set(key, { label, phrase, codes: [c.code] });
   }
 
   const regions: Region[] = [];
   for (const id of REGION_ORDER) {
-    const cities = byRegion.get(id);
-    if (!cities || cities.size === 0) continue;
-    const buckets: CityBucket[] = [...cities.entries()]
-      .map(([name, codes]) => ({ slug: slugify(name), name, codes }))
-      .sort((a, b) => b.codes.length - a.codes.length || a.name.localeCompare(b.name));
+    const areas = byRegion.get(id);
+    if (!areas || areas.size === 0) continue;
+    const buckets: Area[] = [...areas.entries()].map(([key, a]) => ({
+      slug: slugify(key),
+      label: a.label,
+      phrase: a.phrase,
+      codes: a.codes,
+    }));
+    // Sides read in compass order — a row that reshuffles itself as the rank
+    // changes is harder to re-find than one that never moves. Cities have no
+    // natural order, so the biggest goes first.
+    if (id === "bengaluru") {
+      // Anything unplaced sorts last (indexOf → -1 would put it first).
+      const rank = (slug: string) => {
+        const i = SIDE_ORDER.indexOf(slug as Side);
+        return i === -1 ? SIDE_ORDER.length : i;
+      };
+      buckets.sort((a, b) => rank(a.slug) - rank(b.slug));
+    } else {
+      buckets.sort((a, b) => b.codes.length - a.codes.length || a.label.localeCompare(b.label));
+    }
+
     regions.push({
       id,
       label: REGION_LABEL[id],
-      codes: buckets.flatMap((b) => b.codes),
-      cities: buckets,
+      codes: regionCodes.get(id) ?? [],
+      areas: buckets,
     });
   }
   return regions;
@@ -212,34 +368,37 @@ export function regionById(id: string | null | undefined): Region | undefined {
   return REGIONS.find((r) => r.id === id);
 }
 
-export function cityBySlug(
+export function areaBySlug(
   region: Region | undefined,
   slug: string | null | undefined,
-): CityBucket | undefined {
+): Area | undefined {
   if (!region || !slug) return undefined;
-  return region.cities.find((c) => c.slug === slug);
+  return region.areas.find((a) => a.slug === slug);
 }
 
 /**
- * The college codes a (region, city) selection allows — or null for "anywhere",
+ * The college codes a (region, area) selection allows — or null for "anywhere",
  * which callers treat as "no filter" rather than "empty set".
  */
 export function codesFor(
   regionId: string | null,
-  citySlug: string | null,
+  areaSlug: string | null,
 ): ReadonlySet<string> | null {
   const region = regionById(regionId);
   if (!region) return null;
-  const city = cityBySlug(region, citySlug);
-  return new Set(city ? city.codes : region.codes);
+  const area = areaBySlug(region, areaSlug);
+  return new Set(area ? area.codes : region.codes);
 }
 
-/** "Bengaluru" / "Bengaluru Rural" / null when nothing is selected. */
-export function placeLabel(
+/**
+ * How the selection reads mid-sentence — "22 found in *north Bengaluru*",
+ * "Nothing in *Mysuru* at rank 45,000". Null when nothing is selected.
+ */
+export function placePhrase(
   regionId: string | null,
-  citySlug: string | null,
+  areaSlug: string | null,
 ): string | null {
   const region = regionById(regionId);
   if (!region) return null;
-  return cityBySlug(region, citySlug)?.name ?? region.label;
+  return areaBySlug(region, areaSlug)?.phrase ?? region.label;
 }
