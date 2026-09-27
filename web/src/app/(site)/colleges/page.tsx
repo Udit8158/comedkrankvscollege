@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CollegeRow } from "@/components/CollegeRow";
+import { BrowseNav } from "@/components/BrowseNav";
 import {
   DIRECTORY_TOTAL,
   DIRECTORY_WITH_CUTOFFS,
@@ -90,6 +91,8 @@ export default function CollegesIndex() {
           </div>
         </section>
       ))}
+
+      <BrowseNav />
     </main>
   );
 }

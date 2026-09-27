@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Predictor } from "@/components/Predictor";
 import { StartingList } from "@/components/StartingList";
+import { BrowseNav } from "@/components/BrowseNav";
 
 export default function Home() {
   return (
@@ -39,6 +40,8 @@ export default function Home() {
           crawler has ever been able to read — the predictor's own results are
           client-side and arrive after a keystroke. */}
       <StartingList />
+
+      <BrowseNav />
 
     </main>
   );
