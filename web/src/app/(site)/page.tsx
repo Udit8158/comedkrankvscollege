@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { Predictor } from "@/components/Predictor";
+import { StartingList } from "@/components/StartingList";
 
 export default function Home() {
   return (
@@ -33,6 +34,11 @@ export default function Home() {
           <Predictor />
         </Suspense>
       </div>
+
+      {/* Server-rendered, and therefore the first college names on this page a
+          crawler has ever been able to read — the predictor's own results are
+          client-side and arrive after a keystroke. */}
+      <StartingList />
 
     </main>
   );

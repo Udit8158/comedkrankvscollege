@@ -259,6 +259,29 @@ export function canonicalCity(raw?: string): string | null {
   return CITY_ALIASES[trimmed.toLowerCase()] ?? trimmed;
 }
 
+/**
+ * Region a city belongs to, or `null` when the row carries no city at all.
+ *
+ * `REGIONS` below deliberately excludes colleges with no Round 3 GM record,
+ * because a filter chip that can only ever read `0` is noise. The directory
+ * has the opposite requirement — every college needs a page it can be reached
+ * from, cut-offs or not — so it maps colleges to regions through this instead
+ * of through the buckets, and the city→region knowledge stays in one file.
+ */
+export function regionIdForCity(raw?: string): RegionId | null {
+  const city = canonicalCity(raw);
+  if (!city) return null;
+  return REGION_OF_CITY[city] ?? "other";
+}
+
+/** Display label for a region id. */
+export function regionLabel(id: RegionId): string {
+  return REGION_LABEL[id];
+}
+
+/** Region ids in display order — biggest and best-known first. */
+export const REGION_IDS: readonly RegionId[] = REGION_ORDER;
+
 export function slugify(s: string): string {
   return s
     .toLowerCase()

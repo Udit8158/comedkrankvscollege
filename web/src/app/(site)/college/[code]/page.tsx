@@ -1,12 +1,14 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getCollege, listColleges } from "@/lib/colleges";
+import { regionIdForCity, regionLabel } from "@/lib/locations";
 import { getCollegeRecords } from "@/lib/college-records";
 import { CollegeHero } from "@/components/college/CollegeHero";
 import { PlacementStrip } from "@/components/college/PlacementStrip";
 import { PodcastEmbed } from "@/components/college/PodcastEmbed";
 import { CollegeCutoffTable } from "@/components/college/CollegeCutoffTable";
+import { RelatedColleges } from "@/components/college/RelatedColleges";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CounselCTA } from "@/components/CounselCTA";
 import { RankSync } from "@/components/RankContext";
 import { SITE_URL } from "@/lib/site";
@@ -71,7 +73,17 @@ export default async function CollegePage({
   const userRank = hasRank ? parsedRank : undefined;
   const records = getCollegeRecords(code, userRank);
 
-  const backHref = hasRank ? `/?rank=${userRank}` : "/";
+  // The trail is the page's position in the site, so it is built from the
+  // college's own region rather than from wherever the student came in. The
+  // rank rides along on the predictor link so stepping back up does not throw
+  // away what they typed.
+  const region = regionIdForCity(college.city);
+  const trail = [
+    { label: "predictor", href: hasRank ? `/?rank=${userRank}` : "/" },
+    { label: "colleges", href: "/colleges" },
+    ...(region ? [{ label: regionLabel(region).toLowerCase(), href: "/colleges" }] : []),
+    { label: college.name },
+  ];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -100,18 +112,7 @@ export default async function CollegePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Quiet back nav — small mono link with the same hover wipe as the rest. */}
-      <nav className="pb-10">
-        <Link
-          href={backHref}
-          className="linkmark font-mono text-[12px] text-fg-mute tracking-wider"
-        >
-          ← back to predictor
-          {hasRank && (
-            <span className="text-fg-dim"> · rank {userRank!.toLocaleString("en-IN")}</span>
-          )}
-        </Link>
-      </nav>
+      <Breadcrumbs trail={trail} />
 
       <CollegeHero college={college} />
 
@@ -120,6 +121,12 @@ export default async function CollegePage({
       {college.podcast && <PodcastEmbed podcast={college.podcast} />}
 
       <CollegeCutoffTable records={records} hasRank={hasRank} />
+
+      <RelatedColleges
+        code={college.code}
+        city={college.city}
+        rank={userRank}
+      />
 
       {/* Deepest intent in the app: they left the list to read about one
           specific campus. The pre-filled message names it, so the counsellor
