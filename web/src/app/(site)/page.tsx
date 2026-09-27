@@ -16,19 +16,19 @@ export default function Home() {
 
       <div className="pt-10">
         {/* <p className="eyebrow">2025 Engineering · General Merit</p> */}
+        {/* Two lines, second in italic — the same shape the old "From rank /
+            to college." had, so the page keeps its proportions now that the
+            standfirst is gone. The provenance that paragraph carried (which
+            round, which year, GM only) is not lost: it sits under the rank
+            input, where it is read at the moment it actually matters. */}
         <h1 className="display text-[48px] sm:text-[72px] md:text-[88px] leading-[0.92] mt-3 tracking-tight">
-          From rank
+          College
           <br />
-          <span className="display-italic">to college.</span>
+          <span className="display-italic">Predictor.</span>
         </h1>
-        <p className="mt-6 max-w-md text-[15px] text-fg-mute leading-relaxed">
-          A direct lookup against the official COMEDK 2025 Round 3 cut-offs.
-          Enter a rank, see the colleges and branches that actually closed at or
-          after it — computing branches first, core last.
-        </p>
       </div>
 
-      <div className="mt-20">
+      <div className="mt-16">
         <Suspense fallback={null}>
           <Predictor />
         </Suspense>

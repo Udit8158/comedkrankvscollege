@@ -6,9 +6,6 @@ import {
   groupByFamily,
   predict,
   reachableCollegeCodes,
-  TOTAL_COLLEGES_WITH_RECORDS,
-  TOTAL_BRANCHES,
-  TOTAL_RECORDS,
 } from "@/lib/predict";
 import { FAMILY_LABEL, type BranchFamily } from "@/lib/branches";
 import { areaBySlug, codesFor, placePhrase, regionById } from "@/lib/locations";
@@ -145,7 +142,6 @@ export function Predictor() {
           }}
           onKeyDown={handleEnter}
           className="rank-input text-[52px] sm:text-[72px] md:text-[92px] leading-none pb-1"
-          aria-describedby="rank-help"
         />
         {hasRank && (
           <button
@@ -157,15 +153,6 @@ export function Predictor() {
           </button>
         )}
       </div>
-
-      <p id="rank-help" className="mt-4 text-[13px] text-fg-mute max-w-xl">
-        Indexed against{" "}
-        <span className="font-mono text-fg">{TOTAL_COLLEGES_WITH_RECORDS}</span> colleges and{" "}
-        <span className="font-mono text-fg">{TOTAL_BRANCHES}</span> branches —{" "}
-        <span className="font-mono text-fg">{TOTAL_RECORDS}</span> cut-off
-        entries from the 2025 Round 3 allotment. General Merit only. Last year
-        is a hint, not a promise.
-      </p>
 
       {/* Results */}
       <div ref={resultsRef} className="mt-16 scroll-mt-6">
@@ -263,8 +250,7 @@ function EmptyState() {
   return (
     <div className="border-t border-hairline pt-10">
       <p className="display text-[28px] leading-snug text-fg-mute max-w-md">
-        Empty until a rank is entered.{" "}
-        <span className="display-italic">No defaults, no sample data.</span>
+        Empty until a rank is entered.
       </p>
     </div>
   );
