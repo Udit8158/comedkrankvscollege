@@ -94,16 +94,37 @@ export const FAMILY_LABEL: Record<BranchFamily, string> = {
 };
 
 // Cleanup of branch names — the PDF has wrapped words like "Communicati on"
+/**
+ * Words COMEDK's column headers break across a line, and what they should be.
+ *
+ * Listed one by one rather than inferred. The previous version also carried a
+ * blanket "join a word to any 1-3 letter word after it" rule, meant to catch
+ * new splits automatically; what it actually did was eat the space in front of
+ * every short *real* word — "Electronics and Communication" rendered as
+ * "Electronicsand Communication", and "Ceramic And Cement" as "CeramicAnd
+ * Cement", on the live site. A rule that cannot tell the "on" in
+ * "Communicati on" from the "and" in "Reality and Virtual" cannot be applied
+ * blind, so it is not applied at all.
+ *
+ * A new year's PDF may wrap a word this list has not seen. That shows up as a
+ * visible space inside a word rather than as a silently mangled name, and the
+ * fix is a line here.
+ */
+const WRAPPED_WORDS: Array<[RegExp, string]> = [
+  [/Communicati\s+on/g, "Communication"],
+  [/Communicatio\s+n/g, "Communication"],
+  [/Communica-\s+tion/g, "Communication"],
+  [/Communic-\s+ation/g, "Communication"],
+  [/Telecommu-\s+nication/g, "Telecommunication"],
+  [/Instrumentati\s+on/g, "Instrumentation"],
+  [/Bio-\s+/g, "Bio"],
+  [/V\s+LSI/g, "VLSI"],
+];
+
 export function cleanBranchName(name: string): string {
-  return name
-    .replace(/-\s+/g, "")
-    .replace(/(\w)\s+(?=\w{1,3}\b)/g, (_m, p1, _o, _s) => p1) // soft-fix tiny splits, conservative
-    .replace(/\s{2,}/g, " ")
-    .replace(/Communicati on/g, "Communication")
-    .replace(/Communica- tion/g, "Communication")
-    .replace(/Telecommu- nication/g, "Telecommunication")
-    .replace(/Instrumentati on/g, "Instrumentation")
-    .replace(/Bio- /g, "Bio")
-    .replace(/Communic- ation/g, "Communication")
-    .trim();
+  let out = name.replace(/-\s+/g, "").replace(/\s{2,}/g, " ");
+  for (const [pattern, replacement] of WRAPPED_WORDS) {
+    out = out.replace(pattern, replacement);
+  }
+  return out.trim();
 }
