@@ -11,13 +11,13 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "All COMEDK Colleges",
-  description: `Every one of the ${DIRECTORY_TOTAL} engineering colleges in the COMEDK 2025 Round 3 allotment, grouped by region — with the lowest cut-off rank, branch count and founding year for each.`,
+  description: `Every one of the ${DIRECTORY_TOTAL} engineering colleges in the COMEDK 2026 Round 3 allotment, grouped by region — with the lowest cut-off rank, branch count and founding year for each.`,
   alternates: { canonical: "/colleges" },
   openGraph: {
     type: "website",
     url: "/colleges",
     title: `All ${DIRECTORY_TOTAL} COMEDK Colleges — Cut-offs by Region`,
-    description: `Browse every COMEDK engineering college in Karnataka by region, with official 2025 Round 3 cut-off ranks.`,
+    description: `Browse every COMEDK engineering college in Karnataka by region, with official 2026 Round 3 cut-off ranks.`,
   },
 };
 
@@ -31,7 +31,7 @@ export default function CollegesIndex() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "COMEDK engineering colleges",
-    description: `Engineering colleges in the COMEDK 2025 Round 3 allotment.`,
+    description: `Engineering colleges in the COMEDK 2026 Round 3 allotment.`,
     numberOfItems: DIRECTORY_TOTAL,
     itemListElement: regions
       .flatMap((r) => r.entries)
@@ -55,7 +55,7 @@ export default function CollegesIndex() {
       />
 
       <header>
-        <p className="eyebrow">comedk · round 3 2025 · general merit</p>
+        <p className="eyebrow">comedk · round 3 2026 · general merit</p>
         <h1 className="display text-[44px] sm:text-[60px] md:text-[72px] leading-[0.96] mt-4 tracking-tight">
           Every college
           <br />

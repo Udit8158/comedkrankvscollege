@@ -8,14 +8,14 @@ import { formatRank } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "COMEDK Rank vs College — Every Rank Band",
   description:
-    "What each COMEDK rank band can reach, from under 1,000 to above 1,00,000 — colleges and branches from the official COMEDK 2025 Round 3 cut-offs.",
+    "What each COMEDK rank band can reach, from under 1,000 to above 1,00,000 — colleges and branches from the official COMEDK 2026 Round 3 cut-offs.",
   alternates: { canonical: "/comedk-rank" },
   openGraph: {
     type: "website",
     url: "/comedk-rank",
     title: "COMEDK Rank vs College — Every Rank Band",
     description:
-      "Nine rank bands, each showing the colleges and branches it reaches in the official COMEDK 2025 Round 3 cut-offs.",
+      "Nine rank bands, each showing the colleges and branches it reaches in the official COMEDK 2026 Round 3 cut-offs.",
   },
 };
 
@@ -32,7 +32,7 @@ export default function RankBandsIndex() {
       />
 
       <header>
-        <p className="eyebrow">comedk · round 3 2025 · general merit</p>
+        <p className="eyebrow">comedk · round 3 2026 · general merit</p>
         <h1 className="display text-[44px] sm:text-[60px] md:text-[72px] leading-[0.96] mt-4 tracking-tight">
           What each rank
           <br />

@@ -6,7 +6,7 @@
     },
     {
       "code": "E003",
-      "name": "A.C.S. College of Engineering-Kambipura Mysore Road, Bengaluru"
+      "name": "Dr. ACS College of Engineering Kambipura -(Mysore Road), Bengaluru"
     },
     {
       "code": "E004",
@@ -94,7 +94,7 @@
     },
     {
       "code": "E032",
-      "name": "C.M.R. Institute of Technology-Brookefield, Bengaluru"
+      "name": "CMR Institute of Technology, ITPL Main Road, Kundalahalli, Bengaluru"
     },
     {
       "code": "E033",
@@ -134,7 +134,7 @@
     },
     {
       "code": "E043",
-      "name": "Yenepoya Institute of Technology formerly known as Dr. M V Shetty Institute of Technology- Moodbidri, Mangaluru"
+      "name": "Yenepoya Institute of Technology, NH-13, Thodar, Moodbidri, Mangaluru"
     },
     {
       "code": "E044",
@@ -188,7 +188,10 @@
       "code": "E060",
       "name": "JSS Academy of Technical Education-Kengeri Main Road, Bengaluru"
     },
-    { "code": "E061", "name": "JSS Science and Technology University-Mysuru" },
+    {
+      "code": "E061",
+      "name": "JSS Science and Technology University-Mysuru"
+    },
     {
       "code": "E062",
       "name": "Jain College of Engineering-T.S Nagar, Belagavi"
@@ -203,7 +206,7 @@
     },
     {
       "code": "E065",
-      "name": "KLE Technological University Formerly called as KLE Dr. M.S. Sheshgiri College of Engineering and Technology-Udyambag, Belagavi"
+      "name": "KLE Technological University, Belagavi Campus. Formerly known as KLE Dr. M.S. Sheshgiri College of Engineering and Technology-Udyambag, Belagavi"
     },
     {
       "code": "E066",
@@ -227,7 +230,7 @@
     },
     {
       "code": "E071",
-      "name": "Karavali Institute of Technology-Kottara, Mangaluru"
+      "name": "Karavali Institute of Technology, Mangaluru"
     },
     {
       "code": "E073",
@@ -241,7 +244,10 @@
       "code": "E075",
       "name": "KNS Institute of Technology-Yelahanka, Bengaluru"
     },
-    { "code": "E076", "name": "M.S. Engineering College-Sadahalli, Bengaluru" },
+    {
+      "code": "E076",
+      "name": "M.S. Engineering College-Sadahalli, Bengaluru"
+    },
     {
       "code": "E077",
       "name": "M.S. Ramaiah Institute of Technology-MSR Nagar, Bengaluru"
@@ -340,7 +346,7 @@
     },
     {
       "code": "E108",
-      "name": "S J C Institute of Technology-BB Road, Chikkaballapur"
+      "name": "SJC Institute of Technology-BB Road, Chikkaballapur"
     },
     {
       "code": "E109",
@@ -451,10 +457,6 @@
       "name": "Vemana Institute of Technology-Koramangala, Bengaluru"
     },
     {
-      "code": "E146",
-      "name": "Vidya Vikas Institute of Engineering and Technology-Alnahally, Mysuru"
-    },
-    {
       "code": "E147",
       "name": "Vidyavardhaka College of Engineering-Gokulam, Mysuru"
     },
@@ -471,15 +473,17 @@
       "name": "Jyothy Institute of Technology-Tathguni, Bengaluru"
     },
     {
-      "code": "E158",
-      "name": "Shetty Institute of Technology - Gulbarga Shahabad Road, Kalaburagi"
+      "code": "E159",
+      "name": "Lingaraj Appa Engineering-Gornalli, Bidar"
     },
-    { "code": "E159", "name": "Lingaraj Appa Engineering-Gornalli, Bidar" },
     {
       "code": "E161",
       "name": "Cambridge Institute of Technology North Campus-Kundana, Bengaluru"
     },
-    { "code": "E164", "name": "Reva University-Yelahanka, Bengaluru" },
+    {
+      "code": "E164",
+      "name": "Reva University-Yelahanka, Bengaluru"
+    },
     {
       "code": "E165",
       "name": "Alliance College of Engineering and Design. Alliance University-Anekal, Bengaluru"
@@ -492,12 +496,18 @@
       "code": "E172",
       "name": "Mysore College of Engineering and Management-Chikkahalli, Mysuru"
     },
-    { "code": "E173", "name": "Presidency University-Yelahanka, Bengaluru" },
+    {
+      "code": "E173",
+      "name": "Presidency University-Yelahanka, Bengaluru"
+    },
     {
       "code": "E183",
       "name": "Jain Institute of Technology-Avaragere Village, Davangere"
     },
-    { "code": "E187", "name": "CMR University-Bagalur-Chagalatti, Bengaluru" },
+    {
+      "code": "E187",
+      "name": "CMR University-Bagalur-Chagalatti, Bengaluru"
+    },
     {
       "code": "E191",
       "name": "Sir M V School Of Architecture-Yelahanka, Bengaluru"
@@ -527,12 +537,8 @@
       "name": "G Madegowda Institute of Technology-Maddur, Mandya District"
     },
     {
-      "code": "E202",
-      "name": "C Byregowda Insitute of Technology-Thoradevandahalli, Kolar"
-    },
-    {
       "code": "E203",
-      "name": "Amruta Institute of Engineering and Management Science-Bidadi, Ramnagar Taluk, Bengaluru Rural"
+      "name": "Amruta Institute of Engineering and Management Science-Bidadi,"
     },
     {
       "code": "E204",
@@ -564,7 +570,7 @@
     },
     {
       "code": "E212",
-      "name": "Seshadripuram Institute of Technology - Jaipura Hobli, Mysuru"
+      "name": "Seshadripuram Institute of Technology - Kadakola Industrial Area, Mysuru"
     },
     {
       "code": "E214",
@@ -575,82 +581,235 @@
       "name": "Cauvery College of Engineering-KBL Layout, Mysuru"
     },
     {
-      "code": "E216",
-      "name": "New Ebenezer Institute of Technology - Kothanur, Bangalore"
-    },
-    {
       "code": "E217",
       "name": "Harsha Institute of Technology-Nelamangala Taluk, Bangalore Rural"
+    },
+    {
+      "code": "E218",
+      "name": "CMN Institute of Technology- Off Magadi Road, Herohalli, Bengaluru"
+    },
+    {
+      "code": "E219",
+      "name": "ISBR College of Engineering and Technology-Electronic City Phase 2, Bengaluru"
+    },
+    {
+      "code": "E220",
+      "name": "Ramaiah University College of Engineering-Jigani, Bangalore"
+    },
+    {
+      "code": "E221",
+      "name": "Koshys Institute of Technology"
+    },
+    {
+      "code": "E223",
+      "name": "Shri Swami Nagabhushan Gurukul College of Engineering and Technology -Halasangi, Vijayapura"
     }
   ],
   "branches": [
-    { "code": "AD", "name": "Artificial Intelligence & Data Science" },
-    { "code": "AE", "name": "Aeronautical Engineering" },
-    { "code": "AG", "name": "Agricultural Engineering" },
-    { "code": "AI", "name": "Artificial Intelligence & Machine Learning" },
-    { "code": "AL", "name": "Agriculture Engineering Course" },
-    { "code": "AR", "name": "Automation & Robotics Engineering" },
-    { "code": "AS", "name": "Aerospace Engineering" },
-    { "code": "AU", "name": "Automobile Engineering" },
-    { "code": "AVE", "name": "Automotive Engineering" },
-    { "code": "BD", "name": "Bachelor of Design" },
-    { "code": "BDC", "name": "Bachelor of Design (Communic- ation & Design)" },
-    { "code": "BFD", "name": "Bachelor of Design (Fashion Design)" },
-    { "code": "BID", "name": "Bachelor of Design (Industrial Design)" },
     {
-      "code": "BLD",
-      "name": "Bachelor of Design (Lifestyle & Accessory Design)"
+      "code": "AD",
+      "name": "Artificial Intelligence & Data Science"
     },
-    { "code": "BM", "name": "Bio- Medical Engineering" },
-    { "code": "BP", "name": "Bachelor of Urban & Regional Planning" },
-    { "code": "BT", "name": "Bio- technology" },
+    {
+      "code": "AE",
+      "name": "Aeronautical Engineering"
+    },
+    {
+      "code": "AG",
+      "name": "Agriculture Engineering"
+    },
+    {
+      "code": "AI",
+      "name": "Artificial Intelligence & Machine Learning"
+    },
+    {
+      "code": "AIF",
+      "name": "Computer Science & Engineering -AI and Future Technologies"
+    },
+    {
+      "code": "AL",
+      "name": "Agricultural Engineering"
+    },
+    {
+      "code": "AR",
+      "name": "Automation & Robotics Engineering"
+    },
+    {
+      "code": "AS",
+      "name": "Aerospace Engineering"
+    },
+    {
+      "code": "AU",
+      "name": "Automobile Engineering"
+    },
+    {
+      "code": "AVE",
+      "name": "Automotive Engineering"
+    },
+    {
+      "code": "BD",
+      "name": "Bachelor Design"
+    },
+    {
+      "code": "BM",
+      "name": "Bio Medical Engineering"
+    },
+    {
+      "code": "BP",
+      "name": "Bachelor Planning"
+    },
+    {
+      "code": "BT",
+      "name": "Biotechnology"
+    },
     {
       "code": "CA",
       "name": "Computer Science & Engineering (Artificial Intelligence)"
     },
     {
-      "code": "CAD",
-      "name": "Computer Science & Engineering (Artificial Intelligence & Data Science)"
+      "code": "CB",
+      "name": "Computer Science & Business Systems"
     },
-    { "code": "CB", "name": "Computer Science & Business Systems" },
-    { "code": "CBD", "name": "Computer Science & Technology (Big Data)" },
-    { "code": "CC", "name": "Ceramic And Cement Technology" },
-    { "code": "CCA", "name": "Civil Engineering with Computer Application" },
     {
-      "code": "CCS",
-      "name": "Civil Construction & Sustainability Engineering"
+      "code": "CBD",
+      "name": "Computer Science & Technology (Big Data)"
     },
-    { "code": "CD", "name": "Computer Science & Engineering (Data Science)" },
-    { "code": "CE", "name": "Computer Engineering" },
-    { "code": "CG", "name": "Computer Science & Design" },
-    { "code": "CH", "name": "Chemical Engineering" },
+    {
+      "code": "CC",
+      "name": "Ceramic And Cement Technology"
+    },
+    {
+      "code": "CCC",
+      "name": "Computer Science & Engineering -Cloud Computing"
+    },
+    {
+      "code": "CD",
+      "name": "Computer Science & Engineering (Data Science)"
+    },
+    {
+      "code": "CE",
+      "name": "Computer Engineering"
+    },
+    {
+      "code": "CG",
+      "name": "Computer Science & Design"
+    },
+    {
+      "code": "CH",
+      "name": "Chemical Engineering"
+    },
     {
       "code": "CI",
       "name": "Computer Science & Engineering (Artificial Intelligence & Machine Learning)"
     },
-    { "code": "CIT", "name": "Computer Science & Information Technology" },
-    { "code": "CK", "name": "Civil Engineering (Kannada)" },
-    { "code": "CM", "name": "Computer & Communica- tion Engineering" },
-    { "code": "CN", "name": "Computer Science & Technology" },
-    { "code": "CO", "name": "Computer Science & Engineering (IOT)" },
-    { "code": "CR", "name": "Computer Science" },
-    { "code": "CS", "name": "Computer Science & Engineering" },
-    { "code": "CSB", "name": "Computer Science & Engineering (Block Chain)" },
-    { "code": "CSD", "name": "Computer Science & Technology (Devops)" },
-    { "code": "CV", "name": "Civil Engineering" },
-    { "code": "CX", "name": "Cyber Security" },
-    { "code": "CY", "name": "Computer Science & Engineering (Cyber Security)" },
-    { "code": "DS", "name": "Data Science" },
-    { "code": "EC", "name": "Electronics & Communicati on Engineering" },
-    { "code": "ECE", "name": "Electrical & Computer Engineering" },
     {
-      "code": "ECV",
-      "name": "Electronics and Communica- tion Engineering ( VLSI Design & Technology)"
+      "code": "CIT",
+      "name": "Computer Science & Information Technology"
     },
-    { "code": "EE", "name": "Electrical & Electronics Engineering" },
-    { "code": "EI", "name": "Electronics & Instrumentati on Engineering" },
-    { "code": "ES", "name": "Electronics & Computer Science" },
-    { "code": "ET", "name": "Electronics & Telecommu- nication Engineering" },
+    {
+      "code": "CN",
+      "name": "Computer Science & Technology"
+    },
+    {
+      "code": "CO",
+      "name": "Computer Science & Engineering (IOT)"
+    },
+    {
+      "code": "CP",
+      "name": "Computer Science & Engineering (Artificial Intelligence & Data Science)"
+    },
+    {
+      "code": "CR",
+      "name": "Computer Science"
+    },
+    {
+      "code": "CS",
+      "name": "Computer Science & Engineering"
+    },
+    {
+      "code": "CSB",
+      "name": "Computer Science & Engineering (Block Chain)"
+    },
+    {
+      "code": "CSD",
+      "name": "Computer Science & Technology (Devops)"
+    },
+    {
+      "code": "CV",
+      "name": "Civil Engineering"
+    },
+    {
+      "code": "CX",
+      "name": "Cyber Security"
+    },
+    {
+      "code": "CY",
+      "name": "Computer Science & Engineering (Cyber Security)"
+    },
+    {
+      "code": "DC",
+      "name": "Bachelor Design (Communicatio n & Design)"
+    },
+    {
+      "code": "DE",
+      "name": "Design Engineering"
+    },
+    {
+      "code": "DF",
+      "name": "Bachelor Design (Fashion Design)"
+    },
+    {
+      "code": "DI",
+      "name": "Bachelor Design (Industrial Design)"
+    },
+    {
+      "code": "DL",
+      "name": "Bachelor Design (Lifestyle & Accessory Design)"
+    },
+    {
+      "code": "DS",
+      "name": "Data Science"
+    },
+    {
+      "code": "EC",
+      "name": "Electronics & Communicatio n Engineering"
+    },
+    {
+      "code": "ECE",
+      "name": "Electrical & Computer Engineering"
+    },
+    {
+      "code": "ED",
+      "name": "Electronics and Communicatio n Engineering (V LSI Design & Technology)"
+    },
+    {
+      "code": "EE",
+      "name": "Electrical Electronics Engineering"
+    },
+    {
+      "code": "EEC",
+      "name": "Electrical Engineering and Computer Science"
+    },
+    {
+      "code": "EES",
+      "name": "Electronics Engineering (VLSI and Embedded System)"
+    },
+    {
+      "code": "EI",
+      "name": "Electronics & Instrumentatio n Engineering"
+    },
+    {
+      "code": "ELE",
+      "name": "Electronics Engineering"
+    },
+    {
+      "code": "ET",
+      "name": "Electronics & Telecommunic ation Engineering"
+    },
+    {
+      "code": "FSD",
+      "name": "Computer Science & Engineering -Full Stack Development"
+    },
     {
       "code": "IAR",
       "name": "Information Technology (Augmented Reality and Virtual Reality (AR / VR)"
@@ -659,536 +818,2834 @@
       "code": "IC",
       "name": "Computer Science & Engineering (IOT & Cyber Security Including Block Chain Technology)"
     },
-    { "code": "IDA", "name": "Information Technology (Data Analytics)" },
-    { "code": "IM", "name": "Industrial Engineering & Management" },
-    { "code": "INT", "name": "Information Technology" },
-    { "code": "IP", "name": "Industrial & Production Engineering" },
-    { "code": "IS", "name": "Information Science & Engineering" },
-    { "code": "IST", "name": "Information Science & Technology" },
-    { "code": "MAE", "name": "Mechanical & Aerospace Engineering" },
-    { "code": "MD", "name": "Medical Electronics Engineering" },
-    { "code": "ME", "name": "Mechanical Engineering" },
-    { "code": "MR", "name": "Marine Engineering" },
-    { "code": "MT", "name": "Mechatronics Engineering" },
-    { "code": "RA", "name": "Robotics & Automation" },
-    { "code": "RI", "name": "Robotics & Artificial Intelligence" },
-    { "code": "ROB", "name": "Robotics" },
-    { "code": "TX", "name": "Textile Technology" },
-    { "code": "UE", "name": "Electronics & Computer Engineering" },
+    {
+      "code": "IDA",
+      "name": "Information Technology (Data Analytics)"
+    },
+    {
+      "code": "IFS",
+      "name": "Information Science"
+    },
+    {
+      "code": "IM",
+      "name": "Industrial Engineering & Management"
+    },
+    {
+      "code": "IMP",
+      "name": "Integrated Masters in Planning"
+    },
+    {
+      "code": "INT",
+      "name": "Information Technology"
+    },
+    {
+      "code": "IP",
+      "name": "Industrial Production Engineering"
+    },
+    {
+      "code": "IS",
+      "name": "Information Science & Engineering"
+    },
+    {
+      "code": "IST",
+      "name": "Information Science & Technology"
+    },
+    {
+      "code": "ITE",
+      "name": "Information Technology & Engineering"
+    },
+    {
+      "code": "MD",
+      "name": "Medical Electronics Engineering"
+    },
+    {
+      "code": "ME",
+      "name": "Mechanical Engineering"
+    },
+    {
+      "code": "MR",
+      "name": "Marine Engineering"
+    },
+    {
+      "code": "MT",
+      "name": "Mechatronics Engineering"
+    },
+    {
+      "code": "QC",
+      "name": "Quantum Computing"
+    },
+    {
+      "code": "RA",
+      "name": "Robotics Automation"
+    },
+    {
+      "code": "RBE",
+      "name": "Robotic Engineering"
+    },
+    {
+      "code": "RI",
+      "name": "Robotics & Artificial Intelligence"
+    },
+    {
+      "code": "ROB",
+      "name": "Robotics"
+    },
+    {
+      "code": "SPE",
+      "name": "Computer Science & Engineering -Software Product Engineering"
+    },
+    {
+      "code": "TX",
+      "name": "Textile Technology"
+    },
+    {
+      "code": "UE",
+      "name": "Electronics & Computer Engineering"
+    },
     {
       "code": "VL",
       "name": "Electronics Engineering (VLSI Design & Technology)"
     },
-    { "code": "VLS", "name": "VLSI" }
+    {
+      "code": "VLS",
+      "name": "VLSI"
+    }
   ],
   "records": [
-    { "college": "E001", "branch": "AE", "rank": 104061 },
-    { "college": "E001", "branch": "AI", "rank": 52746 },
-    { "college": "E003", "branch": "AI", "rank": 92733 },
-    { "college": "E003", "branch": "AS", "rank": 90119 },
-    { "college": "E004", "branch": "AI", "rank": 106484 },
-    { "college": "E005", "branch": "AD", "rank": 71024 },
-    { "college": "E006", "branch": "AI", "rank": 89891 },
-    { "college": "E007", "branch": "AE", "rank": 95021 },
-    { "college": "E007", "branch": "AI", "rank": 109229 },
-    { "college": "E012", "branch": "AI", "rank": 92297 },
-    { "college": "E014", "branch": "AI", "rank": 104513 },
-    { "college": "E015", "branch": "AI", "rank": 30837 },
-    { "college": "E016", "branch": "AR", "rank": 53894 },
-    { "college": "E017", "branch": "AI", "rank": 86938 },
-    { "college": "E019", "branch": "AI", "rank": 12943 },
-    { "college": "E020", "branch": "AI", "rank": 107728 },
-    { "college": "E021", "branch": "AI", "rank": 111412 },
-    { "college": "E024", "branch": "AI", "rank": 103197 },
-    { "college": "E027", "branch": "AD", "rank": 4049 },
-    { "college": "E027", "branch": "AI", "rank": 4569 },
-    { "college": "E028", "branch": "AI", "rank": 16633 },
-    { "college": "E032", "branch": "AD", "rank": 24251 },
-    { "college": "E032", "branch": "AI", "rank": 22998 },
-    { "college": "E033", "branch": "AI", "rank": 59221 },
-    { "college": "E040", "branch": "AE", "rank": 21325 },
-    { "college": "E040", "branch": "AI", "rank": 6201 },
-    { "college": "E041", "branch": "AD", "rank": 102657 },
-    { "college": "E042", "branch": "AE", "rank": 107317 },
-    { "college": "E042", "branch": "AI", "rank": 45417 },
-    { "college": "E043", "branch": "AI", "rank": 89103 },
-    { "college": "E045", "branch": "AD", "rank": 106828 },
-    { "college": "E048", "branch": "AI", "rank": 108498 },
-    { "college": "E050", "branch": "AD", "rank": 80207 },
-    { "college": "E050", "branch": "AE", "rank": 76592 },
-    { "college": "E050", "branch": "AI", "rank": 63167 },
-    { "college": "E055", "branch": "AD", "rank": 69950 },
-    { "college": "E059", "branch": "AI", "rank": 101886 },
-    { "college": "E066", "branch": "AD", "rank": 105457 },
-    { "college": "E068", "branch": "AI", "rank": 102605 },
-    { "college": "E073", "branch": "AE", "rank": 107667 },
-    { "college": "E075", "branch": "AI", "rank": 103454 },
-    { "college": "E077", "branch": "AD", "rank": 2483 },
-    { "college": "E077", "branch": "AI", "rank": 2402 },
-    { "college": "E077", "branch": "AS", "rank": 9212 },
-    { "college": "E082", "branch": "AD", "rank": 75566 },
-    { "college": "E090", "branch": "AI", "rank": 111068 },
-    { "college": "E095", "branch": "AS", "rank": 3464 },
-    { "college": "E099", "branch": "AI", "rank": 103540 },
-    { "college": "E101", "branch": "AI", "rank": 72485 },
-    { "college": "E107", "branch": "AI", "rank": 55981 },
-    { "college": "E108", "branch": "AS", "rank": 110023 },
-    { "college": "E109", "branch": "AI", "rank": 38473 },
-    { "college": "E110", "branch": "AD", "rank": 101776 },
-    { "college": "E117", "branch": "AI", "rank": 55939 },
-    { "college": "E118", "branch": "AD", "rank": 77621 },
-    { "college": "E123", "branch": "AD", "rank": 62552 },
-    { "college": "E126", "branch": "AI", "rank": 24120 },
-    { "college": "E141", "branch": "AI", "rank": 97282 },
-    { "college": "E145", "branch": "AI", "rank": 110976 },
-    { "college": "E156", "branch": "AI", "rank": 88766 },
-    { "college": "E164", "branch": "AD", "rank": 34295 },
-    { "college": "E164", "branch": "AG", "rank": 71914 },
-    { "college": "E165", "branch": "AS", "rank": 94827 },
-    { "college": "E194", "branch": "AI", "rank": 108652 },
-    { "college": "E203", "branch": "AI", "rank": 81494 },
-    { "college": "E207", "branch": "AD", "rank": 108945 },
-    { "college": "E207", "branch": "AI", "rank": 96926 },
-    { "college": "E209", "branch": "AD", "rank": 90966 },
-    { "college": "E209", "branch": "AI", "rank": 107173 },
-    { "college": "E211", "branch": "AL", "rank": 93611 },
-    { "college": "E212", "branch": "AI", "rank": 104925 },
-    { "college": "E040", "branch": "AU", "rank": 37797 },
-    { "college": "E101", "branch": "BM", "rank": 96470 },
-    { "college": "E191", "branch": "BD", "rank": 44061 },
-    { "college": "E197", "branch": "AVE", "rank": 47146 },
-    { "college": "E001", "branch": "BT", "rank": 105937 },
-    { "college": "E016", "branch": "BT", "rank": 106895 },
-    { "college": "E016", "branch": "CA", "rank": 33066 },
-    { "college": "E017", "branch": "CA", "rank": 73490 },
-    { "college": "E026", "branch": "CA", "rank": 103425 },
-    { "college": "E027", "branch": "BT", "rank": 30409 },
-    { "college": "E027", "branch": "CB", "rank": 4349 },
-    { "college": "E028", "branch": "CB", "rank": 15601 },
-    { "college": "E040", "branch": "BT", "rank": 44710 },
-    { "college": "E042", "branch": "CB", "rank": 59929 },
-    { "college": "E061", "branch": "BT", "rank": 98365 },
-    { "college": "E061", "branch": "CB", "rank": 18824 },
-    { "college": "E065", "branch": "CA", "rank": 69481 },
-    { "college": "E074", "branch": "CA", "rank": 111074 },
-    { "college": "E077", "branch": "BT", "rank": 26988 },
-    { "college": "E078", "branch": "CA", "rank": 100751 },
-    { "college": "E078", "branch": "CB", "rank": 106222 },
-    { "college": "E089", "branch": "CB", "rank": 25053 },
-    { "college": "E095", "branch": "BT", "rank": 14685 },
-    { "college": "E126", "branch": "BT", "rank": 78926 },
-    { "college": "E137", "branch": "CA", "rank": 80920 },
-    { "college": "E165", "branch": "BT", "rank": 104355 },
-    { "college": "E173", "branch": "CBD", "rank": 75355 },
-    { "college": "E216", "branch": "CAD", "rank": 94868 },
-    { "college": "E001", "branch": "CD", "rank": 53623 },
-    { "college": "E004", "branch": "CD", "rank": 86772 },
-    { "college": "E005", "branch": "CI", "rank": 91347 },
-    { "college": "E006", "branch": "CD", "rank": 56170 },
-    { "college": "E007", "branch": "CD", "rank": 92944 },
-    { "college": "E007", "branch": "CI", "rank": 111096 },
-    { "college": "E011", "branch": "CI", "rank": 94218 },
-    { "college": "E012", "branch": "CD", "rank": 111230 },
-    { "college": "E019", "branch": "CD", "rank": 10496 },
-    { "college": "E020", "branch": "CD", "rank": 103964 },
-    { "college": "E020", "branch": "CE", "rank": 100965 },
-    { "college": "E021", "branch": "CD", "rank": 111716 },
-    { "college": "E027", "branch": "CD", "rank": 3854 },
-    { "college": "E027", "branch": "CH", "rank": 25041 },
-    { "college": "E032", "branch": "CD", "rank": 19813 },
-    { "college": "E032", "branch": "CI", "rank": 18611 },
-    { "college": "E033", "branch": "CD", "rank": 58396 },
-    { "college": "E039", "branch": "CD", "rank": 37213 },
-    { "college": "E039", "branch": "CI", "rank": 34054 },
-    { "college": "E040", "branch": "CD", "rank": 5740 },
-    { "college": "E040", "branch": "CG", "rank": 7492 },
-    { "college": "E040", "branch": "CH", "rank": 38499 },
-    { "college": "E041", "branch": "CI", "rank": 107604 },
-    { "college": "E042", "branch": "CD", "rank": 48747 },
-    { "college": "E046", "branch": "CD", "rank": 104956 },
-    { "college": "E046", "branch": "CI", "rank": 110249 },
-    { "college": "E048", "branch": "CI", "rank": 64384 },
-    { "college": "E050", "branch": "CI", "rank": 79288 },
-    { "college": "E053", "branch": "CD", "rank": 90783 },
-    { "college": "E053", "branch": "CI", "rank": 110929 },
-    { "college": "E055", "branch": "CI", "rank": 52101 },
-    { "college": "E059", "branch": "CD", "rank": 104928 },
-    { "college": "E060", "branch": "CI", "rank": 37474 },
-    { "college": "E061", "branch": "CI", "rank": 13641 },
-    { "college": "E062", "branch": "CI", "rank": 96545 },
-    { "college": "E064", "branch": "CI", "rank": 110588 },
-    { "college": "E065", "branch": "CH", "rank": 94423 },
-    { "college": "E073", "branch": "CI", "rank": 41876 },
-    { "college": "E076", "branch": "CD", "rank": 45773 },
-    { "college": "E077", "branch": "CH", "rank": 28430 },
-    { "college": "E077", "branch": "CI", "rank": 1649 },
-    { "college": "E078", "branch": "CD", "rank": 111099 },
-    { "college": "E078", "branch": "CE", "rank": 108542 },
-    { "college": "E078", "branch": "CI", "rank": 96870 },
-    { "college": "E079", "branch": "CI", "rank": 92605 },
-    { "college": "E084", "branch": "CD", "rank": 59079 },
-    { "college": "E085", "branch": "CI", "rank": 15809 },
-    { "college": "E089", "branch": "CD", "rank": 29874 },
-    { "college": "E089", "branch": "CI", "rank": 23957 },
-    { "college": "E090", "branch": "CD", "rank": 106482 },
-    { "college": "E090", "branch": "CE", "rank": 110737 },
-    { "college": "E095", "branch": "CD", "rank": 649 },
-    { "college": "E095", "branch": "CH", "rank": 11506 },
-    { "college": "E095", "branch": "CI", "rank": 713 },
-    { "college": "E104", "branch": "CD", "rank": 34045 },
-    { "college": "E104", "branch": "CI", "rank": 33681 },
-    { "college": "E107", "branch": "CD", "rank": 62287 },
-    { "college": "E108", "branch": "CI", "rank": 62272 },
-    { "college": "E112", "branch": "CI", "rank": 103600 },
-    { "college": "E113", "branch": "CI", "rank": 110575 },
-    { "college": "E116", "branch": "CD", "rank": 103424 },
-    { "college": "E117", "branch": "CH", "rank": 88258 },
-    { "college": "E122", "branch": "CI", "rank": 81412 },
-    { "college": "E125", "branch": "CI", "rank": 15983 },
-    { "college": "E126", "branch": "CD", "rank": 23926 },
-    { "college": "E145", "branch": "CD", "rank": 87999 },
-    { "college": "E147", "branch": "CI", "rank": 64888 },
-    { "college": "E152", "branch": "CI", "rank": 99165 },
-    { "college": "E161", "branch": "CD", "rank": 105165 },
-    { "college": "E161", "branch": "CI", "rank": 105955 },
-    { "college": "E164", "branch": "CI", "rank": 27585 },
-    { "college": "E171", "branch": "CD", "rank": 24435 },
-    { "college": "E171", "branch": "CI", "rank": 21709 },
-    { "college": "E173", "branch": "CD", "rank": 75286 },
-    { "college": "E173", "branch": "CI", "rank": 58354 },
-    { "college": "E187", "branch": "CD", "rank": 55912 },
-    { "college": "E187", "branch": "CE", "rank": 87610 },
-    { "college": "E187", "branch": "CI", "rank": 47545 },
-    { "college": "E195", "branch": "CI", "rank": 95782 },
-    { "college": "E198", "branch": "CI", "rank": 15849 },
-    { "college": "E207", "branch": "CG", "rank": 70313 },
-    { "college": "E217", "branch": "CD", "rank": 85336 },
-    { "college": "E001", "branch": "CS", "rank": 51728 },
-    { "college": "E003", "branch": "CS", "rank": 104746 },
-    { "college": "E004", "branch": "CS", "rank": 59442 },
-    { "college": "E005", "branch": "CS", "rank": 111733 },
-    { "college": "E006", "branch": "CS", "rank": 107931 },
-    { "college": "E007", "branch": "CS", "rank": 109518 },
-    { "college": "E011", "branch": "CS", "rank": 41643 },
-    { "college": "E012", "branch": "CS", "rank": 85478 },
-    { "college": "E015", "branch": "CS", "rank": 24582 },
-    { "college": "E016", "branch": "CS", "rank": 31388 },
-    { "college": "E019", "branch": "CS", "rank": 9177 },
-    { "college": "E020", "branch": "CS", "rank": 81326 },
-    { "college": "E021", "branch": "CS", "rank": 110850 },
-    { "college": "E024", "branch": "CS", "rank": 92928 },
-    { "college": "E026", "branch": "CS", "rank": 106797 },
-    { "college": "E027", "branch": "CS", "rank": 3689 },
-    { "college": "E028", "branch": "CS", "rank": 14153 },
-    { "college": "E032", "branch": "CS", "rank": 18084 },
-    { "college": "E033", "branch": "CS", "rank": 58952 },
-    { "college": "E035", "branch": "CS", "rank": 88016 },
-    { "college": "E038", "branch": "CS", "rank": 63276 },
-    { "college": "E039", "branch": "CS", "rank": 35187 },
-    { "college": "E040", "branch": "CS", "rank": 5479 },
-    { "college": "E041", "branch": "CS", "rank": 111427 },
-    { "college": "E042", "branch": "CS", "rank": 42969 },
-    { "college": "E045", "branch": "CS", "rank": 99127 },
-    { "college": "E046", "branch": "CS", "rank": 87819 },
-    { "college": "E048", "branch": "CS", "rank": 88757 },
-    { "college": "E049", "branch": "CN", "rank": 79136 },
-    { "college": "E049", "branch": "CS", "rank": 106127 },
-    { "college": "E050", "branch": "CS", "rank": 75438 },
-    { "college": "E051", "branch": "CS", "rank": 78310 },
-    { "college": "E053", "branch": "CS", "rank": 101116 },
-    { "college": "E055", "branch": "CS", "rank": 48397 },
-    { "college": "E058", "branch": "CS", "rank": 4752 },
-    { "college": "E059", "branch": "CS", "rank": 101301 },
-    { "college": "E060", "branch": "CS", "rank": 36550 },
-    { "college": "E061", "branch": "CS", "rank": 12996 },
-    { "college": "E062", "branch": "CS", "rank": 110288 },
-    { "college": "E064", "branch": "CS", "rank": 110996 },
-    { "college": "E065", "branch": "CS", "rank": 79727 },
-    { "college": "E066", "branch": "CS", "rank": 109981 },
-    { "college": "E067", "branch": "CS", "rank": 101569 },
-    { "college": "E068", "branch": "CS", "rank": 106608 },
-    { "college": "E073", "branch": "CS", "rank": 53966 },
-    { "college": "E074", "branch": "CS", "rank": 110111 },
-    { "college": "E075", "branch": "CS", "rank": 94425 },
-    { "college": "E076", "branch": "CS", "rank": 101479 },
-    { "college": "E077", "branch": "CS", "rank": 1341 },
-    { "college": "E078", "branch": "CS", "rank": 101975 },
-    { "college": "E079", "branch": "CS", "rank": 110247 },
-    { "college": "E080", "branch": "CS", "rank": 109490 },
-    { "college": "E082", "branch": "CS", "rank": 109919 },
-    { "college": "E084", "branch": "CS", "rank": 94779 },
-    { "college": "E085", "branch": "CS", "rank": 15390 },
-    { "college": "E089", "branch": "CS", "rank": 35673 },
-    { "college": "E090", "branch": "CS", "rank": 82096 },
-    { "college": "E095", "branch": "CS", "rank": 542 },
-    { "college": "E099", "branch": "CS", "rank": 105648 },
-    { "college": "E101", "branch": "CS", "rank": 103272 },
-    { "college": "E104", "branch": "CS", "rank": 30222 },
-    { "college": "E107", "branch": "CS", "rank": 53748 },
-    { "college": "E108", "branch": "CS", "rank": 51440 },
-    { "college": "E109", "branch": "CS", "rank": 86597 },
-    { "college": "E110", "branch": "CS", "rank": 104814 },
-    { "college": "E112", "branch": "CS", "rank": 104962 },
-    { "college": "E113", "branch": "CS", "rank": 107167 },
-    { "college": "E116", "branch": "CS", "rank": 110300 },
-    { "college": "E117", "branch": "CS", "rank": 49002 },
-    { "college": "E118", "branch": "CS", "rank": 89042 },
-    { "college": "E125", "branch": "CS", "rank": 14939 },
-    { "college": "E126", "branch": "CS", "rank": 22026 },
-    { "college": "E127", "branch": "CS", "rank": 86353 },
-    { "college": "E137", "branch": "CS", "rank": 109058 },
-    { "college": "E138", "branch": "CS", "rank": 90025 },
-    { "college": "E141", "branch": "CS", "rank": 106939 },
-    { "college": "E145", "branch": "CS", "rank": 109781 },
-    { "college": "E146", "branch": "CS", "rank": 106350 },
-    { "college": "E147", "branch": "CS", "rank": 82079 },
-    { "college": "E152", "branch": "CS", "rank": 105603 },
-    { "college": "E156", "branch": "CS", "rank": 109278 },
-    { "college": "E161", "branch": "CS", "rank": 104072 },
-    { "college": "E164", "branch": "CIT", "rank": 39983 },
-    { "college": "E165", "branch": "CO", "rank": 80186 },
-    { "college": "E165", "branch": "CSB", "rank": 109154 },
-    { "college": "E165", "branch": "CS", "rank": 42800 },
-    { "college": "E171", "branch": "CS", "rank": 20658 },
-    { "college": "E173", "branch": "CO", "rank": 79721 },
-    { "college": "E173", "branch": "CSB", "rank": 85739 },
-    { "college": "E173", "branch": "CS", "rank": 46905 },
-    { "college": "E187", "branch": "CN", "rank": 75437 },
-    { "college": "E187", "branch": "CS", "rank": 57965 },
-    { "college": "E194", "branch": "CS", "rank": 99653 },
-    { "college": "E198", "branch": "CS", "rank": 14773 },
-    { "college": "E203", "branch": "CS", "rank": 110891 },
-    { "college": "E205", "branch": "CS", "rank": 40289 },
-    { "college": "E207", "branch": "CS", "rank": 100335 },
-    { "college": "E212", "branch": "CS", "rank": 102501 },
-    { "college": "E214", "branch": "CS", "rank": 61878 },
-    { "college": "E217", "branch": "CS", "rank": 80960 },
-    { "college": "E001", "branch": "CV", "rank": 90907 },
-    { "college": "E001", "branch": "EC", "rank": 89548 },
-    { "college": "E003", "branch": "CY", "rank": 98461 },
-    { "college": "E005", "branch": "CY", "rank": 104762 },
-    { "college": "E007", "branch": "EC", "rank": 62066 },
-    { "college": "E009", "branch": "EC", "rank": 107672 },
-    { "college": "E012", "branch": "EC", "rank": 110946 },
-    { "college": "E015", "branch": "EC", "rank": 37057 },
-    { "college": "E016", "branch": "CV", "rank": 111127 },
-    { "college": "E016", "branch": "EC", "rank": 54028 },
-    { "college": "E019", "branch": "CV", "rank": 84998 },
-    { "college": "E019", "branch": "EC", "rank": 19284 },
-    { "college": "E020", "branch": "EC", "rank": 94248 },
-    { "college": "E021", "branch": "EC", "rank": 101158 },
-    { "college": "E024", "branch": "EC", "rank": 108233 },
-    { "college": "E027", "branch": "CV", "rank": 31147 },
-    { "college": "E027", "branch": "EC", "rank": 5302 },
-    { "college": "E028", "branch": "CV", "rank": 68667 },
-    { "college": "E028", "branch": "EC", "rank": 19346 },
-    { "college": "E030", "branch": "CV", "rank": 6655 },
-    { "college": "E032", "branch": "EC", "rank": 38765 },
-    { "college": "E033", "branch": "EC", "rank": 111194 },
-    { "college": "E039", "branch": "CY", "rank": 37819 },
-    { "college": "E039", "branch": "EC", "rank": 46875 },
-    { "college": "E040", "branch": "CV", "rank": 40753 },
-    { "college": "E040", "branch": "CY", "rank": 6442 },
-    { "college": "E040", "branch": "EC", "rank": 10951 },
-    { "college": "E041", "branch": "EC", "rank": 81250 },
-    { "college": "E042", "branch": "EC", "rank": 60654 },
-    { "college": "E042", "branch": "ECV", "rank": 82112 },
-    { "college": "E046", "branch": "EC", "rank": 74935 },
-    { "college": "E048", "branch": "EC", "rank": 69091 },
-    { "college": "E050", "branch": "CV", "rank": 104120 },
-    { "college": "E050", "branch": "EC", "rank": 111800 },
-    { "college": "E053", "branch": "EC", "rank": 90597 },
-    { "college": "E055", "branch": "EC", "rank": 110904 },
-    { "college": "E059", "branch": "EC", "rank": 75336 },
-    { "college": "E060", "branch": "CV", "rank": 78471 },
-    { "college": "E060", "branch": "EC", "rank": 56738 },
-    { "college": "E061", "branch": "CV", "rank": 109696 },
-    { "college": "E062", "branch": "EC", "rank": 79925 },
-    { "college": "E064", "branch": "EC", "rank": 77514 },
-    { "college": "E065", "branch": "EC", "rank": 94385 },
-    { "college": "E066", "branch": "EC", "rank": 96361 },
-    { "college": "E068", "branch": "EC", "rank": 66339 },
-    { "college": "E073", "branch": "CV", "rank": 7406 },
-    { "college": "E073", "branch": "EC", "rank": 68273 },
-    { "college": "E074", "branch": "EC", "rank": 108632 },
-    { "college": "E077", "branch": "CV", "rank": 30423 },
-    { "college": "E077", "branch": "CY", "rank": 2071 },
-    { "college": "E077", "branch": "EC", "rank": 3162 },
-    { "college": "E078", "branch": "EC", "rank": 110498 },
-    { "college": "E089", "branch": "CV", "rank": 76684 },
-    { "college": "E089", "branch": "EC", "rank": 41342 },
-    { "college": "E089", "branch": "ECV", "rank": 43511 },
-    { "college": "E090", "branch": "EC", "rank": 108985 },
-    { "college": "E095", "branch": "CV", "rank": 17969 },
-    { "college": "E095", "branch": "CY", "rank": 774 },
-    { "college": "E095", "branch": "EC", "rank": 1077 },
-    { "college": "E099", "branch": "EC", "rank": 56779 },
-    { "college": "E101", "branch": "EC", "rank": 67192 },
-    { "college": "E104", "branch": "CV", "rank": 92294 },
-    { "college": "E104", "branch": "CY", "rank": 35124 },
-    { "college": "E104", "branch": "EC", "rank": 40410 },
-    { "college": "E107", "branch": "EC", "rank": 109664 },
-    { "college": "E113", "branch": "EC", "rank": 33986 },
-    { "college": "E116", "branch": "EC", "rank": 88619 },
-    { "college": "E117", "branch": "CV", "rank": 70309 },
-    { "college": "E117", "branch": "EC", "rank": 66979 },
-    { "college": "E125", "branch": "EC", "rank": 21476 },
-    { "college": "E126", "branch": "CV", "rank": 110094 },
-    { "college": "E126", "branch": "EC", "rank": 34643 },
-    { "college": "E137", "branch": "CY", "rank": 106739 },
-    { "college": "E142", "branch": "EC", "rank": 20308 },
-    { "college": "E147", "branch": "CV", "rank": 110523 },
-    { "college": "E147", "branch": "EC", "rank": 105161 },
-    { "college": "E161", "branch": "CY", "rank": 100037 },
-    { "college": "E164", "branch": "CV", "rank": 102529 },
-    { "college": "E164", "branch": "EC", "rank": 48305 },
-    { "college": "E165", "branch": "CSD", "rank": 86640 },
-    { "college": "E165", "branch": "CY", "rank": 60538 },
-    { "college": "E165", "branch": "EC", "rank": 110448 },
-    { "college": "E171", "branch": "CY", "rank": 24121 },
-    { "college": "E171", "branch": "ECE", "rank": 99933 },
-    { "college": "E171", "branch": "EC", "rank": 37265 },
-    { "college": "E173", "branch": "CSD", "rank": 86348 },
-    { "college": "E173", "branch": "CV", "rank": 104478 },
-    { "college": "E173", "branch": "CY", "rank": 76298 },
-    { "college": "E173", "branch": "EC", "rank": 111665 },
-    { "college": "E187", "branch": "EC", "rank": 66541 },
-    { "college": "E194", "branch": "EC", "rank": 89005 },
-    { "college": "E197", "branch": "CV", "rank": 68875 },
-    { "college": "E198", "branch": "EC", "rank": 18473 },
-    { "college": "E212", "branch": "EC", "rank": 105585 },
-    { "college": "E217", "branch": "EC", "rank": 110173 },
-    { "college": "E001", "branch": "EE", "rank": 104887 },
-    { "college": "E006", "branch": "IC", "rank": 75282 },
-    { "college": "E007", "branch": "EE", "rank": 70900 },
-    { "college": "E015", "branch": "EE", "rank": 62330 },
-    { "college": "E016", "branch": "EE", "rank": 110581 },
-    { "college": "E019", "branch": "EE", "rank": 29168 },
-    { "college": "E019", "branch": "EI", "rank": 33853 },
-    { "college": "E019", "branch": "ET", "rank": 25329 },
-    { "college": "E019", "branch": "IC", "rank": 13341 },
-    { "college": "E027", "branch": "IC", "rank": 4089 },
-    { "college": "E028", "branch": "EE", "rank": 26385 },
-    { "college": "E033", "branch": "EE", "rank": 98440 },
-    { "college": "E033", "branch": "IC", "rank": 63549 },
-    { "college": "E037", "branch": "IC", "rank": 100851 },
-    { "college": "E039", "branch": "IC", "rank": 39604 },
-    { "college": "E040", "branch": "EE", "rank": 19099 },
-    { "college": "E040", "branch": "ET", "rank": 17797 },
-    { "college": "E040", "branch": "IC", "rank": 6664 },
-    { "college": "E041", "branch": "EE", "rank": 32466 },
-    { "college": "E041", "branch": "IC", "rank": 33031 },
-    { "college": "E046", "branch": "IC", "rank": 110484 },
-    { "college": "E048", "branch": "EE", "rank": 108308 },
-    { "college": "E050", "branch": "EE", "rank": 91719 },
-    { "college": "E060", "branch": "EI", "rank": 82291 },
-    { "college": "E065", "branch": "EE", "rank": 94755 },
-    { "college": "E068", "branch": "IC", "rank": 78493 },
-    { "college": "E073", "branch": "EE", "rank": 92019 },
-    { "college": "E077", "branch": "EE", "rank": 5756 },
-    { "college": "E077", "branch": "EI", "rank": 6106 },
-    { "college": "E077", "branch": "ET", "rank": 4772 },
-    { "college": "E078", "branch": "IC", "rank": 109740 },
-    { "college": "E089", "branch": "EE", "rank": 37003 },
-    { "college": "E090", "branch": "EE", "rank": 69375 },
-    { "college": "E095", "branch": "EE", "rank": 1866 },
-    { "college": "E095", "branch": "ET", "rank": 1343 },
-    { "college": "E104", "branch": "EE", "rank": 45507 },
-    { "college": "E116", "branch": "EE", "rank": 93840 },
-    { "college": "E117", "branch": "EE", "rank": 107627 },
-    { "college": "E126", "branch": "EE", "rank": 65232 },
-    { "college": "E126", "branch": "ET", "rank": 52153 },
-    { "college": "E126", "branch": "IC", "rank": 26568 },
-    { "college": "E142", "branch": "EE", "rank": 23770 },
-    { "college": "E147", "branch": "EE", "rank": 84576 },
-    { "college": "E164", "branch": "IC", "rank": 42714 },
-    { "college": "E165", "branch": "EE", "rank": 61682 },
-    { "college": "E165", "branch": "IAR", "rank": 67223 },
-    { "college": "E165", "branch": "IDA", "rank": 109750 },
-    { "college": "E173", "branch": "EE", "rank": 97479 },
-    { "college": "E001", "branch": "IS", "rank": 75143 },
-    { "college": "E012", "branch": "IS", "rank": 109052 },
-    { "college": "E015", "branch": "IS", "rank": 31447 },
-    { "college": "E019", "branch": "IS", "rank": 15238 },
-    { "college": "E021", "branch": "IS", "rank": 106067 },
-    { "college": "E024", "branch": "IS", "rank": 108363 },
-    { "college": "E032", "branch": "IS", "rank": 26492 },
-    { "college": "E036", "branch": "MAE", "rank": 61373 },
-    { "college": "E039", "branch": "IS", "rank": 44072 },
-    { "college": "E040", "branch": "IS", "rank": 7373 },
-    { "college": "E040", "branch": "MD", "rank": 50220 },
-    { "college": "E042", "branch": "IS", "rank": 60782 },
-    { "college": "E045", "branch": "IS", "rank": 83887 },
-    { "college": "E046", "branch": "IS", "rank": 108885 },
-    { "college": "E050", "branch": "IS", "rank": 101196 },
-    { "college": "E055", "branch": "IS", "rank": 71549 },
-    { "college": "E059", "branch": "IS", "rank": 85433 },
-    { "college": "E060", "branch": "IS", "rank": 44529 },
-    { "college": "E061", "branch": "IS", "rank": 19312 },
-    { "college": "E077", "branch": "IM", "rank": 27429 },
-    { "college": "E077", "branch": "IS", "rank": 2311 },
-    { "college": "E077", "branch": "MD", "rank": 33938 },
-    { "college": "E078", "branch": "IS", "rank": 111029 },
-    { "college": "E089", "branch": "IS", "rank": 42248 },
-    { "college": "E090", "branch": "IS", "rank": 107203 },
-    { "college": "E095", "branch": "IM", "rank": 12328 },
-    { "college": "E099", "branch": "IS", "rank": 92310 },
-    { "college": "E107", "branch": "IS", "rank": 71438 },
-    { "college": "E112", "branch": "IS", "rank": 102448 },
-    { "college": "E117", "branch": "IS", "rank": 57018 },
-    { "college": "E125", "branch": "IS", "rank": 18090 },
-    { "college": "E126", "branch": "IS", "rank": 30150 },
-    { "college": "E146", "branch": "IS", "rank": 111279 },
-    { "college": "E164", "branch": "IS", "rank": 44161 },
-    { "college": "E165", "branch": "INT", "rank": 71584 },
-    { "college": "E173", "branch": "IS", "rank": 75506 },
-    { "college": "E173", "branch": "IST", "rank": 107866 },
-    { "college": "E187", "branch": "INT", "rank": 98024 },
-    { "college": "E197", "branch": "IS", "rank": 25525 },
-    { "college": "E207", "branch": "IS", "rank": 89272 },
-    { "college": "E001", "branch": "ME", "rank": 107616 },
-    { "college": "E001", "branch": "MT", "rank": 90218 },
-    { "college": "E001", "branch": "RI", "rank": 70413 },
-    { "college": "E012", "branch": "RA", "rank": 104693 },
-    { "college": "E015", "branch": "ME", "rank": 108369 },
-    { "college": "E016", "branch": "ME", "rank": 103984 },
-    { "college": "E019", "branch": "ME", "rank": 53844 },
-    { "college": "E019", "branch": "RI", "rank": 17065 },
-    { "college": "E020", "branch": "RI", "rank": 65090 },
-    { "college": "E027", "branch": "ME", "rank": 13510 },
-    { "college": "E028", "branch": "ME", "rank": 43026 },
-    { "college": "E033", "branch": "ME", "rank": 82604 },
-    { "college": "E039", "branch": "ME", "rank": 57162 },
-    { "college": "E040", "branch": "ME", "rank": 34913 },
-    { "college": "E040", "branch": "RI", "rank": 8006 },
-    { "college": "E048", "branch": "ME", "rank": 104180 },
-    { "college": "E050", "branch": "ME", "rank": 94278 },
-    { "college": "E059", "branch": "RI", "rank": 100557 },
-    { "college": "E060", "branch": "ME", "rank": 97000 },
-    { "college": "E060", "branch": "RA", "rank": 51021 },
-    { "college": "E061", "branch": "ME", "rank": 56635 },
-    { "college": "E073", "branch": "ME", "rank": 88764 },
-    { "college": "E077", "branch": "ME", "rank": 12622 },
-    { "college": "E089", "branch": "RI", "rank": 39412 },
-    { "college": "E090", "branch": "ME", "rank": 88296 },
-    { "college": "E095", "branch": "ME", "rank": 5339 },
-    { "college": "E104", "branch": "ME", "rank": 57487 },
-    { "college": "E112", "branch": "RA", "rank": 55193 },
-    { "college": "E114", "branch": "ME", "rank": 90200 },
-    { "college": "E117", "branch": "ME", "rank": 109315 },
-    { "college": "E126", "branch": "ME", "rank": 84225 },
-    { "college": "E126", "branch": "RI", "rank": 34662 },
-    { "college": "E126", "branch": "UE", "rank": 45918 },
-    { "college": "E142", "branch": "ME", "rank": 33516 },
-    { "college": "E147", "branch": "ME", "rank": 106778 },
-    { "college": "E161", "branch": "ME", "rank": 21531 },
-    { "college": "E165", "branch": "ME", "rank": 88403 },
-    { "college": "E171", "branch": "ME", "rank": 95156 },
-    { "college": "E171", "branch": "RI", "rank": 29322 },
-    { "college": "E016", "branch": "VLS", "rank": 60902 },
-    { "college": "E019", "branch": "VL", "rank": 23687 },
-    { "college": "E036", "branch": "VL", "rank": 48972 },
-    { "college": "E171", "branch": "VL", "rank": 81522 },
-    { "college": "E173", "branch": "VLS", "rank": 89941 }
+    {
+      "college": "E001",
+      "branch": "AE",
+      "rank": 77845
+    },
+    {
+      "college": "E001",
+      "branch": "AI",
+      "rank": 47135
+    },
+    {
+      "college": "E001",
+      "branch": "AS",
+      "rank": 74853
+    },
+    {
+      "college": "E001",
+      "branch": "BT",
+      "rank": 65539
+    },
+    {
+      "college": "E001",
+      "branch": "CD",
+      "rank": 47623
+    },
+    {
+      "college": "E001",
+      "branch": "CS",
+      "rank": 45906
+    },
+    {
+      "college": "E001",
+      "branch": "CV",
+      "rank": 106843
+    },
+    {
+      "college": "E001",
+      "branch": "EC",
+      "rank": 67485
+    },
+    {
+      "college": "E001",
+      "branch": "EE",
+      "rank": 83564
+    },
+    {
+      "college": "E001",
+      "branch": "IS",
+      "rank": 63716
+    },
+    {
+      "college": "E001",
+      "branch": "ME",
+      "rank": 98703
+    },
+    {
+      "college": "E001",
+      "branch": "MT",
+      "rank": 109265
+    },
+    {
+      "college": "E001",
+      "branch": "RI",
+      "rank": 63411
+    },
+    {
+      "college": "E003",
+      "branch": "AE",
+      "rank": 101828
+    },
+    {
+      "college": "E003",
+      "branch": "AI",
+      "rank": 104521
+    },
+    {
+      "college": "E003",
+      "branch": "AS",
+      "rank": 100551
+    },
+    {
+      "college": "E003",
+      "branch": "BM",
+      "rank": 104240
+    },
+    {
+      "college": "E003",
+      "branch": "CD",
+      "rank": 94363
+    },
+    {
+      "college": "E003",
+      "branch": "CS",
+      "rank": 100883
+    },
+    {
+      "college": "E003",
+      "branch": "CY",
+      "rank": 65477
+    },
+    {
+      "college": "E003",
+      "branch": "EC",
+      "rank": 91673
+    },
+    {
+      "college": "E004",
+      "branch": "AI",
+      "rank": 96909
+    },
+    {
+      "college": "E004",
+      "branch": "CS",
+      "rank": 69786
+    },
+    {
+      "college": "E005",
+      "branch": "AD",
+      "rank": 98092
+    },
+    {
+      "college": "E005",
+      "branch": "CI",
+      "rank": 46764
+    },
+    {
+      "college": "E005",
+      "branch": "CS",
+      "rank": 61959
+    },
+    {
+      "college": "E005",
+      "branch": "CY",
+      "rank": 90164
+    },
+    {
+      "college": "E005",
+      "branch": "EC",
+      "rank": 101263
+    },
+    {
+      "college": "E005",
+      "branch": "IS",
+      "rank": 101980
+    },
+    {
+      "college": "E006",
+      "branch": "AI",
+      "rank": 87434
+    },
+    {
+      "college": "E006",
+      "branch": "EC",
+      "rank": 46079
+    },
+    {
+      "college": "E007",
+      "branch": "AE",
+      "rank": 104838
+    },
+    {
+      "college": "E007",
+      "branch": "AI",
+      "rank": 109629
+    },
+    {
+      "college": "E007",
+      "branch": "CD",
+      "rank": 106763
+    },
+    {
+      "college": "E007",
+      "branch": "CI",
+      "rank": 109963
+    },
+    {
+      "college": "E007",
+      "branch": "CS",
+      "rank": 108719
+    },
+    {
+      "college": "E007",
+      "branch": "EC",
+      "rank": 108750
+    },
+    {
+      "college": "E007",
+      "branch": "EE",
+      "rank": 96359
+    },
+    {
+      "college": "E007",
+      "branch": "ME",
+      "rank": 100443
+    },
+    {
+      "college": "E011",
+      "branch": "AI",
+      "rank": 71116
+    },
+    {
+      "college": "E011",
+      "branch": "CI",
+      "rank": 62509
+    },
+    {
+      "college": "E011",
+      "branch": "CS",
+      "rank": 104673
+    },
+    {
+      "college": "E012",
+      "branch": "AI",
+      "rank": 99792
+    },
+    {
+      "college": "E012",
+      "branch": "CD",
+      "rank": 108193
+    },
+    {
+      "college": "E012",
+      "branch": "CS",
+      "rank": 102146
+    },
+    {
+      "college": "E012",
+      "branch": "CV",
+      "rank": 106449
+    },
+    {
+      "college": "E012",
+      "branch": "EC",
+      "rank": 105557
+    },
+    {
+      "college": "E012",
+      "branch": "IS",
+      "rank": 108713
+    },
+    {
+      "college": "E012",
+      "branch": "ME",
+      "rank": 94383
+    },
+    {
+      "college": "E012",
+      "branch": "QC",
+      "rank": 92826
+    },
+    {
+      "college": "E015",
+      "branch": "AI",
+      "rank": 25710
+    },
+    {
+      "college": "E015",
+      "branch": "CS",
+      "rank": 22838
+    },
+    {
+      "college": "E015",
+      "branch": "EC",
+      "rank": 30118
+    },
+    {
+      "college": "E015",
+      "branch": "EE",
+      "rank": 40272
+    },
+    {
+      "college": "E015",
+      "branch": "IS",
+      "rank": 26915
+    },
+    {
+      "college": "E015",
+      "branch": "ME",
+      "rank": 54020
+    },
+    {
+      "college": "E016",
+      "branch": "AR",
+      "rank": 48707
+    },
+    {
+      "college": "E016",
+      "branch": "BT",
+      "rank": 75562
+    },
+    {
+      "college": "E016",
+      "branch": "CA",
+      "rank": 33179
+    },
+    {
+      "college": "E016",
+      "branch": "CS",
+      "rank": 32273
+    },
+    {
+      "college": "E016",
+      "branch": "CV",
+      "rank": 109684
+    },
+    {
+      "college": "E016",
+      "branch": "EC",
+      "rank": 47684
+    },
+    {
+      "college": "E016",
+      "branch": "EE",
+      "rank": 84703
+    },
+    {
+      "college": "E016",
+      "branch": "ME",
+      "rank": 98659
+    },
+    {
+      "college": "E016",
+      "branch": "VL",
+      "rank": 52411
+    },
+    {
+      "college": "E017",
+      "branch": "CA",
+      "rank": 103766
+    },
+    {
+      "college": "E017",
+      "branch": "CS",
+      "rank": 106828
+    },
+    {
+      "college": "E017",
+      "branch": "EC",
+      "rank": 78277
+    },
+    {
+      "college": "E019",
+      "branch": "AI",
+      "rank": 10932
+    },
+    {
+      "college": "E019",
+      "branch": "CD",
+      "rank": 8664
+    },
+    {
+      "college": "E019",
+      "branch": "CS",
+      "rank": 7969
+    },
+    {
+      "college": "E019",
+      "branch": "CV",
+      "rank": 49963
+    },
+    {
+      "college": "E019",
+      "branch": "EC",
+      "rank": 14211
+    },
+    {
+      "college": "E019",
+      "branch": "EE",
+      "rank": 19866
+    },
+    {
+      "college": "E019",
+      "branch": "EI",
+      "rank": 22217
+    },
+    {
+      "college": "E019",
+      "branch": "ET",
+      "rank": 17772
+    },
+    {
+      "college": "E019",
+      "branch": "IC",
+      "rank": 11046
+    },
+    {
+      "college": "E019",
+      "branch": "IS",
+      "rank": 12286
+    },
+    {
+      "college": "E019",
+      "branch": "ME",
+      "rank": 31896
+    },
+    {
+      "college": "E019",
+      "branch": "RI",
+      "rank": 14285
+    },
+    {
+      "college": "E019",
+      "branch": "VL",
+      "rank": 17796
+    },
+    {
+      "college": "E020",
+      "branch": "AI",
+      "rank": 103840
+    },
+    {
+      "college": "E020",
+      "branch": "CD",
+      "rank": 94118
+    },
+    {
+      "college": "E020",
+      "branch": "CE",
+      "rank": 88526
+    },
+    {
+      "college": "E020",
+      "branch": "CS",
+      "rank": 107434
+    },
+    {
+      "college": "E020",
+      "branch": "EC",
+      "rank": 108157
+    },
+    {
+      "college": "E021",
+      "branch": "AI",
+      "rank": 109464
+    },
+    {
+      "college": "E021",
+      "branch": "BT",
+      "rank": 95089
+    },
+    {
+      "college": "E021",
+      "branch": "CB",
+      "rank": 96779
+    },
+    {
+      "college": "E021",
+      "branch": "CD",
+      "rank": 102026
+    },
+    {
+      "college": "E021",
+      "branch": "CH",
+      "rank": 73577
+    },
+    {
+      "college": "E021",
+      "branch": "CS",
+      "rank": 106078
+    },
+    {
+      "college": "E021",
+      "branch": "EC",
+      "rank": 97294
+    },
+    {
+      "college": "E021",
+      "branch": "IS",
+      "rank": 73182
+    },
+    {
+      "college": "E024",
+      "branch": "AI",
+      "rank": 101225
+    },
+    {
+      "college": "E024",
+      "branch": "CS",
+      "rank": 109594
+    },
+    {
+      "college": "E024",
+      "branch": "EC",
+      "rank": 108837
+    },
+    {
+      "college": "E026",
+      "branch": "CD",
+      "rank": 87610
+    },
+    {
+      "college": "E026",
+      "branch": "CI",
+      "rank": 108559
+    },
+    {
+      "college": "E026",
+      "branch": "CS",
+      "rank": 91000
+    },
+    {
+      "college": "E026",
+      "branch": "EC",
+      "rank": 108229
+    },
+    {
+      "college": "E027",
+      "branch": "AD",
+      "rank": 3667
+    },
+    {
+      "college": "E027",
+      "branch": "AI",
+      "rank": 3984
+    },
+    {
+      "college": "E027",
+      "branch": "BT",
+      "rank": 21112
+    },
+    {
+      "college": "E027",
+      "branch": "CB",
+      "rank": 4007
+    },
+    {
+      "college": "E027",
+      "branch": "CD",
+      "rank": 3455
+    },
+    {
+      "college": "E027",
+      "branch": "CH",
+      "rank": 17536
+    },
+    {
+      "college": "E027",
+      "branch": "CS",
+      "rank": 3268
+    },
+    {
+      "college": "E027",
+      "branch": "CV",
+      "rank": 21550
+    },
+    {
+      "college": "E027",
+      "branch": "EC",
+      "rank": 4096
+    },
+    {
+      "college": "E027",
+      "branch": "IC",
+      "rank": 3594
+    },
+    {
+      "college": "E027",
+      "branch": "ME",
+      "rank": 7269
+    },
+    {
+      "college": "E028",
+      "branch": "AI",
+      "rank": 15081
+    },
+    {
+      "college": "E028",
+      "branch": "CB",
+      "rank": 14509
+    },
+    {
+      "college": "E028",
+      "branch": "CS",
+      "rank": 13710
+    },
+    {
+      "college": "E028",
+      "branch": "CV",
+      "rank": 43842
+    },
+    {
+      "college": "E028",
+      "branch": "EC",
+      "rank": 15491
+    },
+    {
+      "college": "E028",
+      "branch": "EE",
+      "rank": 20353
+    },
+    {
+      "college": "E028",
+      "branch": "ME",
+      "rank": 30744
+    },
+    {
+      "college": "E030",
+      "branch": "AI",
+      "rank": 106953
+    },
+    {
+      "college": "E030",
+      "branch": "CS",
+      "rank": 103707
+    },
+    {
+      "college": "E032",
+      "branch": "AD",
+      "rank": 20193
+    },
+    {
+      "college": "E032",
+      "branch": "AI",
+      "rank": 18392
+    },
+    {
+      "college": "E032",
+      "branch": "CD",
+      "rank": 16250
+    },
+    {
+      "college": "E032",
+      "branch": "CI",
+      "rank": 15875
+    },
+    {
+      "college": "E032",
+      "branch": "CS",
+      "rank": 15439
+    },
+    {
+      "college": "E032",
+      "branch": "EC",
+      "rank": 24638
+    },
+    {
+      "college": "E032",
+      "branch": "IS",
+      "rank": 20254
+    },
+    {
+      "college": "E033",
+      "branch": "AI",
+      "rank": 49909
+    },
+    {
+      "college": "E033",
+      "branch": "CD",
+      "rank": 52063
+    },
+    {
+      "college": "E033",
+      "branch": "CS",
+      "rank": 49700
+    },
+    {
+      "college": "E033",
+      "branch": "EC",
+      "rank": 68487
+    },
+    {
+      "college": "E033",
+      "branch": "EE",
+      "rank": 103702
+    },
+    {
+      "college": "E033",
+      "branch": "IC",
+      "rank": 56019
+    },
+    {
+      "college": "E033",
+      "branch": "ME",
+      "rank": 107972
+    },
+    {
+      "college": "E036",
+      "branch": "AR",
+      "rank": 90872
+    },
+    {
+      "college": "E036",
+      "branch": "CS",
+      "rank": 62776
+    },
+    {
+      "college": "E036",
+      "branch": "EC",
+      "rank": 49701
+    },
+    {
+      "college": "E036",
+      "branch": "EEC",
+      "rank": 108262
+    },
+    {
+      "college": "E036",
+      "branch": "EES",
+      "rank": 56771
+    },
+    {
+      "college": "E037",
+      "branch": "AI",
+      "rank": 98459
+    },
+    {
+      "college": "E037",
+      "branch": "CS",
+      "rank": 97416
+    },
+    {
+      "college": "E037",
+      "branch": "EC",
+      "rank": 94354
+    },
+    {
+      "college": "E039",
+      "branch": "CD",
+      "rank": 33544
+    },
+    {
+      "college": "E039",
+      "branch": "CI",
+      "rank": 32595
+    },
+    {
+      "college": "E039",
+      "branch": "CS",
+      "rank": 31045
+    },
+    {
+      "college": "E039",
+      "branch": "CY",
+      "rank": 35162
+    },
+    {
+      "college": "E039",
+      "branch": "EC",
+      "rank": 39346
+    },
+    {
+      "college": "E039",
+      "branch": "IC",
+      "rank": 36455
+    },
+    {
+      "college": "E039",
+      "branch": "IS",
+      "rank": 37191
+    },
+    {
+      "college": "E039",
+      "branch": "ME",
+      "rank": 52075
+    },
+    {
+      "college": "E040",
+      "branch": "AE",
+      "rank": 16747
+    },
+    {
+      "college": "E040",
+      "branch": "AI",
+      "rank": 6180
+    },
+    {
+      "college": "E040",
+      "branch": "AU",
+      "rank": 25957
+    },
+    {
+      "college": "E040",
+      "branch": "BT",
+      "rank": 25434
+    },
+    {
+      "college": "E040",
+      "branch": "CD",
+      "rank": 5593
+    },
+    {
+      "college": "E040",
+      "branch": "CH",
+      "rank": 21584
+    },
+    {
+      "college": "E040",
+      "branch": "CS",
+      "rank": 5407
+    },
+    {
+      "college": "E040",
+      "branch": "CV",
+      "rank": 28753
+    },
+    {
+      "college": "E040",
+      "branch": "CY",
+      "rank": 5911
+    },
+    {
+      "college": "E040",
+      "branch": "EC",
+      "rank": 8170
+    },
+    {
+      "college": "E040",
+      "branch": "EE",
+      "rank": 14380
+    },
+    {
+      "college": "E040",
+      "branch": "ET",
+      "rank": 11914
+    },
+    {
+      "college": "E040",
+      "branch": "IC",
+      "rank": 6307
+    },
+    {
+      "college": "E040",
+      "branch": "ME",
+      "rank": 20674
+    },
+    {
+      "college": "E040",
+      "branch": "RI",
+      "rank": 6846
+    },
+    {
+      "college": "E041",
+      "branch": "AD",
+      "rank": 80952
+    },
+    {
+      "college": "E041",
+      "branch": "CI",
+      "rank": 77426
+    },
+    {
+      "college": "E041",
+      "branch": "CS",
+      "rank": 64511
+    },
+    {
+      "college": "E041",
+      "branch": "EC",
+      "rank": 75879
+    },
+    {
+      "college": "E041",
+      "branch": "EE",
+      "rank": 77513
+    },
+    {
+      "college": "E041",
+      "branch": "IC",
+      "rank": 88492
+    },
+    {
+      "college": "E041",
+      "branch": "IS",
+      "rank": 92077
+    },
+    {
+      "college": "E042",
+      "branch": "AI",
+      "rank": 42308
+    },
+    {
+      "college": "E042",
+      "branch": "CB",
+      "rank": 44189
+    },
+    {
+      "college": "E042",
+      "branch": "CD",
+      "rank": 42896
+    },
+    {
+      "college": "E042",
+      "branch": "CS",
+      "rank": 40632
+    },
+    {
+      "college": "E042",
+      "branch": "EC",
+      "rank": 34539
+    },
+    {
+      "college": "E042",
+      "branch": "ED",
+      "rank": 40362
+    },
+    {
+      "college": "E043",
+      "branch": "CS",
+      "rank": 43323
+    },
+    {
+      "college": "E045",
+      "branch": "AD",
+      "rank": 84359
+    },
+    {
+      "college": "E045",
+      "branch": "CS",
+      "rank": 103703
+    },
+    {
+      "college": "E045",
+      "branch": "EC",
+      "rank": 81964
+    },
+    {
+      "college": "E046",
+      "branch": "CD",
+      "rank": 87510
+    },
+    {
+      "college": "E046",
+      "branch": "CI",
+      "rank": 83996
+    },
+    {
+      "college": "E046",
+      "branch": "CS",
+      "rank": 64203
+    },
+    {
+      "college": "E046",
+      "branch": "CV",
+      "rank": 107495
+    },
+    {
+      "college": "E046",
+      "branch": "EC",
+      "rank": 80787
+    },
+    {
+      "college": "E046",
+      "branch": "IC",
+      "rank": 90446
+    },
+    {
+      "college": "E046",
+      "branch": "IS",
+      "rank": 84027
+    },
+    {
+      "college": "E048",
+      "branch": "AD",
+      "rank": 73567
+    },
+    {
+      "college": "E048",
+      "branch": "AI",
+      "rank": 108946
+    },
+    {
+      "college": "E048",
+      "branch": "CI",
+      "rank": 96640
+    },
+    {
+      "college": "E048",
+      "branch": "CS",
+      "rank": 105035
+    },
+    {
+      "college": "E048",
+      "branch": "EC",
+      "rank": 102972
+    },
+    {
+      "college": "E049",
+      "branch": "CS",
+      "rank": 110006
+    },
+    {
+      "college": "E050",
+      "branch": "AD",
+      "rank": 65332
+    },
+    {
+      "college": "E050",
+      "branch": "AE",
+      "rank": 83233
+    },
+    {
+      "college": "E050",
+      "branch": "AI",
+      "rank": 62790
+    },
+    {
+      "college": "E050",
+      "branch": "CI",
+      "rank": 60153
+    },
+    {
+      "college": "E050",
+      "branch": "CS",
+      "rank": 52780
+    },
+    {
+      "college": "E050",
+      "branch": "CV",
+      "rank": 107816
+    },
+    {
+      "college": "E050",
+      "branch": "EC",
+      "rank": 69029
+    },
+    {
+      "college": "E050",
+      "branch": "IS",
+      "rank": 62502
+    },
+    {
+      "college": "E050",
+      "branch": "ME",
+      "rank": 109517
+    },
+    {
+      "college": "E051",
+      "branch": "AI",
+      "rank": 108109
+    },
+    {
+      "college": "E053",
+      "branch": "CD",
+      "rank": 85759
+    },
+    {
+      "college": "E053",
+      "branch": "CI",
+      "rank": 100385
+    },
+    {
+      "college": "E053",
+      "branch": "CS",
+      "rank": 92545
+    },
+    {
+      "college": "E053",
+      "branch": "EC",
+      "rank": 98534
+    },
+    {
+      "college": "E053",
+      "branch": "IS",
+      "rank": 109605
+    },
+    {
+      "college": "E055",
+      "branch": "AD",
+      "rank": 62463
+    },
+    {
+      "college": "E055",
+      "branch": "CI",
+      "rank": 50593
+    },
+    {
+      "college": "E055",
+      "branch": "CS",
+      "rank": 58364
+    },
+    {
+      "college": "E055",
+      "branch": "EC",
+      "rank": 83757
+    },
+    {
+      "college": "E056",
+      "branch": "AI",
+      "rank": 57140
+    },
+    {
+      "college": "E056",
+      "branch": "CS",
+      "rank": 55355
+    },
+    {
+      "college": "E058",
+      "branch": "CS",
+      "rank": 4585
+    },
+    {
+      "college": "E059",
+      "branch": "AI",
+      "rank": 104724
+    },
+    {
+      "college": "E059",
+      "branch": "CD",
+      "rank": 89249
+    },
+    {
+      "college": "E059",
+      "branch": "CS",
+      "rank": 103778
+    },
+    {
+      "college": "E059",
+      "branch": "EC",
+      "rank": 43244
+    },
+    {
+      "college": "E059",
+      "branch": "ET",
+      "rank": 109497
+    },
+    {
+      "college": "E059",
+      "branch": "IS",
+      "rank": 90933
+    },
+    {
+      "college": "E060",
+      "branch": "CI",
+      "rank": 34041
+    },
+    {
+      "college": "E060",
+      "branch": "CS",
+      "rank": 32267
+    },
+    {
+      "college": "E060",
+      "branch": "EC",
+      "rank": 35299
+    },
+    {
+      "college": "E061",
+      "branch": "BT",
+      "rank": 35931
+    },
+    {
+      "college": "E061",
+      "branch": "CB",
+      "rank": 10974
+    },
+    {
+      "college": "E061",
+      "branch": "CS",
+      "rank": 5371
+    },
+    {
+      "college": "E061",
+      "branch": "CV",
+      "rank": 56667
+    },
+    {
+      "college": "E061",
+      "branch": "IS",
+      "rank": 10601
+    },
+    {
+      "college": "E061",
+      "branch": "ME",
+      "rank": 24991
+    },
+    {
+      "college": "E062",
+      "branch": "CI",
+      "rank": 107253
+    },
+    {
+      "college": "E062",
+      "branch": "CS",
+      "rank": 91144
+    },
+    {
+      "college": "E062",
+      "branch": "EC",
+      "rank": 78222
+    },
+    {
+      "college": "E064",
+      "branch": "CI",
+      "rank": 104941
+    },
+    {
+      "college": "E065",
+      "branch": "BM",
+      "rank": 108221
+    },
+    {
+      "college": "E065",
+      "branch": "CA",
+      "rank": 70497
+    },
+    {
+      "college": "E065",
+      "branch": "CH",
+      "rank": 58719
+    },
+    {
+      "college": "E065",
+      "branch": "CS",
+      "rank": 70348
+    },
+    {
+      "college": "E065",
+      "branch": "EC",
+      "rank": 82925
+    },
+    {
+      "college": "E065",
+      "branch": "EE",
+      "rank": 107009
+    },
+    {
+      "college": "E065",
+      "branch": "ME",
+      "rank": 95726
+    },
+    {
+      "college": "E066",
+      "branch": "AD",
+      "rank": 96838
+    },
+    {
+      "college": "E066",
+      "branch": "CS",
+      "rank": 92978
+    },
+    {
+      "college": "E067",
+      "branch": "AD",
+      "rank": 89261
+    },
+    {
+      "college": "E068",
+      "branch": "AI",
+      "rank": 98311
+    },
+    {
+      "college": "E068",
+      "branch": "CS",
+      "rank": 82559
+    },
+    {
+      "college": "E068",
+      "branch": "EC",
+      "rank": 105245
+    },
+    {
+      "college": "E068",
+      "branch": "IC",
+      "rank": 99412
+    },
+    {
+      "college": "E073",
+      "branch": "AE",
+      "rank": 107114
+    },
+    {
+      "college": "E073",
+      "branch": "CI",
+      "rank": 43519
+    },
+    {
+      "college": "E073",
+      "branch": "CS",
+      "rank": 61645
+    },
+    {
+      "college": "E073",
+      "branch": "CV",
+      "rank": 101021
+    },
+    {
+      "college": "E073",
+      "branch": "EC",
+      "rank": 69217
+    },
+    {
+      "college": "E073",
+      "branch": "EE",
+      "rank": 96293
+    },
+    {
+      "college": "E073",
+      "branch": "ME",
+      "rank": 102200
+    },
+    {
+      "college": "E074",
+      "branch": "CI",
+      "rank": 56495
+    },
+    {
+      "college": "E074",
+      "branch": "EC",
+      "rank": 74636
+    },
+    {
+      "college": "E075",
+      "branch": "CD",
+      "rank": 75295
+    },
+    {
+      "college": "E075",
+      "branch": "CP",
+      "rank": 103711
+    },
+    {
+      "college": "E076",
+      "branch": "AD",
+      "rank": 87127
+    },
+    {
+      "college": "E076",
+      "branch": "AI",
+      "rank": 71795
+    },
+    {
+      "college": "E076",
+      "branch": "CD",
+      "rank": 60837
+    },
+    {
+      "college": "E076",
+      "branch": "CS",
+      "rank": 46129
+    },
+    {
+      "college": "E076",
+      "branch": "CY",
+      "rank": 71896
+    },
+    {
+      "college": "E077",
+      "branch": "AD",
+      "rank": 2042
+    },
+    {
+      "college": "E077",
+      "branch": "AI",
+      "rank": 1826
+    },
+    {
+      "college": "E077",
+      "branch": "AS",
+      "rank": 6353
+    },
+    {
+      "college": "E077",
+      "branch": "BT",
+      "rank": 16765
+    },
+    {
+      "college": "E077",
+      "branch": "CH",
+      "rank": 15319
+    },
+    {
+      "college": "E077",
+      "branch": "CI",
+      "rank": 1402
+    },
+    {
+      "college": "E077",
+      "branch": "CS",
+      "rank": 1152
+    },
+    {
+      "college": "E077",
+      "branch": "CV",
+      "rank": 20249
+    },
+    {
+      "college": "E077",
+      "branch": "CY",
+      "rank": 1738
+    },
+    {
+      "college": "E077",
+      "branch": "EC",
+      "rank": 2347
+    },
+    {
+      "college": "E077",
+      "branch": "EE",
+      "rank": 4414
+    },
+    {
+      "college": "E077",
+      "branch": "EI",
+      "rank": 4803
+    },
+    {
+      "college": "E077",
+      "branch": "ET",
+      "rank": 3450
+    },
+    {
+      "college": "E077",
+      "branch": "IM",
+      "rank": 15149
+    },
+    {
+      "college": "E077",
+      "branch": "IS",
+      "rank": 2066
+    },
+    {
+      "college": "E077",
+      "branch": "MD",
+      "rank": 22730
+    },
+    {
+      "college": "E077",
+      "branch": "ME",
+      "rank": 8716
+    },
+    {
+      "college": "E078",
+      "branch": "CA",
+      "rank": 103178
+    },
+    {
+      "college": "E078",
+      "branch": "CD",
+      "rank": 102836
+    },
+    {
+      "college": "E078",
+      "branch": "CI",
+      "rank": 92985
+    },
+    {
+      "college": "E078",
+      "branch": "CS",
+      "rank": 108777
+    },
+    {
+      "college": "E078",
+      "branch": "CV",
+      "rank": 104952
+    },
+    {
+      "college": "E078",
+      "branch": "EC",
+      "rank": 93203
+    },
+    {
+      "college": "E078",
+      "branch": "IC",
+      "rank": 107955
+    },
+    {
+      "college": "E078",
+      "branch": "IS",
+      "rank": 109049
+    },
+    {
+      "college": "E078",
+      "branch": "ME",
+      "rank": 69793
+    },
+    {
+      "college": "E079",
+      "branch": "CI",
+      "rank": 103404
+    },
+    {
+      "college": "E079",
+      "branch": "CS",
+      "rank": 107714
+    },
+    {
+      "college": "E079",
+      "branch": "EC",
+      "rank": 86934
+    },
+    {
+      "college": "E079",
+      "branch": "EE",
+      "rank": 55388
+    },
+    {
+      "college": "E080",
+      "branch": "AE",
+      "rank": 75814
+    },
+    {
+      "college": "E080",
+      "branch": "AI",
+      "rank": 96963
+    },
+    {
+      "college": "E080",
+      "branch": "CI",
+      "rank": 81036
+    },
+    {
+      "college": "E080",
+      "branch": "CS",
+      "rank": 106778
+    },
+    {
+      "college": "E080",
+      "branch": "EC",
+      "rank": 87179
+    },
+    {
+      "college": "E082",
+      "branch": "AD",
+      "rank": 99268
+    },
+    {
+      "college": "E082",
+      "branch": "CI",
+      "rank": 103424
+    },
+    {
+      "college": "E082",
+      "branch": "CS",
+      "rank": 100139
+    },
+    {
+      "college": "E082",
+      "branch": "EC",
+      "rank": 85961
+    },
+    {
+      "college": "E084",
+      "branch": "CD",
+      "rank": 88650
+    },
+    {
+      "college": "E084",
+      "branch": "CI",
+      "rank": 108629
+    },
+    {
+      "college": "E084",
+      "branch": "CS",
+      "rank": 109613
+    },
+    {
+      "college": "E085",
+      "branch": "CI",
+      "rank": 13752
+    },
+    {
+      "college": "E085",
+      "branch": "CS",
+      "rank": 13499
+    },
+    {
+      "college": "E089",
+      "branch": "CD",
+      "rank": 11700
+    },
+    {
+      "college": "E089",
+      "branch": "CI",
+      "rank": 19612
+    },
+    {
+      "college": "E089",
+      "branch": "CS",
+      "rank": 18528
+    },
+    {
+      "college": "E089",
+      "branch": "EC",
+      "rank": 8100
+    },
+    {
+      "college": "E089",
+      "branch": "ED",
+      "rank": 18514
+    },
+    {
+      "college": "E089",
+      "branch": "IS",
+      "rank": 24748
+    },
+    {
+      "college": "E089",
+      "branch": "RI",
+      "rank": 22843
+    },
+    {
+      "college": "E090",
+      "branch": "AI",
+      "rank": 94767
+    },
+    {
+      "college": "E090",
+      "branch": "CD",
+      "rank": 87740
+    },
+    {
+      "college": "E090",
+      "branch": "CS",
+      "rank": 70093
+    },
+    {
+      "college": "E090",
+      "branch": "EC",
+      "rank": 90633
+    },
+    {
+      "college": "E090",
+      "branch": "EE",
+      "rank": 109406
+    },
+    {
+      "college": "E090",
+      "branch": "IS",
+      "rank": 109258
+    },
+    {
+      "college": "E090",
+      "branch": "ME",
+      "rank": 86457
+    },
+    {
+      "college": "E095",
+      "branch": "AS",
+      "rank": 3113
+    },
+    {
+      "college": "E095",
+      "branch": "BT",
+      "rank": 10499
+    },
+    {
+      "college": "E095",
+      "branch": "CD",
+      "rank": 612
+    },
+    {
+      "college": "E095",
+      "branch": "CH",
+      "rank": 6288
+    },
+    {
+      "college": "E095",
+      "branch": "CI",
+      "rank": 584
+    },
+    {
+      "college": "E095",
+      "branch": "CS",
+      "rank": 418
+    },
+    {
+      "college": "E095",
+      "branch": "CV",
+      "rank": 10199
+    },
+    {
+      "college": "E095",
+      "branch": "CY",
+      "rank": 657
+    },
+    {
+      "college": "E095",
+      "branch": "EC",
+      "rank": 828
+    },
+    {
+      "college": "E095",
+      "branch": "EE",
+      "rank": 1227
+    },
+    {
+      "college": "E095",
+      "branch": "ET",
+      "rank": 959
+    },
+    {
+      "college": "E095",
+      "branch": "IM",
+      "rank": 7822
+    },
+    {
+      "college": "E095",
+      "branch": "ME",
+      "rank": 3604
+    },
+    {
+      "college": "E097",
+      "branch": "CP",
+      "rank": 100417
+    },
+    {
+      "college": "E097",
+      "branch": "CS",
+      "rank": 94832
+    },
+    {
+      "college": "E097",
+      "branch": "IS",
+      "rank": 80206
+    },
+    {
+      "college": "E099",
+      "branch": "AI",
+      "rank": 106214
+    },
+    {
+      "college": "E099",
+      "branch": "CS",
+      "rank": 105224
+    },
+    {
+      "college": "E099",
+      "branch": "EC",
+      "rank": 102959
+    },
+    {
+      "college": "E099",
+      "branch": "IS",
+      "rank": 97162
+    },
+    {
+      "college": "E101",
+      "branch": "BM",
+      "rank": 108995
+    },
+    {
+      "college": "E101",
+      "branch": "CA",
+      "rank": 100343
+    },
+    {
+      "college": "E101",
+      "branch": "CS",
+      "rank": 89540
+    },
+    {
+      "college": "E101",
+      "branch": "IS",
+      "rank": 84634
+    },
+    {
+      "college": "E104",
+      "branch": "CB",
+      "rank": 27412
+    },
+    {
+      "college": "E104",
+      "branch": "CD",
+      "rank": 27147
+    },
+    {
+      "college": "E104",
+      "branch": "CI",
+      "rank": 25510
+    },
+    {
+      "college": "E104",
+      "branch": "CS",
+      "rank": 23608
+    },
+    {
+      "college": "E104",
+      "branch": "CV",
+      "rank": 72082
+    },
+    {
+      "college": "E104",
+      "branch": "CY",
+      "rank": 27228
+    },
+    {
+      "college": "E104",
+      "branch": "EC",
+      "rank": 29530
+    },
+    {
+      "college": "E104",
+      "branch": "EE",
+      "rank": 37022
+    },
+    {
+      "college": "E104",
+      "branch": "ME",
+      "rank": 47887
+    },
+    {
+      "college": "E104",
+      "branch": "VL",
+      "rank": 32807
+    },
+    {
+      "college": "E105",
+      "branch": "CH",
+      "rank": 100095
+    },
+    {
+      "college": "E107",
+      "branch": "AI",
+      "rank": 46040
+    },
+    {
+      "college": "E107",
+      "branch": "CD",
+      "rank": 47676
+    },
+    {
+      "college": "E107",
+      "branch": "CS",
+      "rank": 45613
+    },
+    {
+      "college": "E107",
+      "branch": "CV",
+      "rank": 101392
+    },
+    {
+      "college": "E107",
+      "branch": "EC",
+      "rank": 55423
+    },
+    {
+      "college": "E107",
+      "branch": "EE",
+      "rank": 60815
+    },
+    {
+      "college": "E107",
+      "branch": "IS",
+      "rank": 53511
+    },
+    {
+      "college": "E107",
+      "branch": "ME",
+      "rank": 96812
+    },
+    {
+      "college": "E108",
+      "branch": "AD",
+      "rank": 107887
+    },
+    {
+      "college": "E108",
+      "branch": "AS",
+      "rank": 106703
+    },
+    {
+      "college": "E108",
+      "branch": "CI",
+      "rank": 42945
+    },
+    {
+      "college": "E108",
+      "branch": "CS",
+      "rank": 108130
+    },
+    {
+      "college": "E109",
+      "branch": "AD",
+      "rank": 106691
+    },
+    {
+      "college": "E109",
+      "branch": "CS",
+      "rank": 44566
+    },
+    {
+      "college": "E109",
+      "branch": "EC",
+      "rank": 77841
+    },
+    {
+      "college": "E110",
+      "branch": "AD",
+      "rank": 99387
+    },
+    {
+      "college": "E110",
+      "branch": "CS",
+      "rank": 91882
+    },
+    {
+      "college": "E112",
+      "branch": "CI",
+      "rank": 102321
+    },
+    {
+      "college": "E112",
+      "branch": "CS",
+      "rank": 109181
+    },
+    {
+      "college": "E112",
+      "branch": "EC",
+      "rank": 107473
+    },
+    {
+      "college": "E112",
+      "branch": "IS",
+      "rank": 69572
+    },
+    {
+      "college": "E113",
+      "branch": "CD",
+      "rank": 109116
+    },
+    {
+      "college": "E113",
+      "branch": "CI",
+      "rank": 104449
+    },
+    {
+      "college": "E113",
+      "branch": "CS",
+      "rank": 74127
+    },
+    {
+      "college": "E113",
+      "branch": "CY",
+      "rank": 108058
+    },
+    {
+      "college": "E113",
+      "branch": "EC",
+      "rank": 27749
+    },
+    {
+      "college": "E116",
+      "branch": "CD",
+      "rank": 60980
+    },
+    {
+      "college": "E116",
+      "branch": "CS",
+      "rank": 56531
+    },
+    {
+      "college": "E116",
+      "branch": "EC",
+      "rank": 61713
+    },
+    {
+      "college": "E116",
+      "branch": "EE",
+      "rank": 90563
+    },
+    {
+      "college": "E117",
+      "branch": "AI",
+      "rank": 54925
+    },
+    {
+      "college": "E117",
+      "branch": "CH",
+      "rank": 87604
+    },
+    {
+      "college": "E117",
+      "branch": "CS",
+      "rank": 52122
+    },
+    {
+      "college": "E117",
+      "branch": "EC",
+      "rank": 68041
+    },
+    {
+      "college": "E117",
+      "branch": "EE",
+      "rank": 102301
+    },
+    {
+      "college": "E117",
+      "branch": "IS",
+      "rank": 66299
+    },
+    {
+      "college": "E117",
+      "branch": "ME",
+      "rank": 108570
+    },
+    {
+      "college": "E118",
+      "branch": "AD",
+      "rank": 93375
+    },
+    {
+      "college": "E118",
+      "branch": "CS",
+      "rank": 97137
+    },
+    {
+      "college": "E118",
+      "branch": "EC",
+      "rank": 63365
+    },
+    {
+      "college": "E124",
+      "branch": "CS",
+      "rank": 86241
+    },
+    {
+      "college": "E125",
+      "branch": "CH",
+      "rank": 31337
+    },
+    {
+      "college": "E125",
+      "branch": "CI",
+      "rank": 13418
+    },
+    {
+      "college": "E125",
+      "branch": "CS",
+      "rank": 12795
+    },
+    {
+      "college": "E125",
+      "branch": "EC",
+      "rank": 17765
+    },
+    {
+      "college": "E125",
+      "branch": "EE",
+      "rank": 18880
+    },
+    {
+      "college": "E125",
+      "branch": "IS",
+      "rank": 14719
+    },
+    {
+      "college": "E126",
+      "branch": "AI",
+      "rank": 21632
+    },
+    {
+      "college": "E126",
+      "branch": "BT",
+      "rank": 52900
+    },
+    {
+      "college": "E126",
+      "branch": "CD",
+      "rank": 21750
+    },
+    {
+      "college": "E126",
+      "branch": "CS",
+      "rank": 20326
+    },
+    {
+      "college": "E126",
+      "branch": "CV",
+      "rank": 65652
+    },
+    {
+      "college": "E126",
+      "branch": "EC",
+      "rank": 29173
+    },
+    {
+      "college": "E126",
+      "branch": "EE",
+      "rank": 43168
+    },
+    {
+      "college": "E126",
+      "branch": "ET",
+      "rank": 38348
+    },
+    {
+      "college": "E126",
+      "branch": "IC",
+      "rank": 23430
+    },
+    {
+      "college": "E126",
+      "branch": "IS",
+      "rank": 26422
+    },
+    {
+      "college": "E126",
+      "branch": "ME",
+      "rank": 46625
+    },
+    {
+      "college": "E126",
+      "branch": "RI",
+      "rank": 30538
+    },
+    {
+      "college": "E126",
+      "branch": "UE",
+      "rank": 37715
+    },
+    {
+      "college": "E132",
+      "branch": "CS",
+      "rank": 101985
+    },
+    {
+      "college": "E137",
+      "branch": "CA",
+      "rank": 103259
+    },
+    {
+      "college": "E137",
+      "branch": "CD",
+      "rank": 109089
+    },
+    {
+      "college": "E137",
+      "branch": "CS",
+      "rank": 106447
+    },
+    {
+      "college": "E137",
+      "branch": "CY",
+      "rank": 93687
+    },
+    {
+      "college": "E137",
+      "branch": "EC",
+      "rank": 101555
+    },
+    {
+      "college": "E138",
+      "branch": "MR",
+      "rank": 60488
+    },
+    {
+      "college": "E141",
+      "branch": "AI",
+      "rank": 99111
+    },
+    {
+      "college": "E141",
+      "branch": "CS",
+      "rank": 107206
+    },
+    {
+      "college": "E141",
+      "branch": "EC",
+      "rank": 102234
+    },
+    {
+      "college": "E142",
+      "branch": "EC",
+      "rank": 15026
+    },
+    {
+      "college": "E142",
+      "branch": "EE",
+      "rank": 17516
+    },
+    {
+      "college": "E142",
+      "branch": "ME",
+      "rank": 26917
+    },
+    {
+      "college": "E145",
+      "branch": "AI",
+      "rank": 88588
+    },
+    {
+      "college": "E145",
+      "branch": "CD",
+      "rank": 94960
+    },
+    {
+      "college": "E145",
+      "branch": "CS",
+      "rank": 103325
+    },
+    {
+      "college": "E145",
+      "branch": "CY",
+      "rank": 103409
+    },
+    {
+      "college": "E145",
+      "branch": "EC",
+      "rank": 98533
+    },
+    {
+      "college": "E145",
+      "branch": "IS",
+      "rank": 78458
+    },
+    {
+      "college": "E147",
+      "branch": "CI",
+      "rank": 66252
+    },
+    {
+      "college": "E147",
+      "branch": "CS",
+      "rank": 73115
+    },
+    {
+      "college": "E147",
+      "branch": "CV",
+      "rank": 83522
+    },
+    {
+      "college": "E147",
+      "branch": "EC",
+      "rank": 67682
+    },
+    {
+      "college": "E147",
+      "branch": "EE",
+      "rank": 75503
+    },
+    {
+      "college": "E147",
+      "branch": "ME",
+      "rank": 64699
+    },
+    {
+      "college": "E152",
+      "branch": "CD",
+      "rank": 66007
+    },
+    {
+      "college": "E152",
+      "branch": "CI",
+      "rank": 97574
+    },
+    {
+      "college": "E152",
+      "branch": "CS",
+      "rank": 74925
+    },
+    {
+      "college": "E152",
+      "branch": "CV",
+      "rank": 96385
+    },
+    {
+      "college": "E156",
+      "branch": "AI",
+      "rank": 108461
+    },
+    {
+      "college": "E156",
+      "branch": "CS",
+      "rank": 103476
+    },
+    {
+      "college": "E156",
+      "branch": "EC",
+      "rank": 75431
+    },
+    {
+      "college": "E161",
+      "branch": "CD",
+      "rank": 103647
+    },
+    {
+      "college": "E161",
+      "branch": "CI",
+      "rank": 108994
+    },
+    {
+      "college": "E161",
+      "branch": "CS",
+      "rank": 107807
+    },
+    {
+      "college": "E161",
+      "branch": "CY",
+      "rank": 109392
+    },
+    {
+      "college": "E161",
+      "branch": "EC",
+      "rank": 104784
+    },
+    {
+      "college": "E161",
+      "branch": "ME",
+      "rank": 80761
+    },
+    {
+      "college": "E164",
+      "branch": "AL",
+      "rank": 74594
+    },
+    {
+      "college": "E164",
+      "branch": "CIT",
+      "rank": 31238
+    },
+    {
+      "college": "E164",
+      "branch": "CV",
+      "rank": 89215
+    },
+    {
+      "college": "E164",
+      "branch": "DE",
+      "rank": 72787
+    },
+    {
+      "college": "E164",
+      "branch": "EC",
+      "rank": 29397
+    },
+    {
+      "college": "E164",
+      "branch": "EE",
+      "rank": 46200
+    },
+    {
+      "college": "E164",
+      "branch": "IS",
+      "rank": 34052
+    },
+    {
+      "college": "E164",
+      "branch": "UE",
+      "rank": 36872
+    },
+    {
+      "college": "E165",
+      "branch": "AIF",
+      "rank": 41272
+    },
+    {
+      "college": "E165",
+      "branch": "AS",
+      "rank": 55318
+    },
+    {
+      "college": "E165",
+      "branch": "BT",
+      "rank": 67263
+    },
+    {
+      "college": "E165",
+      "branch": "CCC",
+      "rank": 60244
+    },
+    {
+      "college": "E165",
+      "branch": "CO",
+      "rank": 63128
+    },
+    {
+      "college": "E165",
+      "branch": "CS",
+      "rank": 21141
+    },
+    {
+      "college": "E165",
+      "branch": "CSB",
+      "rank": 69424
+    },
+    {
+      "college": "E165",
+      "branch": "CSD",
+      "rank": 73254
+    },
+    {
+      "college": "E165",
+      "branch": "CV",
+      "rank": 85456
+    },
+    {
+      "college": "E165",
+      "branch": "EC",
+      "rank": 35499
+    },
+    {
+      "college": "E165",
+      "branch": "EE",
+      "rank": 92395
+    },
+    {
+      "college": "E165",
+      "branch": "FSD",
+      "rank": 99041
+    },
+    {
+      "college": "E165",
+      "branch": "IAR",
+      "rank": 49135
+    },
+    {
+      "college": "E165",
+      "branch": "IDA",
+      "rank": 107417
+    },
+    {
+      "college": "E165",
+      "branch": "INT",
+      "rank": 108070
+    },
+    {
+      "college": "E165",
+      "branch": "ME",
+      "rank": 99384
+    },
+    {
+      "college": "E165",
+      "branch": "SPE",
+      "rank": 91351
+    },
+    {
+      "college": "E171",
+      "branch": "EC",
+      "rank": 56631
+    },
+    {
+      "college": "E171",
+      "branch": "ECE",
+      "rank": 78714
+    },
+    {
+      "college": "E171",
+      "branch": "ME",
+      "rank": 67630
+    },
+    {
+      "college": "E171",
+      "branch": "RI",
+      "rank": 61230
+    },
+    {
+      "college": "E171",
+      "branch": "VL",
+      "rank": 60679
+    },
+    {
+      "college": "E173",
+      "branch": "AS",
+      "rank": 52311
+    },
+    {
+      "college": "E173",
+      "branch": "CBD",
+      "rank": 64656
+    },
+    {
+      "college": "E173",
+      "branch": "CD",
+      "rank": 57658
+    },
+    {
+      "college": "E173",
+      "branch": "CO",
+      "rank": 67387
+    },
+    {
+      "college": "E173",
+      "branch": "CS",
+      "rank": 42779
+    },
+    {
+      "college": "E173",
+      "branch": "CSB",
+      "rank": 78702
+    },
+    {
+      "college": "E173",
+      "branch": "CSD",
+      "rank": 80912
+    },
+    {
+      "college": "E173",
+      "branch": "CV",
+      "rank": 108388
+    },
+    {
+      "college": "E173",
+      "branch": "CY",
+      "rank": 54271
+    },
+    {
+      "college": "E173",
+      "branch": "EC",
+      "rank": 63119
+    },
+    {
+      "college": "E173",
+      "branch": "EE",
+      "rank": 107956
+    },
+    {
+      "college": "E173",
+      "branch": "IS",
+      "rank": 66598
+    },
+    {
+      "college": "E173",
+      "branch": "IST",
+      "rank": 80362
+    },
+    {
+      "college": "E173",
+      "branch": "VLS",
+      "rank": 104571
+    },
+    {
+      "college": "E183",
+      "branch": "CS",
+      "rank": 105475
+    },
+    {
+      "college": "E187",
+      "branch": "CD",
+      "rank": 77615
+    },
+    {
+      "college": "E187",
+      "branch": "CE",
+      "rank": 107769
+    },
+    {
+      "college": "E187",
+      "branch": "CI",
+      "rank": 53141
+    },
+    {
+      "college": "E187",
+      "branch": "CN",
+      "rank": 109444
+    },
+    {
+      "college": "E187",
+      "branch": "CS",
+      "rank": 72989
+    },
+    {
+      "college": "E187",
+      "branch": "EC",
+      "rank": 63741
+    },
+    {
+      "college": "E187",
+      "branch": "INT",
+      "rank": 102913
+    },
+    {
+      "college": "E194",
+      "branch": "AI",
+      "rank": 109485
+    },
+    {
+      "college": "E194",
+      "branch": "CS",
+      "rank": 108701
+    },
+    {
+      "college": "E197",
+      "branch": "AD",
+      "rank": 28672
+    },
+    {
+      "college": "E197",
+      "branch": "AVE",
+      "rank": 56069
+    },
+    {
+      "college": "E197",
+      "branch": "CS",
+      "rank": 31863
+    },
+    {
+      "college": "E197",
+      "branch": "EC",
+      "rank": 27550
+    },
+    {
+      "college": "E197",
+      "branch": "EE",
+      "rank": 41778
+    },
+    {
+      "college": "E197",
+      "branch": "ME",
+      "rank": 52324
+    },
+    {
+      "college": "E197",
+      "branch": "ROB",
+      "rank": 44696
+    },
+    {
+      "college": "E197",
+      "branch": "VL",
+      "rank": 39246
+    },
+    {
+      "college": "E198",
+      "branch": "CI",
+      "rank": 13356
+    },
+    {
+      "college": "E198",
+      "branch": "CS",
+      "rank": 12224
+    },
+    {
+      "college": "E198",
+      "branch": "EC",
+      "rank": 14654
+    },
+    {
+      "college": "E203",
+      "branch": "AI",
+      "rank": 66385
+    },
+    {
+      "college": "E207",
+      "branch": "AD",
+      "rank": 87521
+    },
+    {
+      "college": "E207",
+      "branch": "AI",
+      "rank": 93176
+    },
+    {
+      "college": "E207",
+      "branch": "CG",
+      "rank": 100158
+    },
+    {
+      "college": "E207",
+      "branch": "CS",
+      "rank": 71006
+    },
+    {
+      "college": "E207",
+      "branch": "IS",
+      "rank": 88717
+    },
+    {
+      "college": "E211",
+      "branch": "AE",
+      "rank": 92004
+    },
+    {
+      "college": "E211",
+      "branch": "CS",
+      "rank": 108143
+    },
+    {
+      "college": "E211",
+      "branch": "ME",
+      "rank": 97566
+    },
+    {
+      "college": "E212",
+      "branch": "AI",
+      "rank": 102423
+    },
+    {
+      "college": "E212",
+      "branch": "CS",
+      "rank": 108328
+    },
+    {
+      "college": "E212",
+      "branch": "IS",
+      "rank": 86511
+    },
+    {
+      "college": "E214",
+      "branch": "IS",
+      "rank": 38038
+    },
+    {
+      "college": "E218",
+      "branch": "AI",
+      "rank": 56723
+    },
+    {
+      "college": "E218",
+      "branch": "CS",
+      "rank": 77428
+    },
+    {
+      "college": "E218",
+      "branch": "EC",
+      "rank": 66536
+    },
+    {
+      "college": "E219",
+      "branch": "AI",
+      "rank": 109001
+    },
+    {
+      "college": "E219",
+      "branch": "CS",
+      "rank": 104735
+    },
+    {
+      "college": "E220",
+      "branch": "AI",
+      "rank": 42280
+    },
+    {
+      "college": "E220",
+      "branch": "CS",
+      "rank": 39375
+    },
+    {
+      "college": "E220",
+      "branch": "EC",
+      "rank": 52601
+    },
+    {
+      "college": "E220",
+      "branch": "VL",
+      "rank": 60765
+    },
+    {
+      "college": "E223",
+      "branch": "AI",
+      "rank": 103455
+    },
+    {
+      "college": "E223",
+      "branch": "ME",
+      "rank": 13237
+    }
   ]
 }

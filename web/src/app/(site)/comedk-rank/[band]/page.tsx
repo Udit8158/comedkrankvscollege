@@ -39,8 +39,8 @@ export async function generateMetadata({
   const title = `COMEDK Rank ${band.label} — Which College Can You Get?`;
   const description =
     band.to === null
-      ? `COMEDK ranks above ${formatRank(band.from)}: what the official 2025 Round 3 cut-offs show. The highest General Merit cut-off recorded was ${formatRank(MAX_CUTOFF)}.`
-      : `Colleges and branches a COMEDK rank of ${band.label} can reach — ${reachable} colleges, from the official COMEDK 2025 Round 3 cut-offs.`;
+      ? `COMEDK ranks above ${formatRank(band.from)}: what the official 2026 Round 3 cut-offs show. The highest General Merit cut-off recorded was ${formatRank(MAX_CUTOFF)}.`
+      : `Colleges and branches a COMEDK rank of ${band.label} can reach — ${reachable} colleges, from the official COMEDK 2026 Round 3 cut-offs.`;
 
   return {
     title,
@@ -96,7 +96,7 @@ export default async function RankBandPage({
       />
 
       <header>
-        <p className="eyebrow">comedk · round 3 2025 · general merit</p>
+        <p className="eyebrow">comedk · round 3 2026 · general merit</p>
         <h1 className="display text-[40px] sm:text-[56px] md:text-[64px] leading-[0.98] mt-4 tracking-tight">
           COMEDK rank {band.label}
           <br />
@@ -119,7 +119,7 @@ export default async function RankBandPage({
               <span className="font-mono text-fg">
                 {formatRank(band.reference)}
               </span>{" "}
-              in the official COMEDK 2025 Round 3 allotment —{" "}
+              in the official COMEDK 2026 Round 3 allotment —{" "}
               <span className="font-mono text-fg">{reachable}</span> colleges in
               reach.
             </p>

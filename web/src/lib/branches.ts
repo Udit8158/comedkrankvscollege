@@ -18,16 +18,29 @@ const CSE_SPEC = new Set([
   "CSB", "CSD", "CR", "CM", "CN", "IC", "CE", "ES", "UE",
   "IS", "IST", "INT", "IDA", "IAR", "DS", "CX",
   "AI", "AD", "RI", "CBD",
+  // New in the 2026 Round 3 list. COMEDK keeps minting CSE flavours; each of
+  // these is a CS degree with a specialisation in its name.
+  "AIF", "CCC", "CP", "FSD", "SPE", "QC", "IFS", "ITE",
+  // Electrical Engineering & Computer Science reads as electrical first, but
+  // it is the branch a student comparing CS offers is weighing against them,
+  // and burying it under core would hide it from exactly that reader.
+  "EEC",
 ]);
 
 const ELECTRONICS = new Set([
   "EC", "ECE", "ECV", "EE", "EI", "ET", "MD", "VL", "VLS",
+  // New in 2026. ED is the code ECV became; EES and ELE are new.
+  "ED", "EES", "ELE",
 ]);
 
 const CORE = new Set([
   "ME", "CV", "CCA", "CCS", "CK", "CH", "IM", "IP",
   "MAE", "MT", "AE", "AS", "AU", "AVE", "MR", "BT", "BM",
   "CC", "TX", "RA", "ROB", "AG", "AL", "AR",
+  // New in 2026. "Design Engineering" is an engineering degree — not one of
+  // the B.Des programmes ignored below, which is a distinction worth keeping
+  // straight because the names look alike.
+  "DE", "RBE",
 ]);
 
 // Branch codes intentionally excluded from the engineering predictor: design and
@@ -41,6 +54,13 @@ export const IGNORED_BRANCHES = new Set([
   "BID", // B.Des — Industrial Design
   "BLD", // B.Des — Lifestyle & Accessory Design
   "BP",  // Bachelor of Urban & Regional Planning
+  // 2026 renamed the B.Des codes and added a planning one. The old codes stay
+  // listed: they are what a re-run against an older PDF will produce.
+  "DC",  // B.Des — Communication & Design
+  "DF",  // B.Des — Fashion Design
+  "DI",  // B.Des — Industrial Design
+  "DL",  // B.Des — Lifestyle & Accessory Design
+  "IMP", // Integrated Masters in Planning
 ]);
 
 // Within-family sort: pure CS first inside computing, etc.
@@ -52,12 +72,16 @@ const INTRA_FAMILY_ORDER: Record<string, number> = {
   CM: 15, CE: 16, UE: 17, ES: 18, CIT: 19,
   IS: 20, IST: 21, INT: 22, IDA: 23, IAR: 24, CX: 25,
   AI: 26, AD: 27, DS: 28, RI: 29,
+  CP: 30, AIF: 31, CCC: 32, FSD: 33, SPE: 34, QC: 35,
+  IFS: 36, ITE: 37, EEC: 38,
   // electronics
-  EC: 0, ECE: 1, EE: 2, ECV: 3, VL: 4, VLS: 5, EI: 6, ET: 7, MD: 8,
+  EC: 0, ECE: 1, EE: 2, ECV: 3, ED: 4, VL: 5, VLS: 6, EES: 7,
+  ELE: 8, EI: 9, ET: 10, MD: 11,
   // core
   ME: 0, CV: 1, EE_C: 1, CH: 2, BT: 3, BM: 4, MT: 5, IM: 6, IP: 7,
   MAE: 8, AE: 9, AS: 10, AU: 11, AVE: 12, MR: 13, RA: 14, ROB: 15,
   AR: 16, AG: 17, AL: 18, CC: 19, TX: 20, CCA: 21, CCS: 22, CK: 23,
+  RBE: 14, DE: 24,
 };
 
 // Returns null for branches outside the engineering scope (Bachelor of Design,

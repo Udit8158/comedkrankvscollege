@@ -8,7 +8,7 @@ export default function NotFound() {
         That code isn&apos;t in the dataset.
       </h1>
       <p className="mt-6 max-w-md text-[15px] text-fg-mute leading-relaxed">
-        The COMEDK Round 3 2025 list covers 150 colleges by code (E001 – E217).
+        The COMEDK Round 3 2026 list covers 155 colleges by code (E001 – E223).
         If you hit this page from a typed URL, double-check the code.
       </p>
       <Link

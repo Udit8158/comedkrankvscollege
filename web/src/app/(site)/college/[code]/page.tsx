@@ -34,9 +34,9 @@ export async function generateMetadata({
     bits.push(`avg package ₹${c.placement.overallAvgLpa} LPA`);
   const extra = bits.length ? ` ${bits.join(", ")}.` : "";
 
-  const description = `COMEDK 2026 cut-off ranks for ${c.name}${
+  const description = `COMEDK 2027 cut-off ranks for ${c.name}${
     place ? `, ${place}` : ""
-  }.${extra} Based on the official COMEDK 2025 Round 3 cut-offs.`;
+  }.${extra} Based on the official COMEDK 2026 Round 3 cut-offs.`;
 
   return {
     title: c.name,
@@ -45,12 +45,12 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: canonical,
-      title: `${c.name} — COMEDK 2026 Cutoffs & Placements`,
+      title: `${c.name} — COMEDK 2027 Cutoffs & Placements`,
       description,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${c.name} — COMEDK 2026`,
+      title: `${c.name} — COMEDK 2027`,
       description,
     },
   };

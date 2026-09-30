@@ -7,7 +7,7 @@ import { GoogleGlyph } from "@/components/brand/GoogleGlyph";
 
 export const metadata: Metadata = {
   // `absolute` escapes the root template, which appends the tool's SEO tail
-  // ("COMEDK 2026 Cutoffs & Placements") to every title. Correct for the public
+  // ("COMEDK 2027 Cutoffs & Placements") to every title. Correct for the public
   // pages, nonsense on a staff sign-in.
   title: { absolute: "Sign in — MindCreed" },
   // The dashboard is staff-only; it has no business in an index.

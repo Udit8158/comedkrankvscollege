@@ -12,12 +12,12 @@ export default function Home() {
           <span className="eyebrow text-fg">comedk · cut-off lookup</span>
         </div>
         <span className="font-mono text-[11px] text-fg-mute tracking-wider">
-          round 3 · 2025
+          round 3 · 2026
         </span>
       </header> */}
 
       <div className="pt-10">
-        {/* <p className="eyebrow">2025 Engineering · General Merit</p> */}
+        {/* <p className="eyebrow">2026 Engineering · General Merit</p> */}
         {/* Two lines, second in italic — the shape every other H1 on the site
             uses ("Every college / on the list.", "What each rank / actually
             reaches."). The break falls after "vs" so the italic line carries

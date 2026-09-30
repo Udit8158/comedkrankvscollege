@@ -307,7 +307,7 @@ function NoMatches({ rank }: { rank: number }) {
         <span className="font-mono">{formatRank(rank)}</span>.
       </p>
       <p className="mt-3 text-[14px] text-fg-mute max-w-md">
-        Every 2025 Round 3 cut-off in the dataset closed earlier than this
+        Every 2026 Round 3 cut-off in the dataset closed earlier than this
         number. It does not mean no seat is possible — counselling rounds,
         management quota, and category seats are separate.
       </p>

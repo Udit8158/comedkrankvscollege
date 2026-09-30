@@ -15,7 +15,7 @@ import { SITE_URL } from "@/lib/site";
  *
  * Update this alongside `data.json` when a new year's PDF lands.
  */
-const DATA_PUBLISHED = new Date("2025-08-22T00:00:00Z");
+const DATA_PUBLISHED = new Date("2026-08-18T00:00:00Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entry = (

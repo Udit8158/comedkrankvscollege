@@ -31,7 +31,7 @@ export function StartingList() {
 
       <p className="mt-5 max-w-xl text-[14px] text-fg-mute leading-relaxed">
         The twenty colleges where the hardest seat went to the lowest rank, in
-        the COMEDK 2025 Round 3 allotment. Each page carries every branch that
+        the COMEDK 2026 Round 3 allotment. Each page carries every branch that
         college filled, its placement figures, and — for some — a student who
         studied there talking about it.
       </p>

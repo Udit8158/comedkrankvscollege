@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { BRAND } from "@/lib/mindcreed";
 
 export const alt =
-  "COMEDK 2026 Rank vs College — College Predictor by MindCreed";
+  "COMEDK 2027 Rank vs College — College Predictor by MindCreed";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -55,7 +55,7 @@ export default function OgImage() {
               textTransform: "uppercase",
             }}
           >
-            COMEDK 2026
+            COMEDK 2027
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export default function OgImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            Official COMEDK 2025 Round 3 cut-offs
+            Official COMEDK 2026 Round 3 cut-offs
           </div>
           <div style={{ display: "flex" }}>
             Admission counselling · Bengaluru

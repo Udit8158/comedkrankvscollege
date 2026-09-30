@@ -7,14 +7,14 @@ import { formatRank } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "COMEDK Cut-offs by Branch",
   description:
-    "COMEDK 2025 Round 3 cut-off ranks for every major engineering branch — CSE, ECE, AI/ML, Information Science, Mechanical, Civil and more, across Karnataka colleges.",
+    "COMEDK 2026 Round 3 cut-off ranks for every major engineering branch — CSE, ECE, AI/ML, Information Science, Mechanical, Civil and more, across Karnataka colleges.",
   alternates: { canonical: "/comedk-cutoff" },
   openGraph: {
     type: "website",
     url: "/comedk-cutoff",
     title: "COMEDK Cut-offs by Branch",
     description:
-      "Official COMEDK 2025 Round 3 closing ranks for every major engineering branch across Karnataka.",
+      "Official COMEDK 2026 Round 3 closing ranks for every major engineering branch across Karnataka.",
   },
 };
 
@@ -26,7 +26,7 @@ export default function BranchIndex() {
       />
 
       <header>
-        <p className="eyebrow">comedk · round 3 2025 · general merit</p>
+        <p className="eyebrow">comedk · round 3 2026 · general merit</p>
         <h1 className="display text-[44px] sm:text-[60px] md:text-[72px] leading-[0.96] mt-4 tracking-tight">
           Cut-offs,
           <br />

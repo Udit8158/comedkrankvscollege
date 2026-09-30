@@ -66,7 +66,7 @@ export function SiteFooter() {
 
       <div className="mt-10 pt-6 border-t border-hairline flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
         <p className="max-w-lg text-[12px] text-fg-mute leading-relaxed">
-          Cut-offs are the official COMEDK 2025 Round 3 allotment, General Merit
+          Cut-offs are the official COMEDK 2026 Round 3 allotment, General Merit
           only. Indicative of where a rank stands — not a guarantee of a seat.
         </p>
         <a

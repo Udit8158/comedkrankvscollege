@@ -24,7 +24,7 @@ export async function generateMetadata({
   const best = facet.seats[0];
   const last = facet.seats[facet.seats.length - 1];
   const title = `COMEDK ${facet.name} Cut-off — All Colleges`;
-  const description = `COMEDK 2025 Round 3 cut-off ranks for ${facet.name} at ${facet.seats.length} Karnataka colleges — from ${formatRank(best.cutoff)} at ${best.collegeName} to ${formatRank(last.cutoff)}.`;
+  const description = `COMEDK 2026 Round 3 cut-off ranks for ${facet.name} at ${facet.seats.length} Karnataka colleges — from ${formatRank(best.cutoff)} at ${best.collegeName} to ${formatRank(last.cutoff)}.`;
 
   return {
     title,
@@ -78,7 +78,7 @@ export default async function BranchPage({
 
       <header>
         <p className="eyebrow">
-          comedk · round 3 2025 · general merit · {facet.code}
+          comedk · round 3 2026 · general merit · {facet.code}
         </p>
         <h1 className="display text-[38px] sm:text-[52px] md:text-[60px] leading-[1.0] mt-4 tracking-tight">
           {facet.name}
@@ -86,7 +86,7 @@ export default async function BranchPage({
           <span className="display-italic">cut-offs.</span>
         </h1>
         <p className="mt-6 max-w-xl text-[15px] text-fg-mute leading-relaxed">
-          Every college that filled {facet.name} in the official COMEDK 2025
+          Every college that filled {facet.name} in the official COMEDK 2026
           Round 3 allotment — {facet.seats.length} of them, from rank{" "}
           <span className="font-mono text-fg">{formatRank(best.cutoff)}</span>{" "}
           at {best.collegeName} down to{" "}

@@ -18,10 +18,10 @@ export function CollegeCutoffTable({
     return (
       <section className="mt-20">
         <div className="flex items-baseline justify-between border-b border-hairline pb-3">
-          <span className="eyebrow">cut-offs · round 3 2025</span>
+          <span className="eyebrow">cut-offs · round 3 2026</span>
         </div>
         <p className="mt-5 display-italic text-[18px] text-fg-mute max-w-lg">
-          No Round 3 2025 cut-offs recorded for this college. Branches may have
+          No Round 3 2026 cut-offs recorded for this college. Branches may have
           filled in earlier rounds.
         </p>
       </section>
@@ -33,7 +33,7 @@ export function CollegeCutoffTable({
   return (
     <section className="mt-20">
       <div className="flex items-baseline justify-between border-b border-hairline pb-3">
-        <span className="eyebrow">cut-offs · round 3 2025</span>
+        <span className="eyebrow">cut-offs · round 3 2026</span>
         <span className="font-mono text-[12px] text-fg-mute tabular-nums">
           {records.length} {records.length === 1 ? "branch" : "branches"}
         </span>

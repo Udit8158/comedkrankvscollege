@@ -45,17 +45,17 @@ export const metadata: Metadata = {
   // Keyword-first, brand last: the COMEDK terms are what earns the click in
   // search, the brand is what the student remembers afterwards.
   title: {
-    default: "COMEDK 2026 Rank vs College — College Predictor | MindCreed",
-    template: "%s — COMEDK 2026 Cutoffs & Placements | MindCreed",
+    default: "COMEDK 2027 Rank vs College — College Predictor | MindCreed",
+    template: "%s — COMEDK 2027 Cutoffs & Placements | MindCreed",
   },
   description:
-    "COMEDK 2026 rank-to-college predictor by MindCreed. Enter your COMEDK rank to see the colleges and branches you can get, based on the official COMEDK 2025 Round 3 cut-offs.",
+    "COMEDK 2027 rank-to-college predictor by MindCreed. Enter your COMEDK rank to see the colleges and branches you can get, based on the official COMEDK 2026 Round 3 cut-offs.",
   keywords: [
-    "COMEDK 2026",
-    "COMEDK 2026 rank vs college",
-    "COMEDK 2026 college predictor",
+    "COMEDK 2027",
+    "COMEDK 2027 rank vs college",
+    "COMEDK 2027 college predictor",
     "COMEDK rank predictor",
-    "COMEDK 2026 cutoff",
+    "COMEDK 2027 cutoff",
     "COMEDK college list",
     "Karnataka engineering colleges",
     "MindCreed",
@@ -70,16 +70,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: BRAND.name,
-    title: "COMEDK 2026 Rank vs College — College Predictor | MindCreed",
+    title: "COMEDK 2027 Rank vs College — College Predictor | MindCreed",
     description:
-      "Enter your COMEDK rank, see the colleges and branches that fit. Based on the official COMEDK 2025 Round 3 cut-offs. By MindCreed, Bengaluru.",
+      "Enter your COMEDK rank, see the colleges and branches that fit. Based on the official COMEDK 2026 Round 3 cut-offs. By MindCreed, Bengaluru.",
     locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "COMEDK 2026 Rank vs College — College Predictor | MindCreed",
+    title: "COMEDK 2027 Rank vs College — College Predictor | MindCreed",
     description:
-      "Enter your COMEDK rank, see the colleges and branches that fit. Based on COMEDK 2025 Round 3 cut-offs.",
+      "Enter your COMEDK rank, see the colleges and branches that fit. Based on COMEDK 2026 Round 3 cut-offs.",
   },
   robots: {
     index: true,

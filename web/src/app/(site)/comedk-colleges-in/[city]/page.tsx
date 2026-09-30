@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   const canonical = `/comedk-colleges-in/${facet.slug}`;
   const title = `COMEDK Colleges in ${facet.city} — Cut-off Ranks`;
-  const description = `All ${facet.entries.length} COMEDK engineering colleges in ${facet.city}, with official 2025 Round 3 cut-off ranks, branches and placement figures.`;
+  const description = `All ${facet.entries.length} COMEDK engineering colleges in ${facet.city}, with official 2026 Round 3 cut-off ranks, branches and placement figures.`;
 
   return {
     title,
@@ -76,7 +76,7 @@ export default async function CityPage({
       />
 
       <header>
-        <p className="eyebrow">comedk · round 3 2025 · general merit</p>
+        <p className="eyebrow">comedk · round 3 2026 · general merit</p>
         <h1 className="display text-[42px] sm:text-[58px] md:text-[68px] leading-[0.96] mt-4 tracking-tight">
           COMEDK colleges
           <br />
