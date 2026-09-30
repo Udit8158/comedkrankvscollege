@@ -7,8 +7,8 @@ COMEDK rank-to-college predictor. Next.js + Tailwind app in `web/`. See `README.
 ```
 ┌─ TRACK 1 ─ Cut-off data (rank ↔ college/branch) ────────────────┐
 │                                                                  │
-│   Engineering_…2025.pdf   ──[ one-off pdfplumber extraction ]──▶ │
-│       (repo root)              (no committed script yet)         │
+│   Engineering_…2026.pdf   ──[ scripts/extract-cutoffs.mjs ]────▶ │
+│       (repo root)              (needs pdftotext / poppler)       │
 │                                                                  │
 │   web/src/data.json   ◀── what the app actually imports          │
 │                                                                  │
@@ -30,7 +30,7 @@ The two tracks link by the `code` field (`E001`, `E095`, …).
 
 | Scenario                                                   | Edit                                                                                                                                                                               | Run                                                                                                           | Commit                   |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| New year's COMEDK PDF                                      | Replace PDF at repo root                                                                                                                                                           | (no committed script yet — re-do the pdfplumber inline extraction, then copy the JSON to `web/src/data.json`) | both                     |
+| New year's COMEDK PDF                                      | Replace PDF at repo root                                                                                                                                                           | `node web/scripts/extract-cutoffs.mjs <pdf>` → writes `web/src/data.json`. Then classify any new branch codes in `lib/branches.ts`, add CSV rows for new college codes, and move `DATA_PUBLISHED` in `app/sitemap.ts`. | both                     |
 | Placement / podcast / about / established / type / website | `data/colleges.csv`                                                                                                                                                                | `node web/scripts/merge-csv-to-colleges.mjs`                                                                  | both CSV + `colleges.ts` |
 | New college code added by COMEDK                           | (1) Update PDF first → regen `data.json`. (2) `node web/scripts/build-colleges.mjs` to append the new code to colleges.ts. (3) Add a row in `data/colleges.csv`. (4) Re-run merge. | both scripts                                                                                                  | all three                |
 | Typo in name / locality / city                             | `data/colleges.csv`                                                                                                                                                                | merge script                                                                                                  | both                     |
@@ -41,7 +41,7 @@ The two tracks link by the `code` field (`E001`, `E095`, …).
 
 | File                       | What                                 | Editable?                                |
 | -------------------------- | ------------------------------------ | ---------------------------------------- |
-| `Engineering_…2025.pdf`    | Source for cut-off data              | No (official PDF)                        |
+| `Engineering_…2026.pdf`    | Source for cut-off data              | No (official PDF)                        |
 | `data/colleges.csv`        | Source for college metadata          | **Yes — this is where you make changes** |
 | `web/src/data.json`        | Parsed cut-offs the app reads        | Generated from PDF                       |
 | `web/src/data/colleges.ts` | Typed college metadata the app reads | Generated from CSV                       |
@@ -221,7 +221,9 @@ from the `locality` column via `SIDE_BY_LOCALITY`.
 
 ## Project quirks
 
-- COMEDK GM data only — the PDF has no other reservation categories.
+- COMEDK GM data only — the PDF has no other reservation categories. The
+  extractor asserts this: it collects every seat-category token it sees and
+  prints them, and `GM` is the only one that has ever appeared.
 - 9 colleges have student-podcast YouTube IDs from the user's @mindcreed23 channel; long-tail colleges have podcast = absent (component returns null).
 - Predictor result sort: `cse → cse_spec → electronics → core` (no "other" — design/planning branches filtered out).
 - Per-college pages live at `/college/[code]` and accept `?rank=…` for fit-bar context.
