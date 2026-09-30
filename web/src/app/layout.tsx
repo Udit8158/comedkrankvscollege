@@ -60,6 +60,7 @@ export const metadata: Metadata = {
     "Karnataka engineering colleges",
     "MindCreed",
     "COMEDK counselling Bangalore",
+    "Direct Admission in Bangalore",
   ],
   applicationName: "MindCreed COMEDK Rank vs College",
   authors: [{ name: BRAND.name, url: BRAND.site }],
