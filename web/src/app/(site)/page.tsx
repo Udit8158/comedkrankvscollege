@@ -18,15 +18,23 @@ export default function Home() {
 
       <div className="pt-10">
         {/* <p className="eyebrow">2025 Engineering · General Merit</p> */}
-        {/* Two lines, second in italic — the same shape the old "From rank /
-            to college." had, so the page keeps its proportions now that the
-            standfirst is gone. The provenance that paragraph carried (which
-            round, which year, GM only) is not lost: it sits under the rank
-            input, where it is read at the moment it actually matters. */}
-        <h1 className="display text-[48px] sm:text-[72px] md:text-[88px] leading-[0.92] mt-3 tracking-tight">
-          College
+        {/* Two lines, second in italic — the shape every other H1 on the site
+            uses ("Every college / on the list.", "What each rank / actually
+            reaches."). The break falls after "vs" so the italic line carries
+            the destination, and the type is smaller than the old "College /
+            Predictor." because the phrase is twice as long: at 88px it ran
+            past the measure.
+
+            It names COMEDK and the year on purpose. The old headline was the
+            better piece of writing and worth nothing in search — this is the
+            page that has to rank for "COMEDK rank vs college", and the H1 was
+            the one place that phrase did not appear. The provenance (which
+            round, which year, GM only) still sits under the rank input, where
+            it is read at the moment it matters. */}
+        <h1 className="display text-[32px] min-[390px]:text-[40px] sm:text-[58px] md:text-[80px] leading-[0.96] mt-3 tracking-tight">
+          COMEDK Rank vs
           <br />
-          <span className="display-italic">Predictor.</span>
+          <span className="display-italic">College in 2027.</span>
         </h1>
       </div>
 
