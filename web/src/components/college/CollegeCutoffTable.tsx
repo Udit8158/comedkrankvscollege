@@ -9,11 +9,13 @@ import {
 
 export function CollegeCutoffTable({
   records,
-  hasRank,
+  rank,
 }: {
   records: CollegeRecord[];
-  hasRank: boolean;
+  /** The rank the fit bars and tiers are measured against, if one was given. */
+  rank?: number;
 }) {
+  const hasRank = typeof rank === "number" && rank > 0;
   if (records.length === 0) {
     return (
       <section className="mt-20">
@@ -32,9 +34,17 @@ export function CollegeCutoffTable({
 
   return (
     <section className="mt-20">
-      <div className="flex items-baseline justify-between border-b border-hairline pb-3">
-        <span className="eyebrow">cut-offs · round 3 2026</span>
-        <span className="font-mono text-[12px] text-fg-mute tabular-nums">
+      <div className="flex items-baseline justify-between gap-4 border-b border-hairline pb-3">
+        {/* Naming the rank here rather than in the nav: it is the line directly
+            above the safe/moderate/reach badges, and those badges mean nothing
+            without knowing what they were measured against. */}
+        <span className="eyebrow">
+          cut-offs · round 3 2026
+          {hasRank && (
+            <span className="text-fg-dim"> · against rank {formatRank(rank)}</span>
+          )}
+        </span>
+        <span className="font-mono text-[12px] text-fg-mute tabular-nums whitespace-nowrap">
           {records.length} {records.length === 1 ? "branch" : "branches"}
         </span>
       </div>

@@ -120,7 +120,7 @@ export default async function CollegePage({
 
       {college.podcast && <PodcastEmbed podcast={college.podcast} />}
 
-      <CollegeCutoffTable records={records} hasRank={hasRank} />
+      <CollegeCutoffTable records={records} rank={userRank} />
 
       <RelatedColleges
         code={college.code}
